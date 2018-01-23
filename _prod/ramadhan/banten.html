@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<title>Eksplor Ramadhan - Banten</title>
+	<meta name="author" content="Kompas Klasika" />
+	<meta name="description" content="Sebuah perjalanan rohani di pulau Jawa" />
+	<meta name="keywords"  content="kompas,klasika,eksplor,ramadhan" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="local/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="/_common/css/reset_v1.0.css" />
+	<link rel="icon" href="/_common/img/icon/advisual_favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+	<style>
+		/* bounce up */
+		@-webkit-keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-25px);}
+			60% {-webkit-transform: translateY(-5px);}
+		}
+		@-moz-keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+			40% {-moz-transform: translateY(-25px);}
+			60% {-moz-transform: translateY(-5px);}
+		}
+		@-o-keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+			40% {-o-transform: translateY(-25px);}
+			60% {-o-transform: translateY(-5px);}
+		}
+		@keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+			40% {transform: translateY(-25px);}
+			60% {transform: translateY(-5px);}
+		}
+		/* bounce down */
+		@-webkit-keyframes bounceDown {
+			0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(25px);}
+			60% {-webkit-transform: translateY(5px);}
+		}
+		@-moz-keyframes bounceDown {
+			0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+			40% {-moz-transform: translateY(15px);}
+			60% {-moz-transform: translateY(5px);}
+		}
+		@-o-keyframes bounceDown {
+			0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+			40% {-o-transform: translateY(15px);}
+			60% {-o-transform: translateY(5px);}
+		}
+		@keyframes bounceDown {
+			0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+			40% {transform: translateY(15px);}
+			60% {transform: translateY(5px);}
+		}
+		.animated{
+			-webkit-animation-fill-mode:both;
+			-moz-animation-fill-mode:both;
+			-ms-animation-fill-mode:both;
+			-o-animation-fill-mode:both;
+			animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			-webkit-animation-iteration-count: infinite;
+			animation-fill-mode:both;
+			-webkit-animation-duration:1.5s;
+			-moz-animation-duration:1.5s;
+			-ms-animation-duration:1.5s;
+			-o-animation-duration:1.5s;
+			animation-duration:1.5s;
+		}
+		.bounce {
+			-webkit-animation-name: bounce;
+			-moz-animation-name: bounce;
+			-o-animation-name: bounce;
+			animation-name: bounce;
+		}
+		.bounceDown {
+			-webkit-animation-name: bounceDown;	
+			-moz-animation-name: bounceDown;	
+			-o-animation-name: bounceDown;	
+			animation-name: bounceDown;
+		}
+		body {transition:1s;}
+		@font-face {
+			font-family: rustico;
+			src: url(local/Rustico-Regular.otf);
+		}
+		h1 {
+			font-family: rustico;
+			color: #534741;
+			font-size: 75px;
+			line-height: 80px;
+			transition: 1s;
+		}
+		h2 {
+			font-family: rustico;
+			color: #534741;
+			font-size: 30px;
+			line-height: 40px;
+			transition: 1s;
+		}
+		.tC {text-align:center;}
+		.background {
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: bottom;
+			transition: 1s;
+		}
+		#bg_1 {
+			opacity: 0;
+			background-image: url(img/banten/ilust_01.jpg);
+		}
+		#bg_2 {
+			opacity: 0;
+			background-image: url(img/banten/ilust_02.png);
+			background-size: 45%;
+   			background-position: bottom left;
+			-ms-transform: translate(0,15vh);
+			-webkit-transform: translate(0,15vh);
+			transform: translate(0,15vh);
+		}
+		#bg_3 {}
+		#hint {
+			bottom: 10px;
+			width: 100%;
+			position: fixed;
+			font-family: 'Alegreya Sans', sans-serif;
+			font-size: 9px;
+			color: #fff;
+			z-index: 31;
+			transition: 1s;
+		}
+		#hint p {margin: 5px 0;}
+		#intro,#castle {
+			top:0;
+			width:100vw;
+			position:absolute;
+			opacity: 0;
+			transition: 1s;
+		}
+		#tower {
+			height: 415px;
+			height: 65px;
+		}
+		#section1 {}
+		#section1 p {
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 24px;
+			color: #534741;
+		}
+		#section2 {background-color: #554943;}
+		#section2 .div-text,#section10 .div-text {
+			top: -20%;
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 24px;
+			color: #fff;
+			position: relative;
+			z-index: 30;
+		}
+		#section10 .div-text p{color: #fff;}
+		#section3 h1 {
+			font-size: 28px;
+			line-height: 30px;
+			opacity: 0;
+			color: #fff;
+		}
+		#spot_masjid {
+			padding-bottom: 150px;
+		}
+		#spot_masjid li {
+			opacity: 0;
+			transition: 1s;
+			font-family: rustico;
+			font-size: 18px;
+			-ms-transform: scale(.1,.1);
+			-webkit-transform: scale(.1,.1);
+			transform: scale(.1,.1);
+		}
+		#spot_masjid p {
+			margin-top: 10px;
+			font-family: rustico;
+			font-size: 18px;
+			color: #fff;
+		}
+		.fp-section {overflow:hidden;}
+		.sideA .div-text,
+		.sideA .div-image-list {
+			margin:10px 20% 0% auto;
+		}
+		.sideB {
+			text-align: center;
+			vertical-align: middle;
+		}
+		.sideB .div-text {
+			margin: 10px;
+			display: inline-block;
+			vertical-align: bottom;
+		}
+		.sideB .div-text:first-of-type{
+			max-width: 400px;
+			margin:10px auto 0% 10%;
+		}
+		.sideB .div-text:first-of-type img{width: 100%;}
+		.sideB .div-text:last-of-type{
+			max-width: 400px;
+			margin:10px 10% 0% auto;
+		}
+		.dark .div-text h2{color: #fff;}
+		.dark .div-text p{color: #fff;}
+		.sleding p{
+			-ms-transform: translate(-10px,0);
+			-webkit-transform: translate(-10px,0);
+			transform: translate(-10px,0);
+			opacity: 0;
+		}
+		.return {
+			-ms-transform: translate(0,0) !important;
+			-webkit-transform: translate(0,0) !important;
+			transform: translate(0,0) !important;
+		}
+		.showText {opacity: 1 !important;}
+		.show {
+			opacity: 1 !important;
+			-ms-transform: translate(0,0) !important;
+			-webkit-transform: translate(0,0) !important;
+			transform: translate(0,0) !important;
+			transition: 1s;
+			-ms-transform: scale(1,1);
+			-webkit-transform: scale(1,1);
+			transform: scale(1,1);
+		}
+		.hidden {
+			opacity: 0;
+			transition: 1s;
+		}
+		.div-image {
+			padding: 20px;
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		.div-image-list{
+			max-width: 600px;
+			margin: 50px auto 100px auto;
+		}
+		.list-image {text-align: center;}
+		.list-image li{
+			display: inline-block;
+			padding: 10px;
+			width: 150px;
+			vertical-align: bottom;
+		}
+		.list-image li img {
+			width: 100%;
+		}
+		.div-text {
+			padding: 20px;
+			max-width: 460px;
+			margin: 0 auto;
+		}
+		.div-text h2 {
+            font-weight: bold;
+            font-size: 40px;
+            color: #000;
+			margin-bottom: 20px;
+		}
+		.div-text p {
+            font-family: 'Ubuntu', sans-serif;
+			font-size: 16px;
+			line-height: 20px;
+			color: #000;
+			margin-bottom: 20px;
+			transition: 1s;
+		}
+		@media screen and (max-width: 769px) {
+			#intro,#castle {
+				top: 18%;
+			}
+			#section10 .div-text {
+				top: 30%;
+			}
+			#bg_2 {
+				background-size: 50%;
+				background-position: bottom;
+			}
+			.sideA .div-text,
+			.sideA .div-image-list {
+				margin: 0 auto;
+			}
+			.sideB .div-text:first-of-type,
+			.sideB .div-text:last-of-type {
+				margin: 0 auto;
+				float: none;
+			}
+			#section3 h1 {
+				font-size: 40px;
+				line-height: 50px;
+				opacity:0;
+			}
+		}
+		
+	</style>
+	<!--[if IE]><script type="text/javascript">var console = { log: function() {} };</script><![endif]-->
+</head>
+<body>
+
+<div id="bg_1" class="background"></div>
+<div id="bg_2" class="background"></div>
+<div id="bg_3" class="background"></div>
+<div id="hint">
+	<p class="animated bounce tC">↑</p>
+	<p class="tC">Scroll</p>
+	<p class="animated bounceDown tC">↓</p>
+</div>
+	
+<div id="fullpage">
+	
+	<div class="section " id="section0">
+		<div class="div-text">
+			<h1 class="tC">Masjid Agung Banten</h1>
+		</div>
+	</div> <!-- #section0 index1 -->
+	
+	<div class="section" id="section1">
+		<div class="div-text tC">
+			<p>Masjid Agung Banten adalah salah satu masjid tertua di Indonesia.</p>			
+			<p>Di sini, pengunjung bisa melakukan berbagai macam kegiatan, seperti berziarah, menikmati arsitektur kuno dan unik masjid, serta melihat bukti bersejarah Kesultanan Banten.</p>
+			<p>Jika berkunjung ke sini, tempat apa saja yang harus dikunjungi?</p>
+		</div>
+	</div> <!-- #section1 index2 -->
+	
+	<div class="section" id="section2">
+		<div class="div-text">
+			<p class="TC">Masjid Agung Banten Berjarak 98,7 kilometer atau butuh sekitar 2 jam dari Jakarta</p>
+		</div>
+		<div id="intro"></div>
+	</div> <!-- #section2 index3 -->
+	
+	<div class="section sideA" id="section3">
+		<div class="div-text">
+			<h1 class="tC">6 Titik yang Wajib Dikunjungi di Masjid Agung Banten</h1>
+		</div>
+		<div class="div-image-list">
+			<ul id="spot_masjid" class="list-image">
+				<li><img src="img/banten/ilust_03.png" alt="masjid"><p><span>1.</span> Bangunan Masjid</p></li>
+				<li><img src="img/banten/ilust_04.png" alt="pintu masjid"><p><span>2.</span> Pintu Masjid</p></li>
+				<li><img src="img/banten/ilust_05.png" alt="menara masjid"><p><span>3.</span> Menara Masjid</p></li>
+				<li><img src="img/banten/ilust_06.png" alt="makam bersejarah"><p><span>4.</span> Makam Bersejarah</p></li>
+				<li><img src="img/banten/ilust_07.png" alt="wihara avelokitesvara"><p><span>5.</span> Wihara Avelokitesvara</p></li>
+				<li><img src="img/banten/ilust_08.png" alt="benteng speelwijk"><p><span>6.</span> Benteng Speelwijk</p></li>
+			</ul>
+		</div>
+	</div> <!-- #section3 index4 -->
+	
+	<div class="section sideB dark" id="section4">
+		<div class="div-text">
+			<p class="tC"><img src="img/banten/ilust_03.png" alt="masjid"></p>
+		</div>
+		<div class="div-text sleding" style="background:url(img/banten/number_1.png) no-repeat;background-position: left top;">
+			<h2 class="tC">Bangunan Masjid</h2>
+			<p>Percampuran dua budaya, yaitu Jawa kuno dan China.</p>
+			<p>Serambi luas dan memiliki atap bertingkat 5 yang menyerupai tumpeng.</p>
+			<p>Di dalam ruangan, ditopang 24 tiang penyangga yang bermakna 24 jam dalam 1 hari.</p>
+		</div>
+	</div> <!-- #section4 index5 -->
+	
+	<div class="section sideB dark" id="section5">
+		<div class="div-text">
+			<p class="tC"><img src="img/banten/ilust_04.png" alt="pintu masjid"></p>
+		</div>
+		<div class="div-text sleding" style="background:url(img/banten/number_2.png) no-repeat;background-position: left top;">
+			<h2 class="tC">Pintu Masuk Masjid</h2>
+			<p>Pintu masuknya kecil dan rendah untuk mengingatkan orang selalu rendah hati dan tidak sombong.</p>
+		</div>
+	</div> <!-- #section5 index6 -->
+	
+	<div class="section sideB dark" id="section6">
+		<div class="div-text">
+			<div id="tower"></div>
+		</div>
+		<div class="div-text sleding" style="background:url(img/banten/number_3.png) no-repeat;background-position: left top;">
+			<h2 class="tC">Menara Masjid</h2>
+			<p>Sejak dulu digunakan untuk mengumandangkan adzan kepada rakyat Kesultanan Banten</p>
+		</div>
+	</div> <!-- #section6 index7 -->
+	
+	<div class="section sideB dark" id="section7">
+		<div class="div-text">
+			<p class="tC"><img src="img/banten/ilust_06.png" alt="makam bersejarah"></p>
+		</div>
+		<div class="div-text sleding" style="background:url(img/banten/number_4.png) no-repeat;background-position: left top;">
+			<h2 class="tC">Makam Bersejarah</h2>
+			<p>Sultan Maulana Hasanuddin,</p>
+			<p>Sultan Maulana Muhammad Nasruddin,</p>
+			<p>Pangeran Ratu (istri Maulana Hasanuddin),</p>
+			<p>Sultan Abdul Abdul Fadhal,</p>
+			<p>Sultan Abu Nasir Abdul Kohar atau yang dikenal sebagai Sultan Haji,</p>
+			<p>Sultan Abul Mufakhir Muhammad Aliyudin,</p>
+			<p>Sultan Ageng Tirtayasa.</p>
+		</div>
+	</div> <!-- #section7 index8 -->
+	
+	<div class="section sideB dark" id="section8">
+		<div class="div-text">
+			<p class="tC"><img src="img/banten/ilust_07.png" alt="wihara avelokitesvara"></p>
+		</div>
+		<div class="div-text sleding" style="background:url(img/banten/number_5.png) no-repeat;background-position: left top;">
+			<h2 class="tC">Wihara Avelokitesvara</h2>
+			<p>Menurut cerita, wihara ini dibangun berawal dari kebaikan Sunan Gunung Jati untuk rombongan Putri Kaisar China Oeng Tian Nio. </p>
+		</div>
+	</div> <!-- #section8 index9 -->
+	
+	<div class="section sideB dark" id="section9">
+		<div class="div-text">
+			<p class="tC"><img src="img/banten/ilust_08.png" alt="benteng speelwijk"></p>
+		</div>
+		<div class="div-text sleding" style="background:url(img/banten/number_6.png) no-repeat;background-position: left top;">
+			<h2 class="tC">Benteng Speelwijk</h2>
+			<p>Benteng peninggalan Portugis yang dulu digunakan untuk memantau kapal-kapal yang datang dari Jawa.</p>
+		</div>
+	</div> <!-- #section9 index10 -->
+	
+	<div class="section dark" id="section10">
+		<div id="castle" style=""></div>
+		<div class="div-text">
+			<p>Pada jaman dahulu, benteng peninggalan Portugis ini digunakan untuk memantau kapal-kapal yang datang dari Jawa.</p>
+			<p>Juga digunakan untuk menyimpan meriam dan persenjataan dari Portugis, sekaligus merupakan penjara.</p>
+		</div>
+	</div> <!-- #section10 index11 -->
+	
+</div>
+	<script type="text/javascript" src="/_common/js/jquery_v2.1.0.js"></script>
+	<script type="text/javascript" src="/_common/js/jquery_ui-v1.9.1.js"></script>
+	<script type="text/javascript" src="local/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="local/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="local/bodymovin.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			bodymovin.loadAnimation({
+				container: document.getElementById('intro'),
+				renderer: 'svg',
+				path: 'local/story_1v5.json'
+			});
+			bodymovin.loadAnimation({
+				container: document.getElementById('castle'),
+				renderer: 'svg',
+				path: 'local/story_2v3.json'
+			});bodymovin.loadAnimation({
+				container: document.getElementById('tower'),
+				renderer: 'svg',
+				path: 'local/story_3v1.json'
+			});
+			
+			$('#fullpage').fullpage({
+				scrollOverflow: true,
+				scrollingSpeed: 1000,
+				afterLoad: function(anchorLink, index){
+                    var loadedSection = $(this);
+                    if(index == 1){
+						$('#bg_1').css("opacity","1");
+                    }
+					else if(index == 3){
+						$('body').css("background-color","#fff");
+						$('#bg_1').css("opacity","0");
+						$('#section2 p').css("opacity","1");
+						$('#intro').css("opacity","1");
+                    }
+					else if(index == 4){
+						$('#section3 h1').css("opacity","1");
+						$('#bg_2').css("opacity","1");
+						var children = $("#spot_masjid li");
+						var index = 0;
+						function addClassToNextChild() {
+							if (index == children.length) return;
+								children.eq(index++).addClass("show");
+								window.setTimeout(addClassToNextChild, 500);
+						}
+						addClassToNextChild();
+                    }
+					else if(index == 5){
+						var children2 = $("#section4 .sleding p");
+						var index2 = 0;
+						function addClassToNextChild() {
+							if (index == children2.length) return;
+								children2.eq(index2++).addClass("return showText");
+								window.setTimeout(addClassToNextChild, 500);
+						}
+						addClassToNextChild();
+                    }
+					else if(index == 6){
+						$('#section5 .sleding p').addClass("return showText");
+                    }
+					else if(index == 7){
+						$('#section6 .sleding p').addClass("return showText");
+                    }
+					else if(index == 8){
+						var children3 = $("#section7 .sleding p");
+						var index3 = 0;
+						function addClassToNextChild() {
+							if (index == children3.length) return;
+								children3.eq(index3++).addClass("return showText");
+								window.setTimeout(addClassToNextChild, 500);
+						}
+						addClassToNextChild();
+                    }
+					else if(index == 9){
+						$('#section8 .sleding p').addClass("return showText");
+                    }
+					else if(index == 10){
+						$('#section9 .sleding p').addClass("return showText");
+                    }
+					else if(index == 11){
+						$('#castle').css("opacity","1");
+						
+                    }
+                },
+                onLeave: function(index, nextIndex, direction){
+                    var leavingSection = $(this);
+
+					/* --------------- DOWN ------------- */
+					if(index == 1 && direction == 'down'){
+						$('#bg_1').css("opacity",".3");
+                    }
+					else if(index == 2 && direction == 'down'){
+                    }
+					else if(index == 3 && direction == 'down'){
+						$('#bg_2').css("opacity","1");
+						$('#bg_2').addClass("return");
+						$('body').css("background-color","#64605c");
+                    }
+					else if(index == 4 && direction == 'down'){
+						$('#bg_2').css("opacity",".3");
+                    }
+					
+					/* --------------- UP --------------- */
+                    else if(index == 2 && direction == 'up'){
+						$('body').css("background-color","#fff");
+                    }
+                    else if(index == 3 && direction == 'up'){
+						$('#bg_1').css("opacity",".3");
+                    }
+                    else if(index == 4 && direction == 'up'){
+						$('#bg_2').css("opacity","0");
+						$('#bg_2').removeClass("return");
+						$('#section3 h1').css("opacity","0");
+                    }
+                }
+			});
+		});
+	</script>
+</body>
+</html>

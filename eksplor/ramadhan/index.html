@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=11">
+	
+    <title>Eksplor Ramadhan</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Sebuah perjalanan rohani di pulau jawa">
+    <meta name="keywords" content="kompas,klasika,langgam">
+    <meta name="author" content="Kompas klasika">
+	<meta name="Resource-type" content="Document" />
+	
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="local/jquery.fullPage.css" />
+    <link rel="icon" href="/_common/img/icon/advisual_favicon.png">
+	
+	<script src="/_common/js/jquery_v2.1.0.js"></script>
+	<script src="/_common/js/jquery_ui-v1.9.1.js"></script>
+	
+	<script type="text/javascript" src="local/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="local/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="local/bodymovin.js"></script>
+	
+	<style>
+		.clearfix:before,
+		.clearfix:after{content:"";display:table;}
+		.clearfix:after{clear:both;}
+		.fL{float:left;}
+		.fR{float:right;}
+		.tC{text-align:center;}
+		body {
+            background-color: #fff;
+            /* background: url(img/bg_2.jpg) no-repeat; */
+            background-size: cover;
+            background-attachment: fixed;
+			background-position: center;
+        }
+		h1 {
+			font-family: Georgia;
+			font-size: 42px;
+			font-weight: bold;
+			color: #000;
+		}
+		a{text-decoration:none;color:inherit;}
+		.text-caption {
+			padding: 20px;
+			max-width: 320px;
+			margin: 0 auto;
+		}
+		.text-caption h2 {
+            font-family: Georgia;
+            font-style: normal;
+            font-size: 32px;
+            color: #000;
+		}
+		.text-caption p {
+			font-family: 'Alegreya Sans', sans-serif;
+			font-size: 18px;
+			color: #000;
+		}
+		#section0 {}
+		#section1 {}
+		#section2 {}
+		.fp-tableCell {
+			text-align: center;
+		}
+		#mountain {
+			left: 0;
+            right: 0;
+			top:0;
+            margin: 0 auto;
+			width: 500px;
+			height: 200px;
+			position: fixed;
+			transition: .4s;
+			z-index: 1;
+			/* background: url(img/gunung.png); */
+			z-index: -1;
+            background-size: cover;
+		} 
+		#interior {
+			width: 101vw;
+			height: 50vh;
+			position: fixed;
+			bottom: -5px;
+			right: 0;
+			transition: 1s;
+			z-index: -10;
+			overflow-y: hidden;
+			background: url(img/img_1b.png) no-repeat;
+			background-size: cover;
+    		background-position-y: 30px;
+			animation: shake 3s cubic-bezier(.36,.07,.19,.97) both infinite;
+		}
+		#dashboard {
+			bottom: -5px;
+			width: 100%;
+			/* height: 100%; */
+            bottom: -10px;
+			transform: translate3d(0, 0, 0);
+			backface-visibility: hidden;
+			perspective: 1000px;
+			position: absolute;
+		}
+		#road {
+			position: fixed;
+			bottom: 20vh;
+			width: 100%;
+			height: 100vh;
+			background: url(img/bg_3.jpg) no-repeat;
+			background-size: cover;
+			background-position: center;
+			z-index: -10;
+			transition: 1s;
+		}
+		#hint {
+			position: fixed;
+			top:40vh;
+			right:10px;
+			width: 55px;
+			font-family: 'Varela Round';
+			font-size: 9px;
+			transition: 1s;
+		}
+		#hint p {margin: 5px 0;}
+        .road {
+            width: 300px;
+            position: fixed;
+            right: 0;
+            left: 0;
+			top: 40vh;
+            margin: 0 auto;
+			z-index: 0;
+			opacity: 1;
+			transition: 1s;
+        }
+		.roadMap {
+			padding: 70px 0;
+			max-width: 1000px;
+			margin: 0 auto;
+			/* background: url(img/marka.png); */
+			background-repeat: repeat-y;
+			background-position: center;
+		}
+		.destination {
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			padding: 20px 10px 0 10px;
+			width: 300px;
+			height: 90px;
+			font-family: 'Varela Round';
+			color: #fff;
+			background-image: url(img/plang.png);
+			background-position: 3% 3%;
+			background-size: contain; 
+			background-repeat: no-repeat;
+			text-align: left;
+            transition: .5s all;
+            transform: scale(0.1);
+            position: absolute;
+            top: 10%;
+			opacity: 0.8;
+		}
+		.destination:hover {opacity: 1;}
+		.destination h3 {
+			font-size: 20px;
+			font-weight: bold;
+			width: 175px;
+			margin: 20px auto 0 auto;
+			text-decoration: underline;
+		}
+		.destination p {
+			font-size: 14px;
+			font-weight: 100;
+			padding: 10px;
+			line-height: 20px;
+			text-align: left;
+		}
+		.scroll {
+			bottom: 0;
+			width: 100%;
+			color: #000;
+			position: absolute;
+			text-align: center;
+			font-family: 'Varela Round';
+		}
+		.animated{
+			-webkit-animation-fill-mode:both;
+			-moz-animation-fill-mode:both;
+			-ms-animation-fill-mode:both;
+			-o-animation-fill-mode:both;
+			animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			-webkit-animation-iteration-count: infinite;
+			animation-fill-mode:both;
+			-webkit-animation-duration:1.5s;
+			-moz-animation-duration:1.5s;
+			-ms-animation-duration:1.5s;
+			-o-animation-duration:1.5s;
+			animation-duration:1.5s;
+		}
+		.blur {
+			filter: blur(5px); 
+			-webkit-filter: blur(5px);
+			-moz-filter: blur(5px); 
+			-o-filter: blur(5px); 
+			-ms-filter: blur(5px);
+		}
+		.bounce {
+			-webkit-animation-name: bounce;
+			-moz-animation-name: bounce;
+			-o-animation-name: bounce;
+			animation-name: bounce;
+		}
+		.bounceDown {
+			-webkit-animation-name: bounceDown;	
+			-moz-animation-name: bounceDown;	
+			-o-animation-name: bounceDown;	
+			animation-name: bounceDown;
+		}
+		@keyframes shake {
+		  10%, 90% {transform: translate3d(0 -1px, 0);}
+		  20%, 80% {transform: translate3d(0, 2px, 0);}
+		  30%, 50%, 70% {transform: translate3d(0, -2px, 0);}
+		  40%, 60% {transform: translate3d(0, 2px, 0);}
+		}
+		@-webkit-keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-25px);}
+			60% {-webkit-transform: translateY(-5px);}
+		}
+		@-moz-keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+			40% {-moz-transform: translateY(-25px);}
+			60% {-moz-transform: translateY(-5px);}
+		}
+		@-o-keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+			40% {-o-transform: translateY(-25px);}
+			60% {-o-transform: translateY(-5px);}
+		}
+		@keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+			40% {transform: translateY(-25px);}
+			60% {transform: translateY(-5px);}
+		}
+		/* bounce down */
+		@-webkit-keyframes bounceDown {
+			0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(25px);}
+			60% {-webkit-transform: translateY(5px);}
+		}
+		@-moz-keyframes bounceDown {
+			0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+			40% {-moz-transform: translateY(15px);}
+			60% {-moz-transform: translateY(5px);}
+		}
+		@-o-keyframes bounceDown {
+			0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+			40% {-o-transform: translateY(15px);}
+			60% {-o-transform: translateY(5px);}
+		}
+		@keyframes bounceDown {
+			0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+			40% {transform: translateY(15px);}
+			60% {transform: translateY(5px);}
+		}
+		.fp-scroller {transform: translate(0px, -100%);}
+        .field {position: relative;}
+		
+		.hidden {
+			left: -200vw !important;
+			top: 200vh !important;
+			transition: 1s;
+		}
+		@media screen and (min-width: 1023px) {
+			#dashboard {
+				top: auto;
+				bottom: -5px;
+				position: relative;
+			}
+		}
+		@media screen and (max-width: 769px) {
+			#interior {height: 30vh;}
+			#dashboard {
+				right:0%;
+			}
+			#road {bottom:10vh;}
+		}
+		@media screen and (max-height:500px) and (max-height:800px) {
+			#dashboard {
+				bottom: auto;
+				top: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<!-- <div id="hint"><p class="animated bounce tC">↑</p><p class="tC">Gulir/Usap</p><p class="animated bounceDown tC">↓</p></div> -->
+<div id="mountain" class="blur"></div>
+<div id="road" class="blur"></div>
+<div id="interior" class="blur"><div id="dashboard"></div></div>
+
+<div class="road blur">
+    <div id="dest_1" class="destination fL left">
+        <h3><a href="banten.html">Banten</a></h3>
+    </div>
+    <div id="dest_2" class="destination fL left">
+        <h3>Cirebon</h3>
+    </div>
+    <div id="dest_3" class="destination fL left">
+        <h3>Semarang</h3>
+    </div>
+	<div id="dest_4" class="destination fL left">
+        <h3>Demak</h3>
+    </div>
+	<div id="dest_5" class="destination fL left">
+        <h3>Malang</h3>
+    </div>
+</div>
+	
+<div id="fullpage">
+	
+	<div class="section active" id="section0">
+		<div class="text-caption">
+			<h1>Eksplor Ramadhan</h1>
+			<p>Sebuah perjalanan rohani di pulau Jawa</p>
+		</div>
+	</div>
+	
+	<div class="section" id="section1">
+		<div class="roadMap">
+			
+            <div class="field" id="field_1" style="margin-top:60vh;height:1000px"></div>
+			<div class="field" id="field_2" style="height:1000px"></div>
+			<div class="field" id="field_3" style="height:1000px"></div>
+			<div class="field" id="field_4" style="height:1000px"></div>
+			<div class="field" id="field_5" style="height:1000px"></div>
+			
+			
+		</div>
+	</div>
+	
+</div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="local/animation.gsap.min.js"></script>
+
+	<script>
+        
+        var controller = new ScrollMagic.Controller();
+		
+        var scene = new ScrollMagic.Scene({triggerElement: "#field_1", duration: 2000})
+					.setTween("#dest_1", {scale: "4",top:"-120vh"})
+					/* .addIndicators({name: "2 (duration: 12000)"}) */
+					.addTo(controller);
+        
+        var scene = new ScrollMagic.Scene({triggerElement: "#field_2", duration: 2000})
+					.setTween("#dest_2", {scale: "4",top:"-120vh"})
+					/* .addIndicators({name: "2 (duration: 2000)"}) */
+					.addTo(controller);
+        
+        var scene = new ScrollMagic.Scene({triggerElement: "#field_3", duration: 2000})
+					.setTween("#dest_3", {scale: "4",top:"-120vh"})
+					/* .addIndicators({name: "2 (duration: 2000)"}) */
+					.addTo(controller);
+		
+		var scene = new ScrollMagic.Scene({triggerElement: "#field_4", duration: 2000})
+					.setTween("#dest_4", {scale: "4",top:"-120vh"})
+					/* .addIndicators({name: "2 (duration: 2000)"}) */
+					.addTo(controller);
+		
+		var scene = new ScrollMagic.Scene({triggerElement: "#field_5", duration: 2000})
+					.setTween("#dest_5", {scale: "4",top:"-120vh"})
+					/* .addIndicators({name: "2 (duration: 2000)"}) */
+					.addTo(controller);
+        
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var animation = bodymovin.loadAnimation({
+			  /* container: document.getElementById('dashboard'), */
+			  renderer: 'svg',
+			  loop: true,
+			  autoplay: true,
+			  path: 'local/data3.json'
+			});
+			
+			$('#fullpage').fullpage({
+				scrollOverflow: true,
+				afterLoad: function(anchorLink, index){
+                    var loadedSection = $(this);
+                    if(index == 2){
+                        /* $('#hint').css('opacity','0'); */
+                    }
+					else if(index == 3){
+                        /* $('#hint').css('opacity','1'); */
+                    }
+                },
+                onLeave: function(index, nextIndex, direction){
+                    var leavingSection = $(this);
+
+					if(index == 1 && direction == 'down'){
+                        $('#road,.road').css("opacity","1");
+                        $('.road').css("z-index","1");
+                        $('#interior,#mountain,#road,.road').removeClass("blur");
+                    }
+                    else if(index == 2 && direction == 'up'){
+                        $('#road').css("opacity",".5");
+                        $('.road').css("z-index","0");
+                        $('#interior,#mountain,#road,.road').addClass("blur");
+                    }
+                }
+			});
+		
+		});
+	</script>
+</body>
+</html>

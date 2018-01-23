@@ -1,0 +1,687 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Passer Baroe</title>
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<link rel="icon" href="/_common/img/icon/advisual_favicon.png">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta name="description" content="Pasar baru merupakan bagian tak terpisahkan dari denyut kehidupan sebagian besar masyarakat Jakarta">
+<meta name="keywords" content="kompas,klasika,langgam,pasarbaroe">
+<meta name="author" content="Kompas klasika">
+<style>
+@charset "utf-8";
+
+/* reset */
+html{background:#fff;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:separate;border-spacing:0;}
+fieldset,img{border:0;}
+img{vertical-align:top;}
+address,caption,em,strong,th{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th,td{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+
+/* base tag */
+html:before {
+	background: url(img/body_bg.jpg);
+	width: 100%;
+	height: 100%;
+	content: "";
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: -10;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body {
+	overflow-x: hidden;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+/* base class */
+.clearfix:before,
+.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+
+.fL{float:left;}
+.fR{float:right;}
+
+.tB{font-weight:bold;}
+.tL{text-align:left;}
+.tC{text-align:center;}
+.tR{text-align:right;}
+.tI{font-style:italic;}
+
+.margin50 {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.tWhite{color:#fff;}
+
+/* components */
+.div-image {
+	overflow: hidden;
+	max-width: 700px;
+    position: relative;
+    margin: 0 auto;
+}
+.div-image p {
+	position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+	font-family: segoe ui;
+	font-size: 13px;
+	opacity: 0;
+	transition: 1s;
+}
+.div-imageA {
+	width: 550px;
+	float: right;
+	margin: 10px -140px 10px 25px;
+	padding: 10px 0;
+	line-height: 20px;
+	font-size: 15px;
+}
+.div-imageA img{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.div-imageA p {
+	padding: 0 10px;
+	margin-top: 5px;
+	font-size: 14px;
+	font-family: arial;
+	font-style: italic;
+}
+.div-imageB {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    text-align:center;
+}
+.div-imageB div {
+    width: 560px;
+    display:inline-block;
+    overflow: hidden;
+}
+.div-imageB div img {
+	width: 100%;
+	vertical-align: middle;
+}
+.div-imageC div{
+    overflow: hidden;
+	float: left;
+	width: 50%;
+    position: relative;
+}
+.div-imageC div img{
+	width: 100%;
+}
+.img-photo {
+    width: 100%;
+	transition: 5s;
+	opacity: .5;
+}
+.img-info {
+	position: absolute;
+    bottom: 3%;
+	left: 2%;
+	opacity: 1;
+	transition: 1s;
+}
+.img-caption {
+    background-color: rgba(0,0,0,.5);
+    width: 250px;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    padding: 20px;
+}
+.img-caption p {
+	line-height: 30px;
+	font-family: georgia;
+	font-size: 16px;
+	color: #fff;
+}
+.div-gallery-wrap {
+    width: 100%;
+    margin: 50px auto;
+    position: relative;
+    text-align:center;
+}
+.div-gallery {
+    width: 50%;
+	margin-bottom: -5px;
+    display:inline-block;
+    overflow: hidden;
+	position: relative;
+}
+.div-gallery p {
+	position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+	font-family: segoe ui;
+	font-size: 13px;
+	opacity: 0;
+	transition: 1s;
+}
+.div-gallery img {overflow: hidden;}
+.div-gallery img:first-of-type {
+	width: 100%;
+	transition: 3s;
+}
+.div-transparent {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); 
+}
+.div-text {
+    padding: 10px;
+    max-width: 740px;
+    margin: 0 auto;
+}
+.div-text h2 {
+	margin-bottom: 10px;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: georgia;
+}
+.div-text p {
+	font-size: 16px;
+	line-height: 26px;
+	margin-bottom: 10px;
+	font-family: georgia;
+	opacity: 0;
+	transition: 1s;
+}
+.text-credits {
+	font-family: georgia;
+}
+.text-credits h3 {
+	font-family: segoe ui;
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight: bold;
+	color: #FF6D00;
+}
+.text-credits p {
+	margin-bottom: 20px;
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+}
+.text-dropCap {
+    float: left;
+    font-size: 60px;
+    line-height: 1;
+    font-weight: bold;
+    margin-right: 9px;
+}
+.text-lead {max-width: 700px !important;}
+.text-lead p{
+	font-size: 16px;
+	line-height: 25px;
+}
+.text-lead_bar {
+	margin: 10px 0;
+	height: 2px;
+	background-color: #000;
+}
+.text-quote {
+	width: 250px;
+    float: left;
+    text-align: left;
+    margin: 10px 25px 10px -140px;
+    font-family: georgia;
+    font-size: 20px !important;
+	font-style: italic;
+    line-height: 35px;
+    padding: 10px 0;
+    color: #795548;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+/* effects */
+
+.animated{
+	-webkit-animation-fill-mode:both;
+	-moz-animation-fill-mode:both;
+	-ms-animation-fill-mode:both;
+	-o-animation-fill-mode:both;
+	animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-fill-mode:both;
+	-webkit-animation-duration:1.5s;
+	-moz-animation-duration:1.5s;
+	-ms-animation-duration:1.5s;
+	-o-animation-duration:1.5s;
+	animation-duration:1.5s;
+}
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+.hidden {
+	opacity: 0 !important;
+	margin-left: -50px;
+	transition: 1s;
+}
+.show {
+	opacity: 1 !important;
+	transition: 1s;
+}
+.zoom {
+    -webkit-transform:scale(1.3); /* Safari and Chrome */
+    -moz-transform:scale(1.3); /* Firefox */
+    -ms-transform:scale(1.3); /* IE 9 */
+    -o-transform:scale(1.3); /* Opera */
+     transform:scale(1.3);
+	opacity: 1;
+	transition: 5s;
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-25px);}
+	60% {-webkit-transform: translateY(-5px);}
+}
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-25px);}
+	60% {-moz-transform: translateY(-5px);}
+}
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-25px);}
+	60% {-o-transform: translateY(-5px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-25px);}
+	60% {transform: translateY(-5px);}
+}
+
+/* preloader */
+#loading{
+	background-color: #00599A;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 20;
+	margin-top: 0px;
+	top: 0px;
+}
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 200px;
+	width: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+	-ms-transform: rotate(-135deg); 
+   	-webkit-transform: rotate(-135deg); 
+    transform: rotate(-135deg);
+}
+.object{
+	-moz-border-radius: 50% 50% 50% 50%;
+	-webkit-border-radius: 50% 50% 50% 50%;
+	border-radius: 50% 50% 50% 50%;
+	position: absolute;
+	border-top: 5px solid #FFF;
+	border-bottom: 5px solid transparent;
+	border-left:  5px solid #FFF;
+	border-right: 5px solid transparent;
+	-webkit-animation: animate 2s infinite;
+	animation: animate 2s infinite;	
+}
+#object_one{
+	left: 75px;
+	top: 75px;
+	width: 50px;
+	height: 50px;
+}						
+#object_two{
+	left: 65px;
+	top: 65px;
+	width: 70px;
+	height: 70px;
+	-webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}	
+#object_three{
+	left: 55px;
+	top: 55px;
+	width: 90px;
+	height: 90px;
+	-webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+#object_four{
+	left: 45px;
+	top: 45px;
+	width: 110px;
+	height: 110px;
+	-webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}	
+@-webkit-keyframes animate {
+50% {
+	-ms-transform: rotate(360deg) scale(0.8); 
+   	-webkit-transform: rotate(360deg) scale(0.8); 
+    transform: rotate(360deg) scale(0.8); 
+  }
+}
+@keyframes animate {
+50% {
+	-ms-transform: rotate(360deg) scale(0.8); 
+   	-webkit-transform: rotate(360deg) scale(0.8); 
+    transform: rotate(360deg) scale(0.8); 
+  }	
+}
+
+/* parallax styles */
+section.module.content {padding: 40px 0;}
+section.module.parallax {
+	width: 100%;
+  	height: 100vh;
+  	background-position: 60% 50%;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	display: table;
+	position: relative;
+}
+/* parallax usage */
+#section_landing {background-image: url("img/pasar_baroe_01.jpg");}
+#section_2 {background-image: url("img/wikipedia_1.jpg");}
+#section_3 {background-image: url("img/../img/pasar_baroe_05.jpg");}
+#section_restoran {background-image: url("img/pasar_baroe_08.jpg");}
+
+@media screen and (max-width: 1024px) {
+	.div-gallery {
+		width: 100%;
+	}
+	.text-quote {
+        margin: 20px 0 40px 30px;
+        width: 100%;
+    }
+	.div-imageA {
+		width: 100%;
+		margin: 20px 0;
+	}
+}
+@media screen and (max-width: 768px) {
+	.div-imageC div{
+		width: 100%;
+		float: none;
+	}
+}
+@media screen and (min-width: 568px) {
+	#section_1 h1 {
+		font-size: 600% !important;
+	}
+}
+
+/* main */
+#section_landing {z-index: 10;}
+#section_landing h1 {
+	font-size: 500%;
+	letter-spacing: -1px;
+	text-align: left;
+	font-family: Georgia;
+	font-weight: bold;
+	color: #fff;
+}
+#section_landing p {
+	font-size: 150%;
+	font-weight: 100;
+	font-family: segoe ui;
+	color: #fff;
+}
+#section_landing .div-transparent-layer {
+	height: 100vh;
+  	width: 100vw;
+	position: relative;
+	background: rgba(0,0,0,.6);
+}
+#section_landing .div-caption {
+	position: absolute;
+	bottom: 10%;
+	padding: 10px 20px;
+	z-index: 11;
+}
+.videoWrapper {
+	position: relative;
+	max-width: 560px;
+	margin: 0 auto;
+}
+.videoWrapper iframe {
+	display: block;
+	width: 100%;
+}
+</style>
+</head>
+
+<body>
+<div id="loading">
+  <div id="loading-center">
+    <div id="loading-center-absolute">
+      <div class="object" id="object_four"></div>
+      <div class="object" id="object_three"></div>
+      <div class="object" id="object_two"></div>
+      <div class="object" id="object_one"></div>
+    </div>
+  </div>
+</div>
+<div id="wrap">
+  <div id="mainArea" class="clearfix">
+    <section class="module parallax" id="section_landing">
+      <div class="div-transparent-layer">
+        <div class="div-caption">
+          <h1>Passer Baroe</h1>
+          <p>Merajut Rindu di Pasar Baru</p>
+        </div>
+        <p class="tC" style="bottom:0;position:absolute;width:100%;"><a class="animated bounce" style="display:inline-block;"><img src="/_common/img/icon/arrow_down.png" alt="scroll kebawah" width="30" height="30"></a></p>
+      </div>
+    </section>
+    <section id="section_lead">
+      <div class="clearfix">
+        <div class="div-image"> <img class="img-photo" src="img/wikipedia_2.jpg" alt="wikipedia"> <img class="img-info" src="img/info.png" alt="klik atau arahkan mouse pada gambar">
+          <p>Pasar Baru yang didirikan pada sekitar tahun 1820 dikenal sebagai pusat perdagangan VOC (Verenigde Oost Indische Compagnie). Namanya diwariskan sejak zaman VOC, dengan ejaan Passer Baroe atau De Niewuw Markt dalam bahasa Belanda.</p>
+        </div>
+      </div>
+      <p style="max-width:700px;margin: 0 auto;padding:5px;">Dok. Wikipedia</p>
+    </section>
+    <div class="div-text text-lead">
+      <p class="tI">Pasar tradisional menjadi bagian tak terpisahkan dari denyut kehidupan sebagian besar masyarakat Indonesia. Tak luput di Jakarta. Di antara derap pembangunan dan solek Ibu Kota, masih tersisa ruang interaksi berwujud pasar tradisional yang menarik dikunjungi. Salah satunya, Pasar Baru.</p>
+    </div>
+    <section class="margin50">
+      <div class="div-text" style="margin-top:30px;">
+        <p><span class="text-dropCap">P</span>asar Baru adalah tempat legendaris yang berlokasi di pusat ibu kota negara. Terbilang dekat dengan kompleks Istana Negara, awalnya pasar ini sempat diidentikkan sebagai pusat belanja bergengsi lantaran menjadi salah satu tempat belanja utama bagi orang-orang Eropa. Lokasinya yang berdekatan dengan kawasan elite Rijswijk (sekarang dikenal sebagai Jalan Veteran, Jakarta Pusat), mempertegas posisi pasar ini sebagai tempat bergengsi pada zamannya.</p>
+      </div>
+      <div class="div-text">
+        <p>Dikutip dari buku Menguak Pasar Tradisional Indonesia yang diterbitkan Direktorat Internalisasi Nilai dan Diplomasi Budaya Direktorat Jenderal Kebudayaan Kementerian Pendidikan dan Kebudayaan, Pasar Baru yang didirikan pada sekitar tahun 1820 dikenal sebagai pusat perdagangan VOC (Verenigde Oost Indische Compagnie). Namanya diwariskan sejak zaman VOC, dengan ejaan Passer Baroe atau De Niewuw Markt dalam bahasa Belanda.</p>
+        <p>Kala itu, Pasar Baru dihadirkan untuk melengkapi dua pasar lainnya yang telah lebih dulu beroperasi di Batavia, yakni Pasar Senen dan Pasar Tanah Abang. Menariknya, sejak dulu, nilai lebih dari pedagang Pasar Baru adalah mampu memenuhi pesanan konsumen dengan cepat. Hal ini seperti tercatat dalam buku Indrukken van een Totok, Indische type en schetsen yang ditulis Justus van Maurik.</p>
+      </div>
+    </section>
+    <section class="module parallax margin50" id="section_2">
+      <div class="clearfix">
+        <div class="img-caption">
+          <p>Kala itu, Pasar Baru dihadirkan untuk melengkapi dua pasar lainnya yang telah lebih dulu beroperasi di Batavia, yakni Pasar Senen dan Pasar Tanah Abang.</p>
+        </div>
+      </div>
+    </section>
+    <p style="padding:5px;margin-top:-25px;">Dok. Wikipedia</p>
+    <section class="margin50">
+      <div class="div-text clearfix">
+        <p>Justus memaparkan salah satu pengalamannya ketika memesan sepatu kepada Sapie le, salah satu perajin sepatu di Passer Baroe. Saat itu, pria berkebangsaan Belanda ini perlu segera mendapatkan sepatu berkualitas dan elegan untuk menghadiri pesta dansa atas undangan Gubernur Jenderal van der Wijck. Namun, ia tak punya banyak waktu untuk mendapatkan sepatu yang ia inginkan. Beruntung sang perajin sepatu berdarah Tionghoa tersebut berhasil menyelesaikan pesanan sepatu pesanan Justus dalam hitungan jam.</p>
+        <p>Tak hanya pedagang sepatu, hingga kini, strategi pemasaran seperti yang dituturkan Justus masih menjadi nilai tambah dari para pemilik toko di Pasar Baru, termasuk toko tekstil dan jasa tailor (penjahit pakaian). Klaim pesan pagi, selesai sore hari, acap kali digaungkan. Ini tak lepas agar konsumen bisa memesan setelan jas hanya dalam hitungan jam.</p>
+        <p>Biasanya, pedagang tekstil dan jasa penjahit pakaian di Pasar Baru didominasi pedagang keturunan India. Orang-orang India dari Bombay dan Kalkuta berimigrasi ke Batavia, seiring kekuasaan Inggris di Jawa, yaitu saat Thomas Stamford Raffles memerintah sebagai Gubernur Jenderal pada 1811–1815. Lalu pada 1930-an jumlah kedatangan mereka meningkat dan terus melonjak pada 1947 hingga 1950-an, ketika terjadi perpecahan di India yang melahirkan negara baru Pakistan.</p>
+        <p>Hingga kini buah akulturasi antara pedagang Tionghoa, India, dan pribumi masih menyisakan keharmonisan di Pasar Baru. Selain toko sepatu dan toko tekstil, di pasar ini Anda bisa menemukan beragam rumah makan, toko obat, toko pakaian, pedagang alat salon, toko jam, toko kamera, toko perabot rumah tangga, penjaja mata uang lama, hingga penjaja baju bekas.</p>
+        <p>Menjelang sore, banyak pedagang kaki lima yang membuka lapak di sepanjang jalan bulevar yang membentang di tengah-tengah Pasar Baru. Mereka menjajakan pakaian ataupun jajanan hingga malam hari, menggantikan jam operasional toko yang rata-rata tutup seusai waktu shalat Maghrib. Inilah pemandangan semarak khas pasar tradisional.</p>
+      </div>
+    </section>
+    <section class="margin50">
+      <div class="div-image"> <img class="img-photo" src="img/pasar_baroe_10.jpg" alt="pasar baru"> <img class="img-info" src="img/info.png" alt="klik atau arahkan mouse pada gambar">
+        <p>Menjelang sore, banyak pedagang kaki lima yang membuka lapak di sepanjang jalan bulevar yang membentang di tengah-tengah Pasar Baru.</p>
+      </div>
+    </section>
+    <section class="margin50">
+      <div class="div-text clearfix">
+        <h2>Pelesir Sejenak</h2>
+        <p>Tertarik berpelesir sejenak? Disarankan jika ingin menjelajah Pasar Baru, pertama, siapkan alas kaki dan pakaian yang nyaman. Meski berdiri di area yang luas, rancangan tata letak Pasar Baru sejak dulu memang didesain seperti bulevar yang memprioritaskan pejalan kaki sehingga aktivitas berbelanja pun lebih nyaman karena tidak dipenuhi dengan kendaraan yang parkir.</p>
+        <p>Pengunjung cukup berjalan kaki di kawasan ini sambil menyusuri lorong-lorong beralaskan <span class="tI">paving block</span> dengan pemandangan etalase toko di sebelah kiri dan kanan. Sambil berjalan, Anda bisa menemukan banyak toko sepatu, termasuk toko sepatu Sin Lie Seng di sisi kanan jalan. Bisa dikatakan inilah salah satu toko sepatu ikonis karena sudah berdiri sejak 1940-an.</p>
+        <p>Tak hanya dikenal menjajakan beragam merek sepatu ternama, Sin Lie Seng justru lebih kondang karena produk sepatu buatan sendiri yang berkualitas tinggi. Seusai mengunjungi Sin Lie Seng, Anda juga bisa mampir sejenak melihat-lihat koleksi toko tekstil di sepanjang bulevar Pasar Baru yang dikenal variatif.</p>
+        <p>Nah, untuk Anda yang memiliki hobi memasak, jangan lupa singgah sejenak ke Toko Melati. Sebagai salah satu toko lawas di Pasar Baru, toko tiga lantai ini menyediakan aneka perabotan dan pernak-pernik memasak lengkap. Bahkan, untuk pilihan hadiah, toko ini menyediakan aneka dining set yang variatif.</p>
+        <p>Setelah itu, tepat berseberangan dengan Toko Melati, Anda bisa menemukan beberapa penjaja uang lama dari era kolonial hingga kemerdekaan. Salah satunya, Haji Lutfi. Pria berusia 76 tahun ini mengaku sudah berdagang di Pasar Baru sejak tahun 1960. Mata uang lama yang dijajakan berasal dari bermacam negara, termasuk Indonesia.</p>
+        <p>“Hingga sekarang masih banyak yang gemar mengoleksi mata uang lama, baik uang kertas maupun logam. Mereka tidak hanya warga Jakarta, tetapi juga banyak berasal dari luar kota,” cerita Lutfi.</p>
+        <p><span class="div-imageA"><img data-original="img/pasar_baroe_04.jpg" alt="pedagang koin">“Hingga sekarang masih banyak yang gemar mengoleksi mata uang lama, baik uang kertas maupun logam. Mereka tidak hanya warga Jakarta, tetapi juga banyak berasal dari luar kota”</span>Pria paruh baya itu secara antusias kembali bercerita,”Selama berjualan di sini, rezeki datang tidak bisa diterka. Pernah suatu waktu, ada kolektor datang membeli uang kertas bergambar Presiden Soekarno terbitan tahun 1960. Tidak disangka uang itu laku terjual Rp 10 juta.”</p>
+        <p>Pria paruh baya itu secara antusias kembali bercerita,”Selama berjualan di sini, rezeki datang tidak bisa diterka. Pernah suatu waktu, ada kolektor datang membeli uang kertas bergambar Presiden Soekarno terbitan tahun 1960. Tidak disangka uang itu laku terjual Rp 10 juta.”</p>
+        <p>Seusai berbincang dengan Haji Lutfi, perjalanan dilanjutkan ke arah utara Pasar Baru yang berbatasan dengan Jalan Kyai Haji Samanhudi. Di area itu, terdapat dua gedung yang berseberangan yaitu Harco Pasar Baru dan Metro Atom. </p>
+        <p>Harco Pasar Baru dikenal sebagai sentra perlengkapan dan peralatan salon dengan harga yang miring. Di sisi lain, gerai-gerai di sana juga menjual produk perawatan rambut maupun kosmetik.</p>
+        <p>Berseberangan dengan Harco Pasar Baru, terdapat bangunan Plaza Metro Atom yang banyak didominasi kios penjaja kamera dan pernak-pernik fotografi. Selain itu, ada pula kios yang menjual obat-obatan, perhiasan emas, batik, yang memenuhi lantai dasar hingga lantai dua.</p>
+        <p>Barulah di lantai tiga, Anda bisa menemukan penjaja baju-baju bekas untuk laki-laki dan perempuan yang beroperasi pukul 10.00–18.00 WIB. Untuk Anda yang gemar mengoleksi busana vintage, tempat ini menjadi opsi menarik. Kemudahan menawar dan banyaknya jumlah kios disertai fasilitas pendingin udara, menjadi kunci kenyamanannya.</p>
+      </div>
+      <section class="module parallax margin50" id="section_3">
+        <div class="img-caption">
+          <p>Untuk Anda yang gemar mengoleksi busana vintage, tempat ini menjadi opsi menarik. Kemudahan menawar dan banyaknya jumlah kios disertai fasilitas pendingin udara, menjadi kunci kenyamanannya.</p>
+        </div>
+      </section>
+      <div class="div-text">
+        <p>Selagi di Pasar Baru, bagi Anda yang beragama Muslim, bisa menyempatkan shalat di Masjid Lautze. Inilah masjid berinterior Tionghoa yang didirikan sejak 1991 oleh Yayasan Haji Karim Oei. Berlokasi di Jalan Lautze 87–89, masjid yang menempati bangunan ruko itu proses renovasinya diresmikan pada Februari 1994 oleh Presiden Ketiga RI BJ Habibie.</p>
+        <p><span class="div-imageA"><img data-original="img/pasar_baroe_07.jpg" alt="masjid lautze">selain menjadi tempat beribadah, Masjid Lautze membuka balai kesehatan gratis untuk masyarakat umum.</span>Menurut penjaga Masjid yang sudah bekerja 10 tahun, Ngatimin (60), selain menjadi tempat beribadah, Masjid Lautze membuka balai kesehatan gratis untuk masyarakat umum.</p>
+        <p>“Balai kesehatan buka pukul 10.00–12.00 setiap hari Selasa. Biasanya yang datang berobat berkisar 20–40 orang. Kegiatan lainnya adalah pengajian dan belajar agama bagi yang baru memeluk agama Islam, diadakan setiap hari Minggu siang,” tutur Ngatimin.</p>
+      </div>
+      <div class="div-text">
+        <h2>Kuliner legendaris</h2>
+        <p>Sesudah singgah di Masjid Lautze, saatnya untuk menikmati beberapa kuliner legendaris di Pasar Baru. Salah satunya, Warung Soto Padang H St Mangkuto yang terletak di Jalan Pintu Air Raya Nomor 26. Berdiri sejak 1966, usaha pun telah bergulir kepada generasi ketiga sang pendiri.</p>
+        <p>Soto padang yang disajikan di mangkuk kecil tampak mengundang selera. Warna kuahnya yang cokelat bening, berisi lauk daging sapi yang digoreng kering, sohun, perkedel kentang, dan daun bawang. Sebagai pendamping, Anda bisa memilih minuman segar, seperti es terong belanda, lidah buaya, dan sari kelapa.</p>
+        <p><span class="div-imageA"><img data-original="img/pasar_baroe_09.jpg" alt="es krim">Pilihan es krim banana split, tutty fruty, maupun tropic kombinasi menjadi sajian pencuci mulut menemani Anda melepas penat sejenak di Pasar Baru.</span>Wisata kuliner pun berlanjut dengan menikmati hidangan pencuci mulut di Restoran Tropic. Memasuki ruangan, interior restoran kental dengan atmosfer 1980-an. Sudah hadir di Pasar Baru sejak 1960-an, restoran yang merupakan usaha keluarga tersebut identik dengan sajian makanan Indonesia dan es krim <span class="tI">homemade</span>. Pilihan es krim <span class="tI">banana split, tutty fruty,</span> maupun <span class="tI">tropic</span> kombinasi menjadi sajian pencuci mulut menemani Anda melepas penat sejenak di Pasar Baru. Rasa es krimnya yang otentik, seolah membawa kita kembali ke masa kecil.</p>
+        <p>Perjalanan mencicipi kuliner legendaris di Pasar Baru pun berakhir dengan singgah ke Soen Yoe.</p>
+        <p>Kedai Bakmi Ayam Pangsit ini berada di Jalan Gang Kelinci 3, dulu bernama Gang Sutek. Saat memasuki kedai yang sudah berdiri sejak 1954, Anda akan menemukan interior bersahaja dan kental dengan atmosfer tempo dulu.</p>
+      </div>
+      <div class="div-imageC clearfix">
+        <div><img src="img/pasar_baroe_03.jpg" alt="pasar baru"></div><div><img src="img/pasar_baroe_02B.jpg" alt="pasar baru"></div>
+      </div>
+      <div class="div-text">
+        <p>Selain menyediakan mi ayam bertekstur lembut dan bercita rasa gurih, Soen Yoe dikenal dengan varian menu masakan China dalam porsi besar, seperti nasi goreng dan tahu bakso disertai sambal khas buatan sendiri. Dari awal berdiri hingga sekarang, cita rasa dan penyajiannya tak pernah berubah.</p>
+      </div>
+    </section>
+    <section class="module parallax margin50" id="section_restoran">
+      <div class="img-caption">
+        <p>“Sejak bekerja di kawasan sekitar sini selama 35 tahun hingga sekarang menikmati masa pensiun, saya tidak pernah bosan berkunjung ke Pasar Baru, terutama mampir menyantap tahu bakso dan mi ayam di Soen Yoe.” <br>
+          -Yayoek Kristanto</p>
+      </div>
+    </section>
+    <section class="margin50">
+      <div class="div-text">
+        <p>Hal itulah yang diakui Yayoek Kristanto (64). “Sejak bekerja di kawasan sekitar sini selama 35 tahun hingga sekarang menikmati masa pensiun, saya tidak pernah bosan berkunjung ke Pasar Baru, terutama mampir menyantap tahu bakso dan mi ayam di Soen Yoe, ” tuturnya.</p>
+        <p>Bagi Yayoek, Pasar Baru sudah menjadi salah satu tempat belanja yang tak tergantikan. Menurut ibu rumah tangga yang bermukim di Bogor ini, Pasar Baru kental dengan suasana nostalgia. “Setiap kali berkunjung, saya sering kali berbincang dengan pemilik Soen Yoe, kasir Toko Melati, ataupun penjual es cincau dan gorengan. Suasana keakraban itulah yang tidak pernah berubah dan tidak bisa saya temukan di pusat perbelanjaan lain.”</p>
+        <p>Diakui, berjalan-jalan di Pasar Baru memang seperti melangkah dalam mesin waktu. Kehadiran toko, keberagaman pedagang, menyuguhkan dinamika tersendiri yang membuat Pasar Baru senantiasa dirindukan. [AJG]</p>
+      </div>
+    </section>
+    
+    <section class="margin50">
+    	<div class="videoWrapper">
+    		<iframe width="560" height="349" src="https://www.youtube.com/embed/3kis4jhbevE" frameborder="0" allowfullscreen></iframe>
+		</div>
+    </section>
+    
+    <section style="padding:20px 0;background-color:#000;margin-top:50px;">
+      <div class="text-credits">
+        <h3>FOTOGRAFER</h3>
+        <p>Egbert Siagian</p>
+        <h3>VIDEOGRAFER</h3>
+        <p>Iwan Andryanto</p>
+        <h3>COPYWRITER</h3>
+        <p>Ajeng Kristianti</p>
+        <h3>EDITOR WEB</h3>
+        <p>Antonius SP</p>
+        <h3>PENGEMBANG WEB</h3>
+        <p>Dimitri Herlambang</p>
+      </div>
+      <div class="div-imageB" style="border-top: 1px solid #fff;padding-top: 10px;">
+        <div style="width:120px;margin-right:20px;"><a target="_blank" href="http://www.kompas.id/"><img src="img/logo_2.png" alt="kompas"></a></div>
+        <div style="width: 120px;"><a target="_blank" href="http://klasika.kompas.id/"><img src="img/logo.png" alt="klasika"></a></div>
+      </div>
+    </section>
+    <p class="tR animated bounce" style="position:fixed;bottom:2%;right:3%;"><a class="top"><img src="img/top.png" width="25" height="25" alt="top"></a></p>
+  </div>
+</div>
+<script src="/_common/js/jquery_v2.1.0.js" type="text/javascript"></script> 
+<script src="/_common/js/jquery_viewportchecker.js" type="text/javascript"></script> 
+<script src="/_common/js/lazy.js" type="text/javascript"></script> 
+<script>
+		function onReady(callback) {
+			
+			var intervalID = window.setInterval(checkReady, 1000);
+			function checkReady() {
+				if (document.getElementsByTagName('body')[0] !== undefined) {
+					window.clearInterval(intervalID);
+					callback.call(this);
+				}
+			}
+		}
+		function show(id, value) {
+			document.getElementById(id).style.display = value ? 'block' : 'none';
+		}
+		onReady(function () {
+			show('wrap', true);
+			show('loading', false);
+		});
+	</script> 
+<script>
+		$(window).on('beforeunload', function() {
+			$(window).scrollTop(0);
+		});
+		$(document).ready(function(){
+			$(".div-image,.div-gallery").hover(function(){
+				$(this).find('p').toggleClass("show");
+				$(this).find('.img-photo,img').toggleClass("zoom");
+				$(this).find('.img-info').toggleClass("hidden");
+			});
+			$(".div-text p").viewportChecker({
+				classToAdd: 'show',
+				offset: 100,
+			});
+			$(".top").click(function(){
+				$('html,body').animate({ scrollTop: 0 }, 'slow');
+			});
+			new LazyLoad();
+		});
+	</script>
+</body>
+</html>

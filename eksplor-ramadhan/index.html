@@ -1,0 +1,782 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="utf-8">
+    <title>Eksplor Jawa</title>
+    <link rel="icon" href="/_common/img/icon/advisual_favicon.png">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Eksplor Jawa bersama Isuzu MU-X">
+    <meta name="keywords" content="eksplor,jawa,mu-x">
+    <meta name="author" content="Kompas klasika">
+    <link href="/_common/modules_v1.css" rel="stylesheet">
+	
+	<link href="local/default-skin.css" rel="stylesheet">
+	<link href="local/photoswipe.css" rel="stylesheet">
+	
+	<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body>
+  	<style>
+		#loading{background-color: #00599A;height:100%;width:100%;position:fixed;z-index:20;margin-top:0px;top:0px;}#loading-center{width:100%;height: 100%;position: relative;}#loading-center-absolute{position: absolute;left:50%;top:50%;height:200px;width:200px;margin-top:-100px;margin-left: -100px;-ms-transform: rotate(-135deg);-webkit-transform:rotate(-135deg);transform: rotate(-135deg);}.object{-moz-border-radius: 50% 50% 50% 50%;-webkit-border-radius:50% 50% 50% 50%;border-radius: 50% 50% 50% 50%;position:absolute;border-top: 5px solid #FFF;border-bottom: 5px solid transparent;border-left:5px solid #FFF;border-right:5px solid transparent;-webkit-animation:animate 2s infinite;animation:animate 2s infinite;}#object_one{left:75px;top:75px;width:50px;height:50px;}#object_two{left:65px;top:65px;width:70px;height:70px;-webkit-animation-delay:0.2s;animation-delay:0.2s;}#object_three{left:55px;top:55px;width:90px;height:90px;-webkit-animation-delay:0.4s;animation-delay:0.4s;}#object_four{left:45px;top: 45px;width:110px;height:110px;-webkit-animation-delay:0.6s;animation-delay:0.6s;}@-webkit-keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}@keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}
+	</style>
+    <style>
+        html {background-color: #000;}
+        p {color: #fff;}
+        div.module.parallax {height: 70vh !important;}
+        .article {
+            display: none;
+            transition: .3s;
+        }
+        .article.current{display: block !important;}
+        .div-map {
+            width: 950px;
+            height: 450px;
+            margin: 0 auto;
+            background: url(img/map-jawa-2.png) no-repeat;
+            background-color: #000;
+            background-size: contain;
+            background-position: center;
+            position: relative;
+            transition: .3s ease-out;
+            transform-style: preserve-3d;
+        }
+        .link {cursor: pointer;}
+        .link-mapCaption {
+            position: absolute;
+            width: 40px;
+            height: 55px;
+            display: table;
+            text-align: center;
+            transform: translateZ(50px);
+            cursor: pointer;
+        }
+        .link-mapCaption a {
+            color: #fff;
+            vertical-align: bottom;
+            font-weight: bold;
+            font-size: 100%;
+			font-family: 'Alegreya Sans', sans-serif;
+            transition: .5s;
+			font-size: 12px;
+        }
+		.link-toMap {cursor: pointer;}
+        .link-mapPointer {
+            display: inline-block;
+            width: 15px;
+            height: 35px;
+            background: url(img/map_pointer.png) no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+		/* modified base */
+		.image-middle p{color: #fff;}
+		.image-right p{color: #fff;}
+        .text-quote p{
+            font-style: italic;
+            color: #f1ba1b;
+        }
+		.section {position: inherit;}
+        .text-paragraph h2 {color: #fff;}
+        .text-paragraph p {color: #fff;}
+        .text-lead_line {background-color: #fff;}
+        .text-credits h2{color: #f1ba1b;}
+        .text-credits p {color: #fff;}
+        .section {background-color: #000;}
+        .zoom {
+			-webkit-transform:scale(1.3); /* Safari and Chrome */
+			-moz-transform:scale(1.3); /* Firefox */
+			-ms-transform:scale(1.3); /* IE 9 */
+			-o-transform:scale(1.3); /* Opera */
+			 transform:scale(1.3);
+			opacity: 1;
+			transition: 1s;
+		}
+		#headerArea {opacity: 0;}
+        #landing_video video {opacity: .5;}
+        #section_map {
+            overflow-y: hidden;
+            overflow-x: scroll;
+        }
+        #footerArea {color: #fff;}
+        /* maps */
+        #section_banten {background-image: url(img/banten/heading.jpg);}
+        #section_cirebon {background-image: url(img/cirebon/heading.jpg);}
+		
+		.image-gallery-modal {
+			width: 100%;
+		  	float: left;
+			text-align: center;
+		}
+		.image-gallery-modal img {
+		 	width: 100%;
+		  	height: auto;
+		}
+		.image-gallery-modal figure {
+		  	display: inline-block;
+		  	float: none;
+		  	margin: 0 0 5px 0;
+		  	width: 150px;
+		}
+		.image-gallery-modal figcaption {
+		  	display: none;
+		}
+		.pswp__caption {font-family: roboto;}
+    </style>
+   	<div id="loading"><div id="loading-center"><div id="loading-center-absolute"><div class="object" id="object_four"></div><div class="object" id="object_three"></div><div class="object" id="object_two"></div><div class="object" id="object_one"></div></div></div></div>
+	
+    <div w3-include-html="/_common/header.html"></div>
+   
+    <div id="wrap">
+    
+        <div class="section" id="landing_video" style="padding-top:0;">
+   			<div class="div-transparent-layer">
+				<video poster="img/landing.jpg" id="bgvid" playsinline autoplay muted loop><source src="img/vid-esksplor-jawa.mp4" type="video/mp4"></video>
+ 				<div class="div-caption">
+					<h1>Eksplor Ramadan</h1>
+					<p>Sebuah Perjalanan Rohani di Pulau Jawa</p>
+ 				</div>
+ 				<p class="tC" style="bottom:0;position:absolute;width:100%;z-index:10;"><a class="animated bounce" style="display:inline-block;"><img src="/_common/img/icon/arrow_down.png" alt="scroll kebawah" width="30" height="30"></a></p>
+			</div>
+   		</div>
+
+        <div class="section clearfix">
+   			<div class="text-paragraph">
+   				<p><span class="text-dropCap">P</span>ulau Jawa merupakan salah satu wilayah yang menjadi pusat penyebaran Islam di Nusantara, dari Banten hingga Madura, terdapat jejak-jejak peninggalan kerajaan Islam yang menjadi simbol kesultanan Islam pada masa itu.</p>
+                <p class="tI tC">Klik lokasi pada peta untuk melihat artikel.</p>
+   			</div>
+   		</div>
+        
+        <div id="section_map" class="section clearfix">
+            <div class="div-map" id="landing_map">
+                <div data-tab="tab-1" class="link-mapCaption" style="top:27%;left:8%;">
+                    <a class="link-mapPointer"></a>
+                    <a>Banten</a>
+                </div>
+                <div data-tab="tab-2" class="link-mapCaption" style="top:32%;left:31%;">
+                    <a class="link-mapPointer"></a>
+                    <a>Cirebon</a>
+                </div>
+                <div data-tab="tab-3" class="link-mapCaption" style="top:35%;left:52%;">
+                    <a class="link-mapPointer"></a>
+                    <a>Semarang</a>
+                </div>
+                <div data-tab="tab-4" class="link-mapCaption" style="top:29%;left:56%;">
+                    <a class="link-mapPointer"></a>
+                    <a>Demak</a>
+                </div>
+                <div data-tab="tab-5" class="link-mapCaption" style="top:44%;left:49%;">
+                    <a class="link-mapPointer"></a>
+                    <a>Magelang</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="anchor-article"></div>
+        
+        <div id="tab-1" class="article" style="display:none;">
+            <!-- <div class="section module parallax" id="section_banten"></div> -->
+            <div class="section clearfix">
+                <div class="text-lead">
+                    <p class="tI">Banten Menyimpan banyak cerita yang memukau pada masa lampau. Mulai dari statusnya yang pernah menjadi pusat perdagangan dan ramai dikunjungi para pedagang, hingga menjadi kunci penyebaran agama Islam di kawasan yang sekarang menjadi Jakarta dan Jawa Barat. Ziarah ke Banten tidak hanya bisa memperkaya batin, tetapi juga wawasan sejarah.</p>
+                    <div class="text-lead_line"></div>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-paragraph">
+                    <p><span class="text-dropCap">N</span>ama Banten sudah masyhur sebelum Kesultanan Banten berdiri. Namun, puncak kejayaannya dicapai saat Maulana Hasanuddin berkuasa. Nama sultan yang adalah putra dari Syarief Hidayatullah atau lebih dikenal Sunan Gunung Jati ini juga makin harum lantaran dialah raja pertama yang memerintah Banten dengan mengedepankan budaya Islam.</p>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-quote">
+                    <p>Kejayaan Banten kala itu tak lepas dari kepiawaian Maulana Hasanuddin, yang tidak hanya cakap dalam hal agama, tetapi juga politik dan ekonomi.</p>
+					<p>Tak heran saat itu Kesultanan Banten memiliki wilayah kekuasaan yang luas, terbentang dari Lampung hingga Karawang.</p>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-paragraph">
+                    <p>Sejarah mencatat, Banten pun dengan cepat meraih kejayaan dan mampu mengalahkan Kerajaan Sunda atau Padjadjaran. Patut dicatat, puncak keemasan kesultanan ini dicapai pada masa pemerintahan Sultan Ageng Tirtayasa.</p>
+                    <p>Begitu tersohornya Banten membuat para pedagang dari India, Timur Tengah, hingga Eropa berdatangan. Komoditas lada menjadi yang paling favorit dan dicari. Konon, komoditas dari Banten itu menjadi rebutan antara Portugis dan Belanda.</p>
+                    <p>Kini, kisah kejayaan Kesultanan Banten yang masih tersisa bisa dilihat di Masjid Agung Banten yang berada di Desa Banten, Kecamatan Kasemen, Kabupaten Serang, Banten. Masjid ini masih berdiri kokoh dan menjadi tempat ziarah yang populer.</p>
+				</div>
+			</div>
+           	<div class="section clearfix">
+           		<div class="image-middle">
+                	<img data-original="img/banten/pelataran_masjid.jpg" alt="pelataran masjid agung banten">
+                	<p>Bangunan masjid ini cukup unik karena menghadirkan percampuran dua budaya, yaitu Jawa kuno dan China, asimilasi budaya ini terlihat dari bangunannya yang memiliki serambi yang luas dan atap bertingkat 5 yang menyerupai tumpeng.</p>
+            	</div>
+           	</div>
+            <div class="section clearfix">
+				<div class="text-paragraph">
+                    <h2>Percampuran Budaya</h2>
+                    <p>Berkunjung ke Masjid Agung Banten tidak membutuhkan waktu yang lama dari Jakarta. Tim Eksplor Ramadhan dengan dukungan dari Isuzu, hanya membutuhkan waktu sekitar 2 jam untuk mencapainya.</p>
+                    <p>Jika tertarik untuk mengunjunginya, Anda bisa mengambil rute Tol Tangerang–Merak dan keluar di pintu Tol Serang Barat. Saat menyambangi Banten Lama, berbagai perbaikan jalan masih dilakukan. Tim Eksplor Ramadhan segera disambut dengan panas terik, jalanan berbatu, dan berdebu.</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="text-quote">
+					<p>Untungnya, kendaraan Isuzu MU-X yang dilengkapi dengan 5-Link suspension dengan gas shock absorbers dan stabilizer bar menjadikan perjalanan lebih nyaman dan aman.</p>
+					<p>Sementara itu, hadirnya fitur AC otomatis yang bisa disesuaikan per 1 derajat serta AC climate control membuat suhu di dalam kabin bisa tetap sejuk sesuai kebutuhan dan udara panas di luar tak mengganggu perjalanan.</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="text-paragraph">
+                    <p>Memasuki kawasan Banten Lama, kompleks Masjid Agung Banten tidak sulit untuk ditemukan. Sebelum masuk ke kawasan itu, sebuah tembok batu besar menyambut. Tembok itu merupakan sebuah dikenal sebagai Benteng Surosowan. </p>
+                    <p>Bagi yang berkunjung ke kompleks masjid mengendarai mobil, tersedia lokasi parkir yang cukup luas dengan biaya Rp 10.000. Anda akan segera disambut dengan sebuah menara megah setinggi 24 meter.</p>
+                    <p>Menara ini dulu berfungsi mengumandangkan Azan untuk memberi tahu waktu shalat kepada rakyat Kesultanan Banten dan masih berfungsi hingga kini.</p>
+				</div>
+			</div>
+          	<div class="section clearfix">
+				<div class="image-middle">
+					<img data-original="img/banten/menara_masjid.jpg" alt="menara masjid banten">
+					<p>Konon, menara ini dibangun oleh seorang Belanda yang telah menjadi Muslim bernama Lucas Cardeel pada masa pemerintahan Sultan Haji (1672-1687).</p>
+				</div>
+            </div>
+            <div class="section clearfix">
+            	<div class="text-paragraph">
+                    <p>Layaknya bangunan masjid kuno, Masjid Agung Banten memiliki kolam di depan bangunan masjid. Kolam ini biasanya digunakan umat untuk tempat wudhu sebelum masuk ke dalam masjid. Namun, kolam ini sudah beralih fungsi menjadi kolam biasa. Tim Eksplor Ramadhan melihat kolam ini dijadikan tempat untuk bermain anak-anak dan memancing.</p>
+                    <p>Bangunan masjid sendiri cukup unik karena menghadirkan percampuran dua budaya, yaitu Jawa kuno dan China. Percampuran budaya ini terlihat dari bangunannya yang memiliki serambi yang luas dan atap bertingkat 5 yang menyerupai tumpeng. Di dalam ruangan, masjid ini ditopang 24 tiang penyangga yang memiliki makna 24 jam dalam 1 hari.</p>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-quote">
+                    <p>Menariknya, pintu masuk masjid ini ada 5 buah yang melambangkan 5 rukun Islam. Pintu masuknya pun terbilang kecil dan rendah. Maknanya, agar seseorang selalu diingatkan untuk tetap rendah hati dan tidak sombong dalam kesehariannya.</p>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-paragraph">
+                    <p>Di dalam kompleks ini juga ada dua bangunan lainnya, yaitu Tiamah yang pada masa Kesultanan Banten sering digunakan untuk bermusyawarah. Di sini juga ada Museum Kepurbakalaan Banten Lama yang berisikan benda-benda bersejarah yang pernah ada di Banten.</p>
+                    <p>Di kompleks masjid ini ada makam Sultan Maulana Hasanuddin, Sultan Maulana Muhammad Nasruddin, Pangeran Ratu (istri Maulana Hasanuddin), Sultan Abdul Abdul Fadhal dan Sultan Abu Nasir Abdul Kohar atau yang dikenal sebagai Sultan Haji, dan Sultan Abul Mufakhir Muhammad Aliyudin, dan Sultan Ageng Tirtayasa.</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="image-middle">
+					<img data-original="img/banten/bagian_dalam_masjid.jpg" alt="bagian dalam masjid banten">
+					<p>Pengurus kenadziran Masjid Agung Banten sekaligus keturunan Sultan Maulana Hasanuddin Tubagus Abbas Wasse mengatakan, pada masa Ramadhan sekarang, masjid ini cenderung lebih sepi.</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="text-paragraph">
+                    <p>Abbas menjelaskan, Masjid Agung Banten ini tiap tahun selalu dilakukan perawatan, terutama menyambut Ramadhan. Walaupun demikian, semua biayanya tanpa tanggungan pemerintah. “Semua biaya operasional dan perawatan masjid ini semua datang dari masyarakat yang berkunjung. Masjid ini juga masih diurus dari keluarga secara turun-temurun,” ujarnya.</p>
+				</div>
+			</div>
+			<div class="section clearfix">
+				<div class="text-paragraph">
+                    <h2>Saksi Keberagaman Budaya</h2>
+                    <div class="image-right"><img data-original="img/banten/vihara_avalokitesvara.jpg" alt="vihara_avalokitesvara"><p>Wihara ini, menurut cerita, merupakan sebuah kebaikan dari Sunan Gunung Jati untuk rombongan dari istrinya seorang Putri Kaisar China Oeng Tian Nio yang tetap memeluk agamanya.</p></div>
+                    <p>Di dekat Masjid Agung Banten juga berdiri peninggalan sejarah lainnya, yaitu Wihara Avalokitesvara. Wihara ini, menurut cerita, merupakan sebuah kebaikan dari Sunan Gunung Jati untuk rombongan dari istrinya seorang Putri Kaisar China Oeng Tian Nio yang tetap memeluk agamanya. Hingga kini, wihara ini masih tetap berdiri kokoh.</p>
+                    <p>Di dekat wihara itu, ada Benteng Speelwijk, sebuah benteng peninggalan Portugis. Benteng Speelwijk ini dulu digunakan untuk memantau kapal-kapal yang datang dari Jawa. Benteng ini juga digunakan untuk menyimpan senjata dan meriam dari Portugis sekaligus penjara.</p>
+                    <p>Sayangnya, benteng ini terlihat tidak terurus. Bagian dalam benteng ini kini digunakan untuk lapangan bola. Sementara itu, di beberapa sudut benteng digunakan anak-anak muda untuk berpacaran. Belum lagi, tempat ini juga difungsikan untuk menggembala kerbau dan kambing.</p>
+                </div>
+            </div>
+			<div class="section clearfix">
+				<div class="text-paragraph clearfix">
+					<div class="image-gallery-modal" itemscope itemtype="">
+						<figure itemprop="associatedMedia" itemscope itemtype="">
+							<a href="img/banten/reruntuhan_keraton_surosowan.jpg" itemprop="contentUrl" data-size="1500x1500">
+								<img src="img/banten/thumb/reruntuhan_keraton_surosowan.jpg" itemprop="thumbnail" alt="reruntuhan keraton surosowan" />
+							</a>
+							<figcaption itemprop="caption description">Reruntuhan Keraton Surosowan, dulu dibangun pada tahun 1522 - 1526 pada masa pemerintahan Sultan Maulana Hasanuddin. Terlihat menara Masjid Agung Banten di kejauhan.</figcaption>
+						</figure>
+		
+						<figure itemprop="associatedMedia" itemscope itemtype="">
+							<a href="img/banten/binatang_ternak_pelataran_keraton_surosowan.jpg" itemprop="contentUrl" data-size="1500x1500">
+							  <img src="img/banten/thumb/binatang_ternak_pelataran_keraton_surosowan.jpg" itemprop="thumbnail" alt="binatang ternak" />
+							</a>
+							<figcaption itemprop="caption description">Karena kondisinya yang terbengkalai, rumput liar pun tumbuh bebas di lingkungan keraton, tak ayal menjadi tempat merumput binatang ternak milik warga.</figcaption>
+						</figure>
+						
+						<figure itemprop="associatedMedia" itemscope itemtype="">
+							<a href="img/banten/pintu_keraton.jpg" itemprop="contentUrl" data-size="2250x1500">
+							  <img src="img/banten/thumb/pintu_keraton.jpg" itemprop="thumbnail" alt="pintu keraton" />
+							</a>
+							<figcaption itemprop="caption description">Salah satu pintu keraton, surosowan memiliki pintu di sisi utara, timur, dan selatan.</figcaption>
+						</figure>
+						
+						<figure itemprop="associatedMedia" itemscope itemtype="">
+							<a href="img/banten/anak_bermain_di_pelataran_keraton.jpg" itemprop="contentUrl" data-size="2250x1500">
+							  <img src="img/banten/thumb/anak_bermain_di_pelataran_keraton.jpg" itemprop="thumbnail" alt="anak bermain di pelataran keraton" />
+							</a>
+							<figcaption itemprop="caption description">Sisa benteng yang terbengkalai juga dimanfaatkan anak-anak untuk bermain.</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+        </div> <!-- /#tab-1 -->
+        
+        <div id="tab-2" class="article" style="display:none;">
+            <!-- <div class="section module parallax" id="section_cirebon"></div> -->
+            <div class="section clearfix">
+                <div class="text-lead">
+                    <p class="tI">Cirebon selama ini banyak dikenal dengan kerajinan batiknya. Maklum, daerah ini memang dikenal sebagai salah satu penghasil kerajinan batik terbesar di Jawa. Namun, ternyata Cirebon memiliki pesona lain selain batik. Hal ini seperti yang dijumpai Tim Eksplor Ramadhan saat berkunjung ke sana.</p>
+                    <div class="text-lead_line"></div>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-paragraph">
+                    <p><span class="text-dropCap">C</span>irebon memiliki dua keraton yang berdiri, yaitu Keraton Kasepuhan dan Keraton Kanoman. Sebelum berkunjung ke Demak, Tim Eksplor Ramadhan menyempatkan untuk berkunjung ke Keraton Kasepuhan di Cirebon. Keraton ini menjadi saksi penyebaran Islam di Jawa, khususnya Jawa Barat. Keraton ini memiliki luas 25 hektar dan masih dihuni oleh keturunan langsung dari Sultan Cirebon.</p>
+				</div>
+			</div>
+          	<div class="image-middle">
+                <img data-original="img/cirebon/silsilah_keraton_kasepuhan_cirebon.jpg" alt="silsilah keraton kasepuhan cirebon">
+                <p>Daftar silsilah Keraton Kasepuhan Cirebon, terlihat garis keturunan dari Sunan Gunung Jati hingga Nabi Muhammad SAW.</p>
+            </div>
+
+           	<div class="section clearfix">
+            	<div class="text-paragraph">
+                    <p>Sultan Cirebon sendiri masih keturunan dari Sunan Gunung Jati. Di kompleks kesultanan Cirebon ini, didirikan museum yang bisa dikatakan masih baru. Seluruh benda pusaka yang dulunya berada di bangunan museum yang lama sudah dipindahkan ke dalam bangunan baru yang terletak di depan bangunan utama keraton. Untuk mengunjunginya, Anda harus membayar Rp 25.000.</p>
+				</div>
+			</div>
+           	<div class="section">
+				<div class="text-quote">
+					<p>Di dalam kompleks ada satu daerah sakral, yaitu Sumur Kejayaan. Wilayah sumur ini dikatakan sakral dan hanya bisa dimasuki oleh laki-laki. Dipercaya, air dari sumur ini memiliki khasiat yang sama seperti air zamzam.</p>
+				</div>
+			</div>
+            <div class="section clearfix">
+                <div class="text-paragraph">
+                    <p>Orang biasa yang ingin tirakat di Sumur Kejayaan ini harus melepaskan alas kaki, kendati lantai di situ berpasir. Anda yang berkesempatan mudik melintasi daerah Cirebon bisa mampir sejenak di situ.</p>
+                    <p>Jikalau lapar, Anda bisa beristirahat sejenak untuk mencicipi kuliner khas Cirebon yang menggoda lidah, yaitu nasi jamblang dan empal gentong. Bagi yang menyukai daging, Empal Gentong Haji Apud bisa menjadi destinasi utama. Namun, jika mencari menu dengan lauk yang beragam, nasi jamblang Ibu Nur boleh dipilih.</p>
+                </div>
+            </div>
+			<div class="section clearfix">
+				<div class="text-paragraph">
+					<div class="image-gallery-modal" itemscope itemtype="">
+						<figure itemprop="associatedMedia" itemscope itemtype="">
+							<a href="img/cirebon/museum_pusaka_keraton_kasepuhan.jpg" itemprop="contentUrl" data-size="900x900">
+								<img src="img/cirebon/thumb/museum_pusaka_keraton_kasepuhan.jpg" itemprop="thumbnail" alt="museum pusaka keraton kasepuhan" />
+							</a>
+							<figcaption itemprop="caption description">Di museum Pusaka ini Anda bisa melihat benda-benda pusaka milik kerajaan.</figcaption>
+						</figure>
+
+						<figure itemprop="associatedMedia" itemscope itemtype="">
+							<a href="img/cirebon/patung_singa_keraton_kasepuhan.jpg" itemprop="contentUrl" data-size="900x900">
+								<img src="img/cirebon/thumb/patung_singa_keraton_kasepuhan.jpg" itemprop="thumbnail" alt="patung singa keraton kasepuhan" />
+							</a>
+							<figcaption itemprop="caption description">Patung macan putih kembar sebagai lambang keluarga besar Pajajaran</figcaption>
+						</figure>
+
+						<figure itemprop="associatedMedia" itemscope itemtype="">
+							<a href="img/cirebon/petilasan.jpg" itemprop="contentUrl" data-size="900x900">
+								<img src="img/cirebon/thumb/petilasan.jpg" itemprop="thumbnail" alt="petilasan keraton kasepuhan" />
+							</a>
+							<figcaption itemprop="caption description">petilasan atau tempat yang pernah disinggahi, utamanya oleh tokoh-tokoh penting kerajaan.</figcaption>
+						</figure>
+						
+						<figure itemprop="associatedMedia" itemscope itemtype="">
+							<a href="img/cirebon/siti_inggil.jpg" itemprop="contentUrl" data-size="900x900">
+							  <img src="img/cirebon/thumb/siti_inggil.jpg" itemprop="thumbnail" alt="siti inggil" />
+							</a>
+							<figcaption itemprop="caption description">Di Keraton Kasepuhan terdapat "Siti Inggil", yang artinya tanah yang tinggi, didalamnya seperti kompleks candi</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+        </div> <!-- /#tab-2 -->
+        
+        <div id="tab-3" class="article" style="display:none;">
+            <!-- <div class="section module parallax" id="section_semarang"></div> -->
+            <div class="section clearfix">
+                <div class="text-lead">
+                    <p class="tI">Bangunan bersejarah di Indonesia tak lepas dari proses percampuran budaya. Menariknya, desain bangunan bersejarah tersebut tidak hanya dibuat untuk fungsionalitas, tetapi juga punya makna di baliknya.</p>
+                    <div class="text-lead_line"></div>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-paragraph">
+                    <p><span class="text-dropCap">S</span>ebelum teknologi berkembang seperti sekarang, desain bangunan dikembangkan berdasarkan apa yang dipelajari dan kemudian dimaknai. Perkembangan desain bangunan itu semakin kaya saat proses akulturasi, yang pertukaran pengetahuan dan budaya juga ikut memengaruhi desain bangunan. Proses akulturasi tersebut biasanya terlihat kental di bangunan rumah ibadah bersejarah. Salah satunya, Kelenteng Sam Poo Kong di Semarang.</p>
+                    <p>Kelenteng yang berada di Jalan Simongan Raya, Semarang, Jawa Tengah, ini memiliki percampuran corak China dan Jawa. Bisa dilihat pada desain atap kelenteng berbentuk limasan yang juga khas digunakan untuk rumah masyarakat Jawa. Bangunannya pun mirip seperti Joglo yang tidak punya sekat dinding. Joglo juga biasanya digunakan untuk seorang raja.</p>
+                </div>    
+            </div>
+            <div class="section">
+                <div class="text-quote">
+                    <p>Atap bertumpuk yang berbentuk menurun menggambarkan ciri khas orang Jawa yang selalu menerima dan rendah hati.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="text-paragraph">
+                    <p>Atap bertumpuk yang berbentuk menurun juga sesuai dengan ciri khas orang Jawa yang selalu menerima dan rendah hati. Unsur Jawa ini juga cukup kuat di beberapa bagian kelenteng, antara lain pahatan atau hiasan batu yang mengingatkan pada candi-candi di Jawa.</p>
+					<div class="image-right"><img data-original="img/semarang/atap_meruncing_khas_china.jpg" alt="unsur china"><p>Unsur arsitektur China terlihat di ujung atap yang cenderung meruncing naik. Filosofi ujung atap yang naik ini sesuai dengan karakter orang China yang selalu bersemangat, baik dalam bekerja maupun belajar.</p></div>
+                    <p>Desain yang cenderung meruncing naik ini juga melambangkan kalau orang China dalam berkehidupan selalu berusaha mengejar yang terbaik. Unsur China semakin kental dengan nuansa merah menyala, yang bagi orang China punya arti keberuntungan.</p>
+                    <p>Ornamen yang jelas terlihat unsur budaya China adalah relief naga, burung hong, dan kura-kura pada tiang struktur dan di alas patung. Hewan ini dipercaya sebagai makhluk langit pembawa berkah. Sementara itu, penopang atap kelenteng ini cukup unik karena konstruksi balok penyangga atap dibangun tanpa kuda-kuda.</p>
+                    <p>Lokasi utama kelenteng ini ada pada Gua Batu yang dipercaya menjadi tempat petilasan atau ruang bersembahyang Laksamana Zheng He atau biasa kita kenal Laksamana Cheng Ho. Di dalam gua batu ini ada patung yang dipercaya sebagai patung Sam Poo Tay Djien atau Cheng Ho.</p>
+                    <p>Percampuran budaya ini juga terlihat saat pemberian nama bangunan. Penamaan ini berdasarkan kepercayaan masyarakat zaman dulu berdasarkan material kelenteng yang dipercaya ada yang berasal dari beberapa bagian kapal milik Cheng Ho. Contohnya, Mbah Kiai Tjundrik Bumi yang menjadi tempat menyimpan senjata, Kiai/Nyai Tumpeng terkait dengan makanan, dan Kiai Djangkar di mana ada bangunan untuk menyimpan jangkar kapal yang digunakan Cheng Ho saat mendarat di Jawa. Penggunaan kata “mbah” sendiri lekat dengan panggilan orang Jawa untuk orang yang sudah tua atau sudah memiliki cucu.</p>
+                    <p>Mengutip dari penelitian Benedicta Sophie Marcella yang ditulis dalam Jurnal Arsitektur Komposisi berjudul Feng Shui Pada Tata Letak Massa Bangunan di Kelenteng Sam Poo Kong, kelenteng ini dibangun berdasarkan fengshui. Salah satunya, adanya anggapan bangunan yang menghadap ke barat laut atau tenggara berarti menghadap ke pintu kejahatan. Oleh karena itu, pembangunan pintu masuk kelenteng diusahakan menghadap ke selatan. Sampai saat ini, gerbang besar kelenteng ini menghadap ke selatan.</p>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-quote">
+                    <p>Menariknya, kelenteng ini juga punya unsur Islam karena Cheng Ho sendiri dipercaya sebagai seorang Muslim.</p>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-paragraph">
+                    <p>Ini terlihat pada penataan altar di dalam gua batu yang menghadap ke tenggara sehingga umat yang beribadah menjadi menghadap barat laut. Dalam kepercayaan Muslim, barat laut berarti menghadap ke Mekkah. Dalam fengshui, arah ini juga dipercaya baik karena menghadap ke laut dan membelakangi gunung. Kenapa laut? Dulu, kelenteng ini sangat dekat dengan bibir pantai, tetapi perlahan perairan mulai surut dan kelenteng ini menjadi jauh dari bibir pantai. Corak Islam juga terlihat pada bagian langit-langit yang memiliki warna hijau dan keberadaan beduk.</p>
+					<div class="image-right"><img data-original="img/semarang/patung_laksamana_cheng_ho.jpg" alt="patung laksamana cheng ho"><p>Keberadaan Cheng Ho ini membuat kelenteng ini tidak saja dikunjungi untuk peziarah dari agama Tridharma, tetapi juga dari Islam.</p></div>
+                    <p>Jika berkunjung ke sini, Anda akan takjub dengan adanya patung Cheng Ho yang tinggi menjulang. Patung ini memiliki tinggi 10,7 meter. Patung berbahan perunggu ini lebih tinggi dari pada patung serupa yang ada di Melaka, Malaysia.</p>
+                    <p>Di sini, juga sering diadakan acara-acara penting. Salah satunya, festival Peringatan Cheng Ho ke Semarang yang diadakan antara Juli hingga Agustus setiap tahunnya. Anda juga bisa berkunjung saat Imlek karena suasana kelenteng ini akan lebih ramai dan menarik.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="tab-4" class="article" style="display:none;">
+            <!-- <div class="section module parallax" id="section_demak"></div> -->
+            <div class="section clearfix">
+                <div class="text-lead">
+                    <p class="tI">Pesisir pantai utara Jawa menyimpan cerita awal masuknya Islam. Salah satu ceritanya berawal dari Demak. Maklum, kota ini disebut memiliki kerajaan bercorak Islam pertama di Jawa.</p>
+                    <div class="text-lead_line"></div>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-paragraph">
+                    <p><span class="text-dropCap">S</span>aat itu, Raden Patah menjadi raja pertama sekaligus merupakan tokoh yang paling berpengaruh dalam penyebaran Islam di Jawa. Kebesaran Kerajaan Demak semakin menguat seiring dengan memudarnya kekuasaan Majapahit.</p>
+                    <p>Kerajaan Demak yang pada akhirnya berhasil mengalahkan Majapahit membuat Raden Patah semakin mudah memperluas kekuasaannya. Setelah menaklukkan Majapahit, Raden Patah segera merintis pembinaan negara maritim, terutama membentuk angkatan perang Demak. Kekuatan angkatan laut Demak semakin perkasa di bawah pimpinan Adipati Unus, putra Raden Patah.</p>
+                    <p>Pada 1515, wilayah Demak sudah meliputi sebagian Sumatera hingga pesisir utara Pulau Jawa, membentang dari Palembang, Cirebon, hingga timur Jepara. Menilik lokasinya, Demak sangat strategis. Berada di pesisir pantai Jawa dan didukung kekuatan angkatan laut yang tangguh, namanya kian tersohor sehingga jalinan perdagangan dengan sejumlah kerajaan di Sumatera hingga Maluku pun bisa terjalin. Kapal-kapal dari luar negeri pun berdatangan, termasuk dari Eropa.</p>
+                    <p>Dukungan dari Wali Sanga juga menjadi salah satu kekuatan Raden Patah untuk menyebarkan Islam. Raden Patah tak hanya cakap dalam hal agama, ia juga ahli dalam ekonomi dan mungkin tata kota. Dia berhasil mengubah rawa-rawa yang ada di sekitar kerajaannya menjadi kawasan permukiman dan pertanian.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="text-paragraph">
+                    <h2>Ramai Peziarah</h2>
+                    <p>Pada 1479, Raden Patah dan Wali Sanga memutuskan untuk membangun Masjid Demak. Masjid inilah yang menjadi saksi kebesaran Kerajaan Demak yang masih kokoh berdiri hingga saat ini.</p>
+				</div>
+			</div>
+			<div class="section clearfix">
+           		<div class="image-middle">
+                	<img data-original="img/demak/masjid_agung_demak.jpg" alt="masjid agung demak">
+                	<p>Masjid ini memiliki aksen bangunan Jawa yang kuat, terlihat dari empat sokoguru atau tiang penyangga atap masjid yang bertumpuk..</p>
+            	</div>
+           	</div>
+			<div class="section">
+				<div class="text-paragraph">
+                    <p>Tim Eksplor Ramadhan memutuskan untuk menyambangi masjid kebanggaan warga Demak sekaligus salah satu masjid tertua di Indonesia ini. Dalam perjalanan menuju lokasi, tim harus berhadapan dengan cuaca panas dan genangan air yang cukup banyak.</p>
+                    <p>Namun, kendaraan Isuzu MU-X yang digunakan membuat percaya diri untuk menembus genangan karena memiliki ground clearance yang tinggi. Panasnya udara pesisir tidak mengganggu saat berkendara apalagi dengan audio yang memiliki kualitas baik ditambah speaker yang berada di bagian langit-langit membuat seolah-olah suara itu sejajar dengan telinga. Keamanan berkendara pun semakin mantap karena dukungan kamera 360 derajat yang disematkan di mobil ini. Jadi, Anda tak perlu khawatir saat ingin parkir atau melewati jalanan yang sempit.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="text-quote">
+                    <p>Keberadaan masjid ini membuat kota kecil yang hanya berjarak sekitar 30 kilometer dari ibu kota Provinsi Jawa Tengah ini selalu ramai dikunjungi turis, terutama peziarah.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="text-paragraph">
+                    <p>Masjid ini memiliki aksen bangunan Jawa yang kuat, terlihat dari empat sokoguru atau tiang penyangga atap masjid yang bertumpuk. Sokoguru ini menjadi khas gaya bangunan Majapahit. Bisa jadi karena Raden Patah sendiri merupakan turunan dari raja Majapahit.</p>
+                    <p>Sokoguru ini berdiri kokoh di ruang utama masjid di empat penjuru. Dipercaya, empat sokoguru ini merupakan pemberian dari empat wali, yaitu Sunan Bonang, Sunan Kalijaga, Sunan Ampel, dan Sunan Gunung Jati. Keempat soko ini menahan beban bagian atap tertinggi.</p>
+                    <p>Sementara itu, untuk menopang tajug yang lebih rendah, terdapat tiang di sekeliling sokoguru. Jika tertarik untuk mengetahui sejarahnya lebih dalam, Anda bisa berkunjung ke museum yang berada di dalam kompleks. Di tempat ini, tidak hanya ada sejarahnya, tetapi juga sejumlah foto masjid dari masa ke masa dan sokoguru asli yang sudah mulai termakan usia.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="tab-5" class="article" style="display:none;">
+            <!-- <div class="section module parallax" id="section_magelang"></div> -->
+            <div class="section clearfix">
+                <div class="text-lead">
+                    <p class="tI">Magelang tidak hanya memiliki Candi Borobudur, tetapi juga pesona lain yang tak kalah menarik.</p>
+                    <div class="text-lead_line"></div>
+                </div>
+            </div>
+            <div class="section clearfix">
+                <div class="text-paragraph">
+                    <p><span class="text-dropCap">D</span>alam perjalanan menuju Yogyakarta, ada dua pilihan jalan yang bisa digunakan. Bisa melewati Magelang atau lewat Boyolali. Pilihan pertama lebih sering menjadi pilihan. Namun, sesaat melintasi Magelang, Anda bisa mampir sejenak di daerah Kragilan. Di ain,i ada sebuah spot wisata yang kekinian bernama Top Selfie Pinusan.</p>
+                    <p>Kenapa disebut kekinian? Karena di sini, bisa menambah apik linimasa media sosial Anda, terutama Instagram. Barisan pohon pinus yang rapat menjadi daya tarik utama tempat wisata ini. Saat berkunjung ke sini, tim Eksplor cukup membayar tiket masuk. Harga tiketnya sebesar Rp 10 ribu untuk mobil dan Rp 3 ribu untuk motor.</p>
+                    <p>Top Selfie Kragilan cukup tricky karena pintu masuknya berada di belokan yang cukup patah. Jika berangkat dari arah Semarang ke Yogyakarta, bisa saja terlewat. Papan nama ini lebih terlihat jika dari arah sebaliknya.</p>
+                    <p>Setelah membayar tiket masuk, Anda akan berjalan membelah barisan pohon pinus. Jangan khawatir karena jalannya sudah rapi dan tidak akan menyusahkan. Untuk parkir, sudah tidak kenakan biaya lagi. Anda cukup siapkan kamera yang sesuai. Tidak punya kamera? Jangan khawatir, ada fotografer yang menyewakan jasanya dan bisa langsung dikirim via ponsel pintar.</p>
+                    <p>Hampir seluruh kawasan ini menarik untuk dijadikan arena foto-foto ria. Mulai dari jalan masuknya, rumah pohon di dalam hutan, hammock yang bertumpuk, hingga bangku kayu yang ada tersedia. Cahaya matahari yang kadang menerobos masuk dari sela-sela pepohonan menjadi saat yang paling dicari oleh pemburu foto. Tempat ini juga sering dijadikan lokasi untuk foto prapernikahan, lho.</p>
+                    <p>Pada masa mendatang, mungkin pengelolaannya harus dibuat lebih profesional dan penataannya terus dibenahi. Misalnya, keberadaan tempat sampah yang masih jarang. Selain itu, lebih baik spot untuk merokok disediakan di satu tempat karena ini area hutan, ketakutan utamanya adalah kebakaran. Selain itu, masih banyak keluhan bahwa setiap spot foto harus membayar dan faktor keselamatannya masih belum memadai.</p>
+                    <p>Setelah dari Top Selfie Pinusan, Anda bisa mampir sejenak ke Ketep Pass. Pemandangan Gunung Merapi yang berlatar belakang langit biru bisa dinikmati dari gardu pandang yang berada di ketinggian 120 meter di atas permukaan laut. Di sini, Anda juga bisa menikmati Museum Vulkanologi untuk menambah wawasan tentang Gunung Merapi dan aktivitas vulkaniknya.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="text-paragraph">
+                    <h2>Wisata Berbasis Konservasi</h2>
+                    <p>Magelang juga punya satu tempat destinasi baru lagi yaitu Jurangjero. Tempat ini sudah menjadi desa wisata. Secara geografis, Jurangjero terletak di sebelah barat Gunung Merapi, tepatnya di Desa Ngargosuko, Srumbung, Magelang. Daerah ini menjadi perlintasan lahar dingin saat Gunung Merapi meletus.</p>
+                    <p>Untuk menuju ke sana, susah-susah gampang. Jalan perlintasannya sudah diaspal, tetapi jalurnya sangat sempit. Di sini, aktivitas yang tersedia adalah wisata petualangan outbond, area kemping, dan wisata alam Randu Ijo.</p>
+                    <p>Jurangjero termasuk ke dalam wilayah hutan lindung kawasan Taman Nasional Gunung Merapi. Oleh karena itu, Anda tidak boleh membawa alat berburu dan menyalakan api di sekitar kawasan ini. Di sini, ada aliran sungai kecil yang bisa Anda gunakan untuk sekadar bermain air. Saat tim Klasika berkunjung ke sana, ada anak-anak sekitar yang sedang berenang dan bermain.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+        	<div class="text-paragraph">
+        		<p class="tR link-toMap">Kembali ke Peta</p>
+        	</div>
+        </div>
+        
+		<div class="section" style="margin-top: 40px;">
+			<div class="text-credits">
+				<h2>PHOTOGRAFER</h2>
+				<p>Antonius SP</p>
+				<h2>COPYWRITER</h2>
+				<p>Benedictus Yurivito</p>
+				<h2>EDITOR WEB</h2>
+				<p>Ino Julianto</p>
+				<h2>DEVELOPER</h2>
+				<p>Dimitri Herlambang</p>
+			</div>
+		</div>
+		<div class="section clearfix" style="background-color:#fff;">
+			<p class="tC" style="color:#000;">Eksplor Ramadhan ini kerjasama antara</p>
+			<ul class="image-sponsor">
+				<li style="width:100px;height:25px;"><img src="img/logo-isuzu.svg" width="100" height="25" alt="logo isuzu"></li>
+				<li style="width:100px;height:25px;"><img src="img/logo-kompas.svg" width="100" height="25" alt="logo isuzu"></li>
+			</ul>
+		</div>
+		
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="pswp__bg"></div>
+			<div class="pswp__scroll-wrap">
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+				<div class="pswp__ui pswp__ui--hidden">
+					<div class="pswp__top-bar">
+						<div class="pswp__counter"></div>
+						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+						<button class="pswp__button pswp__button--share" title="Share"></button>
+						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+							  <div class="pswp__preloader__cut">
+								<div class="pswp__preloader__donut"></div>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div>
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+					<div class="pswp__caption"><div class="pswp__caption__center"></div></div>
+				</div>
+			</div>
+		</div> <!-- /.pswp -->
+    </div> <!-- /#wrap -->
+    
+    <div w3-include-html="../_common/footer.html"></div>
+    
+    <script src="../_common/js/jquery_v2.1.0.js" type="text/javascript"></script>
+	<script src="../_common/js/jquery_viewportchecker.js" type="text/javascript"></script>
+	<script src="../_common/js/lazy.js" type="text/javascript"></script>
+	<script src="../_common/js/w3.js" type="text/javascript"></script>
+	<script src="local/photoswipe-ui-default.js" type="text/javascript"></script>
+	<script src="local/photoswipe.js" type="text/javascript"></script>
+	
+	<script>
+		function onReady(callback) {
+			var intervalID = window.setInterval(checkReady, 1000);
+			function checkReady() {
+				if (document.getElementsByTagName('body')[0] !== undefined) {
+					window.clearInterval(intervalID);
+					callback.call(this);
+				}
+			}
+		}
+		w3.includeHTML();
+		function show(id, value) {document.getElementById(id).style.display = value ? 'block' : 'none';}
+		onReady(function(){show('wrap', true);show('loading', false);});
+	</script>
+	<script>
+		$(window).on('beforeunload',function(){$(window).scrollTop(0);});
+		$(window).scroll(function() {    
+				var scroll = $(window).scrollTop();    
+				if (scroll >= 1 * $(window).height()) {
+					$('#headerArea').css('opacity', '1');
+				} else {
+					$('#headerArea').css('opacity', '0');
+				}
+			});
+		$(document).ready(function(){
+			$(".text-paragraph p,.text-quote p,.text-paragraph h2").viewportChecker({
+				classToAdd: 'show',
+				offset: 100,
+			});
+			$(".image-gallery").hover(function(){
+				$(this).find('p').toggleClass("show");
+				$(this).find('.image-info').toggleClass("hidden");
+			});
+			new LazyLoad();
+            /* tabbing */
+            $('.div-map div').click(function(){
+                var tab_id = $(this).attr('data-tab');
+                $('.div-map div').removeClass('current');
+                $('.article').removeClass('current');
+                $(this).addClass('current');
+                $("#"+tab_id).addClass('current');
+            })
+            /* smoothscrolling */
+            $(".link-mapCaption").click(function() {
+                $('html,body').animate({
+                    scrollTop: $(".anchor-article").offset().top},'slow'
+                );
+            });
+			$(".link-toMap").click(function() {
+                $('.article').removeClass('current');
+				$('html,body').animate({
+					scrollTop: $("#section_map").offset().top},'slow'
+				);
+			});
+			
+			/* zoom image on hover
+			$('.tile')
+				.on('mouseover', function(){
+				  $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+				})
+				.on('mouseout', function(){
+				  $(this).children('.photo').css({'transform': 'scale(1)'});
+				})
+				.on('mousemove', function(e){
+				  $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+				})
+				.each(function(){
+				  $(this)
+					.append('<div class="photo"></div>')
+					.append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
+					.children('.photo').css({'background-image': 'url('+ $(this).attr('data-original') +')'});
+            }) */
+			/* image gallery swipe*/
+			var initPhotoSwipeFromDOM = function(gallerySelector) {
+				var parseThumbnailElements = function(el) {
+					var thumbElements = el.childNodes,
+						numNodes = thumbElements.length,
+						items = [],
+						figureEl,
+						linkEl,
+						size,
+						item;
+
+					for(var i = 0; i < numNodes; i++) {
+						figureEl = thumbElements[i];
+						if(figureEl.nodeType !== 1) {
+							continue;
+						}
+						linkEl = figureEl.children[0];
+						size = linkEl.getAttribute('data-size').split('x');
+						item = {
+							src: linkEl.getAttribute('href'),
+							w: parseInt(size[0], 10),
+							h: parseInt(size[1], 10)
+						};
+						if(figureEl.children.length > 1) {
+							item.title = figureEl.children[1].innerHTML; 
+						}
+						if(linkEl.children.length > 0) {
+							item.msrc = linkEl.children[0].getAttribute('src');
+						} 
+						item.el = figureEl;
+						items.push(item);
+					}
+					return items;
+				};
+				var closest = function closest(el, fn) {
+					return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+				};
+				var onThumbnailsClick = function(e) {
+					e = e || window.event;
+					e.preventDefault ? e.preventDefault() : e.returnValue = false;
+					var eTarget = e.target || e.srcElement;
+					var clickedListItem = closest(eTarget, function(el) {
+						return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+					});
+					if(!clickedListItem) {
+						return;
+					}
+					var clickedGallery = clickedListItem.parentNode,
+						childNodes = clickedListItem.parentNode.childNodes,
+						numChildNodes = childNodes.length,
+						nodeIndex = 0,
+						index;
+					for (var i = 0; i < numChildNodes; i++) {
+						if(childNodes[i].nodeType !== 1) { 
+							continue; 
+						}
+						if(childNodes[i] === clickedListItem) {
+							index = nodeIndex;
+							break;
+						}
+						nodeIndex++;
+					}
+					if(index >= 0) {
+						openPhotoSwipe( index, clickedGallery );
+					}
+					return false;
+				};
+				var photoswipeParseHash = function() {
+					var hash = window.location.hash.substring(1),
+					params = {};
+					if(hash.length < 5) {
+						return params;
+					}
+					var vars = hash.split('&');
+					for (var i = 0; i < vars.length; i++) {
+						if(!vars[i]) {
+							continue;
+						}
+						var pair = vars[i].split('=');  
+						if(pair.length < 2) {
+							continue;
+						}           
+						params[pair[0]] = pair[1];
+					}
+					if(params.gid) {
+						params.gid = parseInt(params.gid, 10);
+					}
+					return params;
+				};
+				var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+					var pswpElement = document.querySelectorAll('.pswp')[0],
+						gallery,
+						options,
+						items;
+					items = parseThumbnailElements(galleryElement);
+					options = {
+						galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+						getThumbBoundsFn: function(index) {
+							var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+								pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+								rect = thumbnail.getBoundingClientRect(); 
+							return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+						}
+					};
+					if(fromURL) {
+						if(options.galleryPIDs) {
+							for(var j = 0; j < items.length; j++) {
+								if(items[j].pid == index) {
+									options.index = j;
+									break;
+								}
+							}
+						} else {
+							options.index = parseInt(index, 10) - 1;
+						}
+					} else {
+						options.index = parseInt(index, 10);
+					}
+					if( isNaN(options.index) ) {
+						return;
+					}
+					if(disableAnimation) {
+						options.showAnimationDuration = 0;
+					}
+					gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+					gallery.init();
+				};
+
+				var galleryElements = document.querySelectorAll( gallerySelector );
+
+				for(var i = 0, l = galleryElements.length; i < l; i++) {
+					galleryElements[i].setAttribute('data-pswp-uid', i+1);
+					galleryElements[i].onclick = onThumbnailsClick;
+				}
+				var hashData = photoswipeParseHash();
+				if(hashData.pid && hashData.gid) {
+					openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+				}
+			};
+			initPhotoSwipeFromDOM('.image-gallery-modal');
+		});
+	</script>
+</body>
+</html>

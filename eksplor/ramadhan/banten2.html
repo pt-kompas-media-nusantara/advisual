@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<title>Eksplor Ramadhan - Banten</title>
+	<meta name="author" content="Kompas Klasika" />
+	<meta name="description" content="Sebuah perjalanan rohani di pulau Jawa" />
+	<meta name="keywords"  content="kompas,klasika,eksplor,ramadhan" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="local/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="/_common/modules_v1.css" />
+	<link rel="icon" href="/_common/img/icon/advisual_favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400" rel="stylesheet">
+</head>
+
+<body>
+  	<style>
+		#loading{background-color: #00599A;height:100%;width:100%;position:fixed;z-index:20;margin-top:0px;top:0px;}#loading-center{width:100%;height: 100%;position: relative;}#loading-center-absolute{position: absolute;left:50%;top:50%;height:200px;width:200px;margin-top:-100px;margin-left: -100px;-ms-transform: rotate(-135deg);-webkit-transform:rotate(-135deg);transform: rotate(-135deg);}.object{-moz-border-radius: 50% 50% 50% 50%;-webkit-border-radius:50% 50% 50% 50%;border-radius: 50% 50% 50% 50%;position:absolute;border-top: 5px solid #FFF;border-bottom: 5px solid transparent;border-left:5px solid #FFF;border-right:5px solid transparent;-webkit-animation:animate 2s infinite;animation:animate 2s infinite;}#object_one{left:75px;top:75px;width:50px;height:50px;}#object_two{left:65px;top:65px;width:70px;height:70px;-webkit-animation-delay:0.2s;animation-delay:0.2s;}#object_three{left:55px;top:55px;width:90px;height:90px;-webkit-animation-delay:0.4s;animation-delay:0.4s;}#object_four{left:45px;top: 45px;width:110px;height:110px;-webkit-animation-delay:0.6s;animation-delay:0.6s;}@-webkit-keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}@keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}
+		#headerArea {opacity: 0;}
+		#landing_image {
+			background: url(img/banten/ilust_01.jpg) no-repeat;
+			background-size: 100%;
+			background-position: bottom;
+			z-index: -1;
+		}
+		#background {
+			width: 100vw;
+			height: 100vh;
+			z-index: -1;
+			position: fixed;
+		}
+		.bg1_active {
+			/* background: url(img/banten/bg_01.jpg) no-repeat; */
+			background-size: cover;
+			background-position: bottom;
+		}
+		.bg_white {background-color: #fff !important;}
+		.text-paragraph p {font-family: georgia;}
+		.trigger {
+			width: 10px;
+			height: 500px;
+			position: relative;
+			z-index: -10;
+		}
+		.section {
+			background-color: rgba(0,0,0,0);
+		}
+		.moving {
+			position: fixed;
+			width:100px;
+			height:100px;
+			ms-transform: translate(0, 10vh);
+			-webkit-transform: translate(0, 10vh);
+			transform: translate(0, 10vh);
+			background-color:red;
+			z-index: 10;
+		}
+	</style>
+   	<div id="loading"><div id="loading-center"><div id="loading-center-absolute"><div class="object" id="object_four"></div><div class="object" id="object_three"></div><div class="object" id="object_two"></div><div class="object" id="object_one"></div></div></div></div>
+	
+    <div w3-include-html="/_common/header.html"></div>
+	
+	<div id="background">
+	</div>
+	
+    <div id="wrap">
+		
+    	<div class="module parallax" id="landing_image">
+        	<div class="div-transparent-layer">
+				<div class="div-caption">
+					<h1>Banten</h1>
+				</div>
+				<p class="tC" style="bottom:0;position:absolute;width:100%;z-index:10;"><a class="animated bounce" style="display:inline-block;"><img src="/_common/img/icon/arrow_down.png" alt="scroll kebawah" width="30" height="30"></a></p>
+			</div>
+		</div>
+		
+		<div class="section bg_white clearfix">
+            <div class="text-lead tI">
+				<p>Masjid Agung Banten adalah salah satu masjid tertua di Indonesia.</p>			
+				<p>Di sini, pengunjung bisa melakukan berbagai macam kegiatan, seperti berziarah, menikmati arsitektur kuno dan unik masjid, serta melihat bukti bersejarah Kesultanan Banten.</p>
+				<p>Jika berkunjung ke sini, tempat apa saja yang harus dikunjungi?</p>
+            	<div class="text-lead_line"></div>
+            </div>
+   		</div>
+		
+		<div class="section bg_white clearfix">
+   			<div class="" style="width:700px;height:500px;background-color:gray;margin: 0 auto;"></div>
+   		</div>
+		
+		<div class="section bg_white clearfix">
+   			<div class="text-paragraph">
+   				<p>Masjid Agung Banten Berjarak 98,7 kilometer atau butuh sekitar 2 jam dari Jakarta</p>
+   			</div>
+   		</div>
+		
+		<div class="section clearfix">
+			
+		</div>
+    </div> <!-- /#wrap -->
+    
+    <div w3-include-html="/_common/footer.html"></div>
+    
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="/_common/js/jquery_v2.1.0.js"></script>
+	<script type="text/javascript" src="/_common/js/jquery_viewportchecker.js"></script>
+	<script type="text/javascript" src="/_common/js/w3.js"></script>
+	<script type="text/javascript" src="/_common/js/lazy.js"></script>
+    <script type="text/javascript" src="local/animation.gsap.min.js"></script>
+	<script type="text/javascript" src="local/bodymovin.js"></script>
+	<script>
+		var controller = new ScrollMagic.Controller();
+		
+        var scene = new ScrollMagic.Scene({triggerElement: "#field_1", duration: 500})
+					/* .setTween("#move", {left:"30%"}) */
+					.setClassToggle("#background","bg1_active")
+					.addIndicators({name: "1 (duration: 500)"})
+					.addTo(controller);
+	</script>
+	<script>
+		w3.includeHTML();
+		function onReady(callback) {
+			var intervalID = window.setInterval(checkReady, 1000);
+			function checkReady() {
+				if (document.getElementsByTagName('body')[0] !== undefined) {
+					window.clearInterval(intervalID);
+					callback.call(this);
+				}
+			}
+		}
+		function show(id, value) {document.getElementById(id).style.display = value ? 'block' : 'none';}
+		onReady(function(){show('wrap', true);show('loading', false);});
+	</script>
+	<script>
+		$(window).on('beforeunload',function(){$(window).scrollTop(0);});
+		$(document).ready(function(){
+			var animation = bodymovin.loadAnimation({
+			  container: document.getElementById('<elementhere>'),
+			  renderer: 'svg',
+			  loop: true,
+			  autoplay: true,
+			  path: '<jsonhere>'
+			});
+			$(".text-paragraph p,.text-quote p").viewportChecker({
+				classToAdd: 'show',
+				offset: 100,
+			});
+			$(window).scroll(function() {    
+				var scroll = $(window).scrollTop();    
+				if (scroll >= 1 * $(window).height()) {
+					$('#headerArea').css('opacity', '1');
+				} else {
+					$('#headerArea').css('opacity', '0');
+				}
+			});
+			$(".image-gallery").hover(function(){
+				$(this).find('p').toggleClass("show");
+				$(this).find('img').toggleClass("zoom");
+				$(this).find('.image-info').toggleClass("hidden");
+			});
+			new LazyLoad();
+		});
+	</script>
+</body>
+</html>

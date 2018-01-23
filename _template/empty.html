@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="utf-8">
+    <title>Template</title>
+    <link rel="icon" href="img/favicon.png">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="kompas klasika langgam">
+    <meta name="keywords" content="kompas,klasika,langgam">
+    <meta name="author" content="Kompas klasika">
+    <link href="../_common/modules.css" rel="stylesheet">
+</head>
+
+<body>
+  	<style>
+		#loading{background-color: #00599A;height:100%;width:100%;position:fixed;z-index:20;margin-top:0px;top:0px;}#loading-center{width:100%;height: 100%;position: relative;}#loading-center-absolute{position: absolute;left:50%;top:50%;height:200px;width:200px;margin-top:-100px;margin-left: -100px;-ms-transform: rotate(-135deg);-webkit-transform:rotate(-135deg);transform: rotate(-135deg);}.object{-moz-border-radius: 50% 50% 50% 50%;-webkit-border-radius:50% 50% 50% 50%;border-radius: 50% 50% 50% 50%;position:absolute;border-top: 5px solid #FFF;border-bottom: 5px solid transparent;border-left:5px solid #FFF;border-right:5px solid transparent;-webkit-animation:animate 2s infinite;animation:animate 2s infinite;}#object_one{left:75px;top:75px;width:50px;height:50px;}#object_two{left:65px;top:65px;width:70px;height:70px;-webkit-animation-delay:0.2s;animation-delay:0.2s;}#object_three{left:55px;top:55px;width:90px;height:90px;-webkit-animation-delay:0.4s;animation-delay:0.4s;}#object_four{left:45px;top: 45px;width:110px;height:110px;-webkit-animation-delay:0.6s;animation-delay:0.6s;}@-webkit-keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}@keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}
+	</style>
+   	<div id="loading"><div id="loading-center"><div id="loading-center-absolute"><div class="object" id="object_four"></div><div class="object" id="object_three"></div><div class="object" id="object_two"></div><div class="object" id="object_one"></div></div></div></div>
+	
+    <div w3-include-html="../_common/header.html"></div>
+   
+    <div id="wrap">
+    
+    </div> <!-- /#wrap -->
+    
+    <div w3-include-html="../_common/footer.html"></div>
+    
+    <script src="../_common/jquery-210.js" type="text/javascript"></script>
+	<script src="../_common/jquery.viewportchecker.js" type="text/javascript"></script>
+	<script src="../_common/lazy.js" type="text/javascript"></script>
+	<script src="../_common/w3.js" type="text/javascript"></script>
+	<script src="../_common/backgroundVideo.js" type="text/javascript"></script>
+    <script>
+		document.getElementById('landing_video').muted = true;
+		const backgroundVideo = new BackgroundVideo('.bv-video', {
+		  src: [
+			'../_img/vid.mp4',
+		  ],
+		  onReady: function () {
+			// Use onReady() to prevent flickers or force loading state
+			const vidParent = document.querySelector(`.${this.bvVideoWrapClass}`);
+			vidParent.classList.add('bv-video-wrap--ready');
+		  }
+		});
+	</script>
+	<script>
+		w3.includeHTML();
+		function onReady(callback) {
+			var intervalID = window.setInterval(checkReady, 1000);
+			function checkReady() {
+				if (document.getElementsByTagName('body')[0] !== undefined) {
+					window.clearInterval(intervalID);
+					callback.call(this);
+				}
+			}
+		}
+		function show(id, value) {document.getElementById(id).style.display = value ? 'block' : 'none';}
+		onReady(function(){show('wrap', true);show('loading', false);});
+	</script>
+	<script>
+		$(window).on('beforeunload',function(){$(window).scrollTop(0);});
+		$(document).ready(function(){
+			$(".text-paragraph p,.text-quote p").viewportChecker({
+				classToAdd: 'show',
+				offset: 100,
+			});
+			$(".image-gallery").hover(function(){
+				$(this).find('p').toggleClass("show");
+				$(this).find('img').toggleClass("zoom");
+				$(this).find('.image-info').toggleClass("hidden");
+			});
+			new LazyLoad();
+		});
+	</script>
+</body>
+</html>
