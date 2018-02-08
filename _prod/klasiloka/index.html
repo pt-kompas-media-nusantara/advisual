@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<title>Klasiloka</title>
+	<link rel="icon" href="/_common/img/icon/advisual_favicon.png">
+	<meta name="author" content="Kompas Klasika" />
+	<meta name="description" content="Klasiloka" />
+	<meta name="keywords"  content="klasiloka" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="/_common/css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="/_common/css/reset_v1.0.css" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:300,400|Amaranth:400,700" rel="stylesheet">
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+	<style>
+		#loading{background-color: #00599A;height:100%;width:100%;position:fixed;z-index:100;margin-top:0px;top:0px;}#loading-center{width:100%;height: 100%;position: relative;}#loading-center-absolute{position: absolute;left:50%;top:50%;height:200px;width:200px;margin-top:-100px;margin-left: -100px;-ms-transform: rotate(-135deg);-webkit-transform:rotate(-135deg);transform: rotate(-135deg);}.object{-moz-border-radius: 50% 50% 50% 50%;-webkit-border-radius:50% 50% 50% 50%;border-radius: 50% 50% 50% 50%;position:absolute;border-top: 5px solid #FFF;border-bottom: 5px solid transparent;border-left:5px solid #FFF;border-right:5px solid transparent;-webkit-animation:animate 2s infinite;animation:animate 2s infinite;}#object_one{left:75px;top:75px;width:50px;height:50px;}#object_two{left:65px;top:65px;width:70px;height:70px;-webkit-animation-delay:0.2s;animation-delay:0.2s;}#object_three{left:55px;top:55px;width:90px;height:90px;-webkit-animation-delay:0.4s;animation-delay:0.4s;}#object_four{left:45px;top: 45px;width:110px;height:110px;-webkit-animation-delay:0.6s;animation-delay:0.6s;}@-webkit-keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}@keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}
+		body {background-color: #000;}
+		h2 {
+			text-align: center;
+			font-family: 'Permanent Marker', cursive;
+			font-size: 72px;
+			color: #fff;
+		}
+		h3 {
+			font-family: 'Amaranth', sans-serif;
+			font-size: 42px;
+		}
+		p {
+			font-family: 'Roboto', sans-serif;
+			font-size: 18px;
+			text-align: center;
+		}
+		.background {
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: bottom;
+			transition: 1s;
+		}
+		.textBackground {
+			position: fixed;
+			width: 100%;
+			transition: 1s;
+			z-index: 29;
+			-ms-transform: translate(0,40vh);
+			-webkit-transform: translate(0,40vh);
+			transform: translate(0,40vh);
+		}
+		.div-text {
+			max-width: 460px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.div-text p {
+			color: #fff;
+			font-weight: 300;
+		}
+		.show {
+			-ms-transform: translate(0,0) !important;
+			-webkit-transform: translate(0,0) !important;
+			transform: translate(0,0) !important;
+		}
+		.showTextBackground {
+			-ms-transform: translate(0,30vh) !important;
+			-webkit-transform: translate(0,30vh) !important;
+			transform: translate(0,30vh) !important;
+		}
+		#bg_1 {
+			background-image: url(img/bg_1.jpg);
+			-ms-transform: translate(0,20vh);
+			-webkit-transform: translate(0,20vh);
+			transform: translate(0,20vh);
+			opacity: .3;
+		}
+		#txt_2 {
+			opacity: 0;
+			transition: .5s;
+		}
+		#section2 {
+			z-index: -1;
+			transition: .5s;
+		}
+		#section2 ul {
+			text-align: center;
+		}
+		#section2 ul li {
+			display: inline-block;
+			color: #fff;
+		}
+		#section0 {background-color: #000;}
+		#header {
+			width: 100%;
+			position: absolute;
+			top: 40px;
+			left: 40px;
+			z-index: 30;
+		}
+	</style>
+</head>
+	
+<body>
+	<div id="loading"><div id="loading-center"><div id="loading-center-absolute"><div class="object" id="object_four"></div><div class="object" id="object_three"></div><div class="object" id="object_two"></div><div class="object" id="object_one"></div></div></div></div>
+	
+	<div id="header">
+		<h1><span style="width:35px;height:46px;"><img src="img/logo_klasiloka.svg" width="35" height="46"></span></h1>
+	</div>
+	<div id="bg_1" class="background"></div>
+	<div id="bg_2" class="background"></div>
+	<div id="bg_3" class="background"></div>
+	
+	<div id="txt_1" class="textBackground">
+		<h2>Jakarta Unveiled</h2>
+	</div>
+	
+	<div id="txt_2" class="textBackground">
+		<div class="div-text">
+			<p id="txt_type1"></p>
+		</div>
+	</div>
+	
+	<div id="fullpage">
+
+		<div class="section " id="section0">
+		</div>
+		
+		<div class="section" id="section1">
+		</div>
+		
+		<div class="section" id="section2">
+			<ul>
+				<li><img src="img/list_01.jpg"><h3>Eat</h3></li>
+				<li><img src="img/list_02.jpg"><h3>To-do</h3></li>
+				<li><img src="img/list_03.jpg"><h3>Space</h3></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="/_common/js/jquery_v2.1.0.js"></script>
+	<script type="text/javascript" src="/_common/js/jquery.scrolloverflow.js"></script>
+	<script type="text/javascript" src="/_common/js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+		function onReady(callback) {
+			var intervalID = window.setInterval(checkReady, 1000);
+			function checkReady() {
+				if (document.getElementsByTagName('body')[0] !== undefined) {
+					window.clearInterval(intervalID);
+					callback.call(this);
+				}
+			}
+		}
+		function show(id, value) {
+			document.getElementById(id).style.display = value ? 'block' : 'none';
+		}
+		onReady(function () {
+			show('fullpage', true);
+			show('loading', false);
+			var i = 0;
+			var txt = 'Jakarta Unveiled is an online platform for pleasure seekers and delicacy hunters enjoying the metropolitan city of Jakarta.';
+			var speed = 40;
+
+			function typeWriter() {
+			  if (i < txt.length) {
+				document.getElementById("txt_type1").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+			  }
+			}
+			$('#fullpage').fullpage({
+				css3: true,
+				scrollingSpeed: 1200,
+				scrollOverflow: true,
+				afterLoad: function(anchorLink, index){
+                    var loadedSection = $(this);
+					if(index == 1){
+						$('#txt_1').css("opacity","1");
+						$('#txt_1').removeClass("showTextBackground");
+                    }
+					else if(index == 2){
+						$('#bg_1').css("opacity",".5");
+						$('#txt_1').css("z-index","-1");
+						$('#txt_2').css("z-index","25");
+						$('#txt_2').css("opacity","1");
+						typeWriter();
+                    }
+					else if(index == 3){
+						$('#txt_3').css("opacity","1");
+						$('#txt_2').css("z-index","-1")
+                    }
+				},
+				onLeave: function(index, nextIndex, direction){
+                    var leavingSection = $(this);
+					/* -- down -- */
+					if(index == 1 && direction == 'down'){
+						$('#bg_1').addClass("show");
+						$('#bg_1').css("opacity","1");
+						$('#txt_1').addClass("showTextBackground");
+						$('#txt_1').css("opacity","0");
+                    }
+					else if (index == 2 && direction == 'down') {
+						$('#txt_2').css("opacity","0");
+					}
+					/* -- up -- */
+					else if(index == 2 && direction == 'up'){
+						$('#bg_1').removeClass("show");
+						$('#bg_1').css("opacity",".3");
+						$('#txt_1').css("z-index","25");
+						$('#txt_2').css("opacity","0");
+                    }
+					else if (index == 3 && direction == 'up') {
+					}
+				}
+			});
+		});
+	</script>
+</body>
+</html>
