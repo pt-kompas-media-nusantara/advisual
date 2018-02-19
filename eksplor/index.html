@@ -100,15 +100,18 @@
 			animation-name: bounceDown;
 		}
 		.fp-controlArrow {
+			top: 15%;
 			margin-top: -10px;
 			transition: 1s;
 		}
 		.fp-prev {
+			left: 30% !important;
 			-ms-transform: translate(-30vw,0);
 			-webkit-transform: translate(-30vw,0);
 			transform: translate(-30vw,0);
 		}
 		.fp-next {
+			right: 30% !important;
 			-ms-transform: translate(30vw,0);
 			-webkit-transform: translate(30vw,0);
 			transform: translate(30vw,0);
@@ -366,7 +369,13 @@
             color: #fff;
 			font-family: georgia;
 		}
-		.text-link {margin-top: 25px;}
+		.text-link {
+			margin-top: 25px;
+			font-size: 14px;
+			font-weight: bold;
+			font-family: 'Alegreya Sans', sans-serif;
+			color: #fff;
+		}
 		.text-link a {
 			padding: 10px 15px;
 			border-radius: 5px;
@@ -456,17 +465,15 @@
 			</div>
 			<div class="image-gallery">
 				<div class="image">
-					<div><img src="img/gal_01.jpg" alt="vihara avalokitesvara banten"></div>
-				</div><!--
-				--><div class="image">
-					<div><img src="img/gal_02.jpg" alt="klenteng sam poo kong"></div>
+					<div><img src="img/gal_14.jpg" alt="masjid agung demak"></div>
 				</div><!--
 				--><div class="image">
 					<div><img src="img/gal_05.jpg" alt="museum ngawi"></div>
+				</div><!--
+				--><div class="image">
+					<div><img src="img/gal_02.jpg" alt="klenteng sam poo kong"></div>
 				</div>
-				<div class="text-caption">
-					<p class="tC text-link"><a href="/eksplor-ramadhan/">Lihat Kisah</a></p>
-				</div>
+				<p class="tC text-link"><a href="/eksplor-ramadhan/">Lihat Kisah</a></p>
 			</div>
 			
 		</div> <!-- /.slide -->
@@ -477,10 +484,10 @@
 			</div>
 			<div class="image-gallery">
 				<div class="image">
-					<div><img src="img/gal_03.jpg" alt="museum perumusan proklamasi"></div>
-				</div><!--
-				--><div class="image">
 					<div><img src="img/gal_09.jpg" alt="museum perumusan proklamasi"></div>
+				</div><!-- 
+				--><div class="image">
+					<div><img src="img/gal_03.jpg" alt="museum perumusan proklamasi"></div>
 				</div><!--
 				--><div class="image">
 					<div><img src="img/gal_10.jpg" alt="monumen perjuangan rakyat jawa barat"></div>
@@ -508,10 +515,13 @@
 			</div>
 			<div class="image-gallery">
 				<div class="image">
+					<div><img src="img/gal_08.jpg" alt="air terjun cikaso"></div>
+				</div><!--
+				--><div class="image">
 					<div><img src="img/gal_07.jpg" alt="eksplor nusantara I bersama isuzu"></div>
 				</div><!--
 				--><div class="image">
-					<div><img src="img/gal_12.jpg" alt="desa sembungan dieng"></div>
+					<div><img src="img/gal_13.jpg" alt=""></div>
 				</div>
 			</div>
 		</div> <!-- /.slide -->
@@ -578,7 +588,6 @@
 						$('#section2 .background_transparent').css('background-color','rgba(0,0,0,.8)');
 					}
 					else if(index == 4){
-						$('.image').addClass('show');
 						$('#headerArea').css('background-color','rgba(0,0,0,.7)');
 						$('#bg_2').css('opacity','0');
 					}

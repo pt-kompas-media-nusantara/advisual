@@ -71,6 +71,10 @@
 			-webkit-transform: translate(0,0) !important;
 			transform: translate(0,0) !important;
 		}
+		.visible {
+			opacity: 1 !important;
+			transition: 1s;
+		}
 		.showTextBackground {
 			-ms-transform: translate(0,30vh) !important;
 			-webkit-transform: translate(0,30vh) !important;
@@ -95,16 +99,23 @@
 			text-align: center;
 		}
 		#section2 ul li {
+			max-width: 640px;
 			display: inline-block;
 			color: #fff;
+			opacity: 0;
+			transition: 1s;
+			position: relative;
+		}
+		#section2 ul li img {
+			width: 100%;
 		}
 		#section0 {background-color: #000;}
 		#header {
 			width: 100%;
 			position: absolute;
-			top: 40px;
-			left: 40px;
+			padding: 40px;
 			z-index: 30;
+			box-sizing: border-box;
 		}
 	</style>
 </head>
@@ -112,8 +123,10 @@
 <body>
 	<div id="loading"><div id="loading-center"><div id="loading-center-absolute"><div class="object" id="object_four"></div><div class="object" id="object_three"></div><div class="object" id="object_two"></div><div class="object" id="object_one"></div></div></div></div>
 	
-	<div id="header">
-		<h1><span style="width:35px;height:46px;"><img src="img/logo_klasiloka.svg" width="35" height="46"></span></h1>
+	<div id="header" class="clearfix">
+		<h1><span style="width:35px;height:46px;float:left;"><img src="img/logo_klasiloka.svg" width="35" height="46"></span>
+			<span style="width:45px;height:45px;float:right;"><img src="img/logo-kompas_bw.svg" width="45" height="45"></span>
+		</h1>
 	</div>
 	<div id="bg_1" class="background"></div>
 	<div id="bg_2" class="background"></div>
@@ -139,9 +152,9 @@
 		
 		<div class="section" id="section2">
 			<ul>
-				<li><img src="img/list_01.jpg"><h3>Eat</h3></li>
-				<li><img src="img/list_02.jpg"><h3>To-do</h3></li>
-				<li><img src="img/list_03.jpg"><h3>Space</h3></li>
+				<li><img src="img/list_01.jpg"><h3>to Eat</h3></li><!--
+				--><li><img src="img/list_02.jpg"><h3>to-Do</h3></li><!--
+				--><li><img src="img/list_03.jpg"><h3>to Stay</h3></li>
 			</ul>
 		</div>
 
@@ -177,6 +190,11 @@
 				setTimeout(typeWriter, speed);
 			  }
 			}
+			
+			$("#section2 ul li", this).hover(function(){
+				 $(this).find("h3").addClass("moveBottom");
+			});
+			
 			$('#fullpage').fullpage({
 				css3: true,
 				scrollingSpeed: 1200,
@@ -195,8 +213,9 @@
 						typeWriter();
                     }
 					else if(index == 3){
-						$('#txt_3').css("opacity","1");
-						$('#txt_2').css("z-index","-1")
+						$('#txt_2').css("z-index","-1");
+						$('#section2').css("opacity","1");
+						$('#section2').css("background-color","#2c2c2c");
                     }
 				},
 				onLeave: function(index, nextIndex, direction){
@@ -210,6 +229,14 @@
                     }
 					else if (index == 2 && direction == 'down') {
 						$('#txt_2').css("opacity","0");
+						var children4 = $("#section2 ul li");
+						var index4 = 0;
+						function addClassToNextChild() {
+							if (index == children4.length) return;
+								children4.eq(index4++).addClass("visible");
+								window.setTimeout(addClassToNextChild, 1000);
+						}
+						addClassToNextChild();
 					}
 					/* -- up -- */
 					else if(index == 2 && direction == 'up'){
@@ -219,6 +246,7 @@
 						$('#txt_2').css("opacity","0");
                     }
 					else if (index == 3 && direction == 'up') {
+						$('#section2').css("opacity","0");
 					}
 				}
 			});

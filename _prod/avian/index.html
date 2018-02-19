@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/png" href="/_common/img/icon/advisual_favicon.png"/>
+	<title>Program Beasiswa Avian</title>
+	<meta name="description" content="avian bersama kompas menyelenggarakan beasiswa untuk mahasiswa ">
+    <meta name="keywords" content="beasiswa avian">
+    <meta name="author" content="beasiswa avian">
+	
+	<link href="/_common/css/reset_v1.0.css" rel="stylesheet">
+	<link href="local/flexslider.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet">
+	<style>
+		.fL {float: left;}
+		.fR {float: right;}
+		.wrap01 {
+			max-width: 1140px;
+			padding: 20px;
+			margin: 0 auto;
+		}
+		.wrap02 {
+			max-width: 810px;
+			padding: 20px;
+			margin: 0 auto;
+		}
+		.flexslider {border: 0;}
+		.info {
+			max-width: 810px;
+			font-family: 'Ubuntu','sans-serif';
+			margin: 0 auto 20px auto;
+		}
+		.info div {
+			height: 80px;
+			vertical-align: middle;
+			display: table-cell;
+			text-align: center;
+		}
+		.info div:nth-child(1) {
+			width: 20%;
+			font-weight: bold;
+			font-size: 20px;
+			background-color: #3a3a3c;
+			color: #fff;
+		}
+		.info div:nth-child(1).active {
+			background-color: #37763d !important;
+		}
+		.info div:nth-child(2) {
+			width: 320px;
+		}
+		.info div:nth-child(3) {
+			width: 380px;
+		}
+		.info div:nth-child(3) table{
+			width: 100%;
+		}
+		.info div:nth-child(3) table tr td{
+			text-align: center;
+		}
+		#headerArea {
+			z-index: 31;
+			position: relative;
+		}
+		#headerArea h1 {
+			width: 100%;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		#highlight h2 {
+			margin-bottom: 20px;
+			font-family: 'Ubuntu','sans-serif';
+			font-size: 24px;
+			font-weight: bold;
+			color: #fff;
+		}
+		#highlight p {
+			margin-bottom: 15px;
+			font-family: 'Ubuntu','sans-serif';
+			font-size: 16px;
+			color: #fff;
+		}
+		#countDown span {font-size: 22px;}
+		@media screen and (max-width: 769px) {
+			.info div {
+				width: 100% !important;
+				display: block;
+				height: auto;
+				padding: 20px 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="headerArea">
+		<div class="wrap02" style="display:table;">
+			<h1 class=""><img src="img/logo_avian.png" alt="logo avian brands" width="80" height="72"></h1>
+			<h1 class=""><img src="img/logo_kompas.png" alt="logo kompas" width="150" height="28"></h1>
+		</div>
+	</div> <!-- /#headerArea -->
+	<div id="contentArea">
+		<div id="sliderArea">
+			<div class="flexslider">
+				<ul class="slides">
+					<li><img src="img/slides/01.jpg" /></li>
+					<li><img src="img/slides/03.jpg" /></li>
+				</ul>
+			</div>
+		</div>
+		<div class="wrap02">
+			
+			<div class="info clearfix">
+				<div class="active"><h2>Pendaftaran</h2></div>
+				<div style="background-color:#fef200;">
+					<p>20 Mei - 31 Juli 2018</p>
+				</div>
+				<div style="background-color:#fef200;">
+					<table>
+						<tbody>
+							<tr>
+								<td><p id="countDown"></p></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<div class="info clearfix">
+				<div><h2>Pengumuman Tahap 1</h2></div>
+				<div><p>7 Agustus 2018</p></div>
+				<div>-</div>
+			</div>
+			
+			<div class="info clearfix">
+				<div><h2>Seleksi Tahap 1</h2></div>
+				<div><p>8 Agustus 2018 - 31 Agustus 2018</p></div>
+				<div>-</div>
+			</div>
+			
+			<div class="info clearfix">
+				<div><h2>Pengumuman Akhir</h2></div>
+				<div><p>8 Agustus 2018 - 31 Agustus 2018</p></div>
+				<div>-</div>
+			</div>
+			
+		</div> <!-- /.wrap02 -->
+		<div id="highlight" style="padding:20px 0;background-color: #37763d;">
+			<div class="wrap02">
+				<h2>Keterangan</h2>
+				<p>Tahap I - PENENTUAN AWAL</p>
+				<p>200 Calon pemenang yang terpilih pada tahap awal wajib mengirimkan dokumen yang dipersyaratkan kemudian</p>
+				<p>Tahap II - PENENTUAN AKHIR</p>
+				<p>Penentuan 100 pemenang beasiswa yang berhak menerima Rp 3.000.000 / Semester</p>
+				<h2 style="margin-top:40px;">Informasi Pendaftaran</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div> <!-- /.wrap02 -->
+		</div>
+		<div class="wrap01" style="overflow-x:scroll;">
+			<p><img src="img/sponsor.jpg"></p>
+		</div>
+	</div> <!-- /#contentArea -->
+	<script type="text/javascript" src="/_common/js/jquery_v2.1.0.js"></script>
+	<script type="text/javascript" src="local/jquery.flexslider.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("html,body").animate({scrollTop: 0}, 1000);
+			$(window).load(function() {
+				$('.flexslider').flexslider({
+					animation: "slide"
+				});
+			});
+		});
+	</script>
+	<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("May 20, 2018 00:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+			// Get todays date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now an the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			// Output the result in an element with id="countDown"
+			document.getElementById("countDown").innerHTML = "<table><tbody><tr>" + "<td><span>" + days + "</span>" + "<br>hari " + "</td>" + "<td><span>" + hours + "</span>" + "<br>jam " + "</td>" + "<td><span>" + minutes + "</span>" + "<br>menit " + "</td>" + "<td><span>" + seconds + "</span>" + "<br>detik " + "</td></tr></tbody></table>";
+
+			// If the count down is over, write some text 
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("countDown").innerHTML = "EXPIRED";
+			}
+		}, 1000);
+</script>
+</body>
+</html>

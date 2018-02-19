@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>Bodymovin Demo</title>
+  <script src="http://assets.kompas.com/data/2014/kompascom/js/jquery.js"></script>
+</head>
+<body>
+
+  <div id="bm" style="width: 800px; height: auto;"> </div>
+  <button id="test" type="button" name="button">
+      test
+  </button>
+  <!-- Scripts -->
+  <script src="bodymovin.js"></script>
+  <script type="text/javascript">
+
+      $(document).ready(function() {
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('bm'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: false,
+      path: 'gelombang.json',
+      name: 'myAnimation',
+    });
+
+
+
+      $("#test").click(function(){
+        animation.goToAndStop(0);
+        animation.play();
+        console.log("asdasd");
+      });
+
+      // $("#bm").mouseenter(function(){
+      //   animation.goToAndStop(0);
+      //   animation.play();
+      // });
+      // $("#bm").mouseout(function(){
+      //   animation.goToAndStop(0);
+      // });
+
+    });
+  </script>
+</body>
+</html>
