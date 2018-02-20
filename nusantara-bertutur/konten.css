@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+a img {border:none; outline:none;}
+.header-logo {margin-top:10px; margin-bottom:5px;}
+.nav1 {max-width:350px;}
+.nav1 img {margin-top:20px; margin-left:5px; margin-right:5px;}
+.main-img {margin-top:20px; margin-bottom:40px; width:100%; text-align:center;}
+
+.nav-bottom {height:20px;}
+
+#cari {background-color:#CCC; width:80px; border:none; border-radius:3px;}
+.kolomb {width:30%;float:right; margin-left:10px; margin-right:45px;}
+.kolom {width:30%; float:left; margin-left:45px; margin-right:10px;}
+
+.konten {margin-bottom:30px;}
+.konten h1 {font-family:Source Sans Pro, serif; font-size:18pt;}
+.konten h2 {font-family:Source Sans Pro, serif; font-size:12pt; color:#F60;}
+.konten h3 a {font-family:Source Sans Pro, serif; font-size:12pt; color:#666; text-decoration:none;}
+.konten h3 a:hover {color:#F60;}
+.konten p a {font-family:Source Sans Pro, serif; font-size:12pt; color:#666; text-decoration:none;}
+.konten p a:hover {color:#F60;}
+.konten h4 {font-family:Source Sans Pro, serif; font-size:13pt; color:#F06; text-decoration:none; margin-bottom:-10px;}
+.konten p {font-family:Source Sans Pro, serif; font-size:11pt;}
+
+#custom-tweet-button {width:68px;height:77px;float:left;border: none;}
+
+.moral {width:auto; height:auto; background-color:#FF9; border-radius:5px; padding:5px;}
+.moral p {font-family:Source Sans Pro, serif; font-size:11pt;}
+
+.video {margin-top:40px;}
+
+hr.style-six {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
