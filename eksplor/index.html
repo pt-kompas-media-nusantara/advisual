@@ -14,12 +14,14 @@
 	
 	<link rel="stylesheet" type="text/css" href="/_common/css/reset_v1.0.css" />
 	<link rel="stylesheet" type="text/css" href="local/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="local/swiper.min.css" />
     <link rel="icon" href="/_common/img/icon/advisual_favicon.png">
 	
 	<script src="/_common/js/jquery_v2.1.0.js" type="text/javascript"></script>
 	<script src="/_common/js/w3.js" type="text/javascript"></script>
 	<script src="local/scrolloverflow.min.js" type="text/javascript"></script>
-	<script src="local/jquery.fullPage.min.js" type="text/javascript" ></script>
+	<script src="local/jquery.fullPage.min.js" type="text/javascript"></script>
+	<script src="local/swiper.min.js" type="text/javascript" ></script>
 	
 	<style>
 		* {box-sizing: border-box;}
@@ -100,30 +102,27 @@
 			animation-name: bounceDown;
 		}
 		.fp-controlArrow {
-			top: 15%;
-			margin-top: -10px;
+			top: 26%;
 			transition: 1s;
 		}
 		.fp-prev {
-			left: 30% !important;
 			-ms-transform: translate(-30vw,0);
 			-webkit-transform: translate(-30vw,0);
 			transform: translate(-30vw,0);
 		}
 		.fp-next {
-			right: 30% !important;
 			-ms-transform: translate(30vw,0);
 			-webkit-transform: translate(30vw,0);
 			transform: translate(30vw,0);
 		}
 		#fullpage {z-index: 10;}
 		#fp-nav ul li a span, .fp-slidesNav ul li a span {background: #fff;}
-		
-		#section4 .text-caption {color: #fff;}
-		#slide1 {background: url(img/eksplor_1.jpg) no-repeat;}
-		#slide2 {background: url(img/eksplor_2.jpg) no-repeat;}
-		#slide3 {background: url(img/eksplor_3.jpg) no-repeat;}
-		#slide4 {background: url(img/eksplor_4a.jpg) no-repeat;}
+		#section2 .text-caption {margin: 100px auto 0 auto;}
+		#section2 h2 {margin-bottom: 0;}
+		#slide1 {background: url(img/eksplor_1-bw.jpg) no-repeat;}
+		#slide2 {background: url(img/eksplor_2-bw.jpg) no-repeat;}
+		#slide3 {background: url(img/eksplor_3-bw.jpg) no-repeat;}
+		#slide4 {background: url(img/eksplor_4-bw.jpg) no-repeat;}
 		
 		#headerArea {
 			padding: 20px;
@@ -315,6 +314,15 @@
 			transform: scale(1.25,1.25);
 			transition: 1s;
 		}
+		.swiper-slide img {
+			transition: 1s;
+		}
+		.swiper-slide img:hover {
+			-ms-transform: scale(1.25,1.25);
+			-webkit-transform: scale(1.25,1.25);
+			transform: scale(1.25,1.25);
+			transition: 1s;
+		}
 		.image-container img {width: 100%;}
 		.image-social {
 			display: table;
@@ -375,6 +383,7 @@
 			font-weight: bold;
 			font-family: 'Alegreya Sans', sans-serif;
 			color: #fff;
+			position: relative;
 		}
 		.text-link a {
 			padding: 10px 15px;
@@ -387,12 +396,40 @@
 			background-color: #fff;
 			transition: .5s;
 		}
-		
+		.swiper-container {
+			max-width: 700px;
+			margin: 20px auto;
+		}
+		.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+			background-color: rgba(0,0,0,0);
+		}
+		.swiper-slide img {
+			width: 100%;
+		}
 		@media screen and (max-width: 569px) {
 			.image-gallery .image {
 				width: 100%;
 				height: auto;
 				margin: 0 0 20px 0;
+			}
+			.fp-controlArrow {
+				top: 50%;
 			}
 		}
 		@media screen and (max-width: 1040px) {
@@ -462,35 +499,26 @@
 			<div class="background_transparent"></div>
 			<div class="text-caption">
 				<h2>Eksplor<br>Ramadan</h2>
-			</div>
-			<div class="image-gallery">
-				<div class="image">
-					<div><img src="img/gal_14.jpg" alt="masjid agung demak"></div>
-				</div><!--
-				--><div class="image">
-					<div><img src="img/gal_05.jpg" alt="museum ngawi"></div>
-				</div><!--
-				--><div class="image">
-					<div><img src="img/gal_02.jpg" alt="klenteng sam poo kong"></div>
-				</div>
 				<p class="tC text-link"><a href="/eksplor-ramadhan/">Lihat Kisah</a></p>
 			</div>
-			
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_14.jpg" alt="masjid agung demak"></div>
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_05.jpg" alt="museum ngawi"></div>
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_02.jpg" alt="klenteng sam poo kong"></div>
+				</div>
+			</div>
 		</div> <!-- /.slide -->
 		<div class="slide" id="slide2" data-anchor="eksplor-hari-merdeka">
 			<div class="background_transparent"></div>
 			<div class="text-caption">
 				<h2>Eksplor<br>Hari Merdeka</h2>
 			</div>
-			<div class="image-gallery">
-				<div class="image">
-					<div><img src="img/gal_09.jpg" alt="museum perumusan proklamasi"></div>
-				</div><!-- 
-				--><div class="image">
-					<div><img src="img/gal_03.jpg" alt="museum perumusan proklamasi"></div>
-				</div><!--
-				--><div class="image">
-					<div><img src="img/gal_10.jpg" alt="monumen perjuangan rakyat jawa barat"></div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_09.jpg" alt="museum perumusan proklamasi"></div>
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_03.jpg" alt="museum perumusan proklamasi"></div>
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_10.jpg" alt="monumen perjuangan rakyat jawa barat"></div>
 				</div>
 			</div>
 		</div> <!-- /.slide -->
@@ -499,12 +527,11 @@
 			<div class="text-caption">
 				<h2>Eksplor<br>Nusantara I</h2>
 			</div>
-			<div class="image-gallery">
-				<div class="image">
-					<div><img src="img/gal_11.jpg" alt="eksplor nusantara I bersama honda"></div>
-				</div><!--
-				--><div class="image">
-					<div><img src="img/gal_12.jpg" alt="desa sembungan dieng"></div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_11.jpg" alt="eksplor nusantara I bersama honda"></div>
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_12.jpg" alt="desa sembungan dieng"></div>
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_15.jpg" alt=""></div>
 				</div>
 			</div>
 		</div> <!-- /.slide -->
@@ -513,15 +540,11 @@
 			<div class="text-caption">
 				<h2>Eksplor<br>Nusantara II</h2>
 			</div>
-			<div class="image-gallery">
-				<div class="image">
-					<div><img src="img/gal_08.jpg" alt="air terjun cikaso"></div>
-				</div><!--
-				--><div class="image">
-					<div><img src="img/gal_07.jpg" alt="eksplor nusantara I bersama isuzu"></div>
-				</div><!--
-				--><div class="image">
-					<div><img src="img/gal_13.jpg" alt=""></div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_08a.jpg" alt="air terjun cikaso"></div>
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_07a.jpg" alt="eksplor nusantara I bersama isuzu"></div>
+					<div class="swiper-slide" data-swiper-autoplay="2000"><img src="img/gal_13a.jpg" alt=""></div>
 				</div>
 			</div>
 		</div> <!-- /.slide -->
@@ -550,6 +573,15 @@
 </div>
 	<script type="text/javascript">
 		$(document).ready(function() {
+			var mySwiper = new Swiper('.swiper-container', {
+			  	paginationClickable: true,
+				spaceBetween: 30,
+				speed: 1000,
+				centeredSlides: true,
+				autoplay: 2500,
+				autoplayDisableOnInteraction: false,
+        		grabCursor: true
+			});
 			
 			w3.includeHTML();
 			$("#menu_dropdown").click(function(){
@@ -585,15 +617,11 @@
 						$('.fp-next').addClass('show');
 						$('#title_2').addClass('show');
 						$('.image').addClass('show');
-						$('#section2 .background_transparent').css('background-color','rgba(0,0,0,.8)');
+						$('#section2 .background_transparent').css('background-color','rgba(0,0,0,.7)');
 					}
 					else if(index == 4){
-						$('#headerArea').css('background-color','rgba(0,0,0,.7)');
 						$('#bg_2').css('opacity','0');
 					}
-					else if(index == 5){
-					}
-					
                 },
                 onLeave: function(index, nextIndex, direction){
                     var leavingSection = $(this);
@@ -624,7 +652,6 @@
 						$('#title_1').removeClass('hide');
 						$('#bg_1').removeClass('moveTopMost');
 						$('#bg_2').removeClass('moveTop');
-						$('#headerArea').css('background-color','transparent');
                     }
 					else if(index == 3 && direction == 'up'){
                         $('.fp-prev').removeClass('show');
@@ -634,10 +661,7 @@
                     }
 					else if(index == 4 && direction == 'up'){
 						$('#section3 .image').removeClass('show');
-						$('#headerArea').css('background-color','transparent');
 						$('#bg_2').css('opacity','.5');
-					}
-					else if(index == 5 && direction == 'up'){
 					}
                 }
 			});
