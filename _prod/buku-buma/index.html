@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Buma</title>
+    <link rel="icon" href="/_common/img/icon/advisual_favicon.png">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   
+   	<meta name="author" 		content="Kompas Klasika" />
+	<meta name="description" 	content="Buma, Menjadi Pilihan dengan Keunggulan" />
+	<meta name="keywords"  		content="buma" />
+	<meta name="Resource-type" 	content="Document" />
+   	
+   	<link href="asset/base_v1.31.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400" rel="stylesheet">
+    
+    <style>
+		/* ---------------------- base tag ---------------------- */
+		h1,h2,h3,h4,h5,h6,p {
+			-moz-user-select: none; 
+			-webkit-user-select: none; 
+			-ms-user-select:none; 
+			user-select:none;
+			-o-user-select:none;
+			position: relative;
+		}
+		a {text-decoration: none;color: inherit;}
+		@keyframes frame1 {
+			0%   {opacity: 0;top:-50px}
+			25%  {opacity: 25%;}
+			50%  {opacity: 50%;}
+			75%  {opacity: 75%;}
+			100% {opacity: 100%;top:0}
+		}
+		@keyframes frame2 {
+			0%   {opacity: 0;left:-50px}
+			25%  {opacity: 25%;}
+			50%  {opacity: 50%;}
+			75%  {opacity: 75%;}
+			100% {opacity: 100%;left:0}
+		}
+		h1 {
+            float: left;
+            padding-left: 20px;
+			opacity: 1;
+			text-align: center;
+			-webkit-animation: frame1 1s;
+			animation: frame1 1s;
+            color: #fff;
+		}
+		h2 {
+            float: left;
+			padding: 35px 10px 10px 20px;
+			font-size: 16px;
+			opacity: 1;
+			color: #000;
+			text-align: center;
+			-webkit-animation: frame2 1s;
+			animation: frame2 1s;
+			transition: 1s;
+            font-family: 'Alegreya Sans', sans-serif;
+		}
+		h3 {
+			margin: 10px 0;
+			font-weight: bold;
+			font-size: 24px;
+            text-align: left;
+			color: #fff;
+            font-family: Georgia;
+		}
+		p {
+			font-size: 16px;
+			text-align: left;
+			color: #fff;
+            font-family: 'Alegreya Sans', sans-serif;
+		}
+		/* ---------------------- base class ---------------------- */
+		.clearfix:before,
+		.clearfix:after{content:"";display:table;}
+		.clearfix:after{clear:both;}
+
+		.dispTable{
+			display:table-cell;
+			vertical-align: middle;
+		}
+		.dispInline li{display:inline-block;}
+		.dispList li{display:list-item;}
+
+		.tI {font-style: italic;}
+		/* ---------------------- components ---------------------- */
+		.topHeading {margin-bottom: 50px;}
+		.wrap01 {
+			max-width: 1920px;
+            min-height: 750px;
+			margin: 0 auto;
+		}
+		.multiple {
+			width: 100%;
+			margin: 0px auto;
+			position: relative;
+			text-align:center;
+		}
+		.block01 {
+			height: 500px;
+			width: 33%;
+			display:inline-block;
+			overflow: hidden;
+			transition: .3s;
+			position: relative;
+			cursor: pointer;
+			opacity: 0;
+			background-size: cover !important;
+			background-position: center !important;
+			z-index: 0;
+			-webkit-transform:scale(.5);
+			-moz-transform:scale(.5);
+			-ms-transform:scale(.5);
+			-o-transform:scale(.5);
+			transform:scale(.5);
+		}
+		.block01:hover {
+			transition: .3s;
+			z-index: 1;
+		}
+		.block01 div {
+			height: 150px;
+			padding: 0 30px 30px 30px;
+			position: absolute;
+			bottom: 0;
+			background-color: rgba(0,0,0,.30);
+            transition: .5s;
+		}
+		.show {
+			opacity: 1 !important;
+			margin-top: 0;
+			transition: 1s;
+			-webkit-transform:scale(1);
+			-moz-transform:scale(1);
+			-ms-transform:scale(1);
+			-o-transform:scale(1);
+			transform:scale(1);
+		}
+        .hover {
+            background-color: rgba(0,0,0,.80) !important;
+            -webkit-transform:scale(1.05);
+			-moz-transform:scale(1.05);
+			-ms-transform:scale(1.05);
+			-o-transform:scale(1.05);
+            transform:scale(1.05);
+        }
+		/* ---------------------- header ---------------------- */
+		#headerArea {
+			padding-left: 10px;
+			font-size: 14px;
+		}
+		#headerArea ul li a {
+			margin-right: 15px;
+			color: #000;
+			transition: .3s;
+		}
+		#headerArea ul li a:hover {
+			color: #00599A;
+			transition: .3s;
+		}
+		/* ---------------------- main ---------------------- */
+		#mainArea {
+			padding-top: 25px;
+		}
+		/* ---------------------- footer ---------------------- */
+		#footerArea {
+			max-width: 1880px;
+            padding: 20px;
+			margin: 25px auto;
+			color: #fff;
+            font-family: 'Alegreya Sans', sans-serif;
+		}
+		/* ---------------------- responsive ---------------------- */
+		@media screen and (max-width:1000px){
+			.block01 {
+				width: 49%;
+				margin: 0;
+			}
+			.block01:hover {
+				-webkit-transform:scale(1);
+				-moz-transform:scale(1);
+				-ms-transform:scale(1);
+				-o-transform:scale(1);
+				 transform:scale(1);
+			}
+		}
+		@media screen and (max-width:768px){
+			#footerArea ul {
+				float: none;
+				text-align: center;
+			}
+			.wrap01 {
+				padding-left: 0;
+				padding-right: 0;
+			}
+            .block01 div {
+                background-color: rgba(0,0,0,.80) !important;
+            }
+		}
+		@media screen and (max-width:768px){
+            h1,h2 {
+                float: none;
+                text-align: center;
+            }
+            h2 {margin-top:20px;}
+			.block01 {width: 99%;}
+			.block01 div {height: auto;}
+		}
+	</style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="mainArea" class="clearfix">
+            <div class="topHeading clearfix">
+                <h1 style="width:200px;height:67px;"><a href="/"><img src="img/logo-buma.png" alt="logo buma" width="200" height="67"></a></h1>
+                <h2>Menjadi Pilihan dengan Keunggulan</h2>
+            </div>
+            
+            <div class="wrap01">
+                <div class="multiple">
+					
+					<div class="block01" onclick="window.open('bab1.html');" style="background: url(img/buma-01.jpg) no-repeat;">
+                        <div>
+							<h3>Bab 1<br>Berkarya untuk Hidup Lebih Baik</h3>
+                            <p>Site Lati, Berau, Kalimantan Timur, tanggal 9 Desember 1998.  PT Bukit Makmur Mandiri Utama atau lebih dikenal sebagai BUMA baru saja dipercaya menjadi kontraktor tambang batubara di site tersebut. &#9654;</p>
+                        </div>
+                    </div>
+					
+                    <div class="block01" onclick="window.open('#');" style="background: url(img/buma-01.jpg) no-repeat;">
+                        <div>
+							<h3>Bab 2<br>Berubah untuk Mengejar Prestasi</h3>
+                            <p>Sejak 2009, harga batu bara mengalami peningkatan yang begitu pesat dan menjadi primadona. Puncaknya ketika menyentuh harga 130 dollar AS per ton pada 2011. Namun, sejak itu, harga batubara mengalami tren menurun. &#9654;</p>
+                        </div>
+                    </div>
+					
+                    <div class="block01" onclick="window.open('#');" style="background: url(img/buma-01.jpg) no-repeat;background-position:bottom !important;">
+                        <div>
+							<h3>Bab 3<br>Pahit Manis Kerja di Tambang</h3>
+                            <p>Hari masih pagi. Matahari belum lagi terlihat. Kabut masih menutupi kawasan hutan Kalimantan di seputar Berau, Meski demikian, sejumlah karyawan berseragam BUMA sudah bergegas menuju bus-bus yang tersedia di sejumlah titik. &#9654;</p>
+                        </div>
+                    </div>
+					
+                    <div class="block01" onclick="window.open('#');" style="background: url(img/buma-01.jpg) no-repeat;background-position:bottom !important;">
+                        <div>
+							<h3>Bab 4<br>Sahabat Bekerja dan Berbagi Bahagia</h3>
+                            <p>Jauh dari mana-mana dan bekerja keras di tengah lokasi tambang tak membuat para karyawan BUMA kehilangan hidup mereka. Keseimbangan antara bekerja dan kehidupan sehari-hari tetap terjaga melalui pendekatan Mind, Body dan Soul. &#9654;</p>
+                        </div>
+                    </div>
+					
+                    <div class="block01" onclick="window.open('#');" style="background: url(img/buma-01.jpg) no-repeat;">
+                        <div>
+                           <h3>Bab 5<br>Teknologi sebagai Pilar Baru yang Menjanjikan</h3>
+                            <p>Dalam industri pertambangan, teknologi memiliki fungsi penting. Teknologi berperan untuk mendukung berbagai proses dalam operasional tambang agar menjadi lebih produktif dan efisien. &#9654;</p>
+                        </div>
+                    </div>
+					
+					<div class="block01" onclick="window.open('#');" style="background: url(img/buma-01.jpg) no-repeat;">
+                        <div>
+                           <h3>Bab 6<br>Ungkapan Hati Kami</h3>
+                            <p>Sangat bisa dimaklumi, dengan latar belakang sebagai transmigran tanpa bekal pendidikan yang memadai, dapat bekerja di BUMA itu merupakan anugerah bagi Teme.  &#9654;</p>
+                        </div>
+                    </div>
+					
+					<div class="block01" onclick="window.open('#');" style="background: url(img/buma-01.jpg) no-repeat;">
+                        <div>
+                           <h3>Bab 7<br>Berkembang Bersama Warga</h3>
+                            <p>Kehadiran BUMA di daerah selalu dibarengi dengan program-program CSR yang memberi kesempatan bagi warga lokal untuk ikut BERKEMBANG. Sebab, dalam prinsip kerja BUMA, mereka datang tak hanya untuk mengeruk batubara tapi juga menawarkan asa. &#9654;</p>
+                        </div>
+                    </div>
+					
+                </div>
+            </div>
+		</div>
+    </div> <!-- /#wrap -->
+    
+    <div w3-include-html="/_common/footer.html"></div>
+    
+    <script src="asset/jquery_v2.1.0.js" type="text/javascript"></script>
+    <script src="asset/w3.js" type="text/javascript"></script>
+    <script src="asset/jquery_viewportchecker.js" type="text/javascript"></script> 
+  
+    <script> /* animation when hovering a particular article*/
+        $( document ).ready(function(){
+			w3.includeHTML();
+			$(".block01").viewportChecker({
+				classToAdd: 'show',
+				offset: 100,
+			});
+            $(".block01").hover(function () {
+                $(this).find("div").toggleClass("hover");
+             });
+        });
+    </script>
+</body>
+</html>
