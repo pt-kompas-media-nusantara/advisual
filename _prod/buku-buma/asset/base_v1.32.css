@@ -25,10 +25,6 @@
 }
 /* custom */
 div {box-sizing: border-box;}
-@font-face {
-  font-family: 'MillerBanner';
-  src:  url('MillerBanner-Roman.otf');
-}
 
 /* header */
 
@@ -110,7 +106,7 @@ div {box-sizing: border-box;}
 	font-size: 12px;
 }
 .text-paragraph h2, .text-paragraph p, .text-lead p, .text-image-parallax_caption p, .image-middle, .div-caption p {
-	font-family: 'Libre Baskerville', serif;
+	font-family: Georgia;
 }
 .section {padding: 20px 0;}
 .div-caption {
@@ -151,9 +147,9 @@ div {box-sizing: border-box;}
 .text-paragraph p {
 	padding: 10px 0;
 	max-width: 600px;
-	font-family: 'Libre Baskerville', serif;
-	font-size: 15px;
-	line-height: 30px;
+	font-family: Georgia;
+	font-size: 16px;
+	line-height: 32px;
 }
 .image-right p, .image-middle p, .image-left p {
 	padding-top: 0;
