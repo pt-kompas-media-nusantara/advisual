@@ -3,17 +3,17 @@ var controller = new ScrollMagic.Controller({
 });
 var scene = new ScrollMagic.Scene({triggerElement: "#content", duration: 1000})
 	.setTween(".heading1", {transform: "translate(0,-10vh)"})
-	.addIndicators({name: "1 (duration: 1000)"})
+	/* .addIndicators({name: "1 (duration: 1000)"}) */
 	.addTo(controller);
 
 var scene = new ScrollMagic.Scene({triggerElement: "#content", duration: 1000})
 	.setTween(".landmark", {transform: "translate(0,-5vh)"})
-	.addIndicators({name: "2 (duration: x)"})
+	/* .addIndicators({name: "1 (duration: 1000)"}) */
 	.addTo(controller);
 
 var scene = new ScrollMagic.Scene({triggerElement: ".cerita"})
 	.setClassToggle(".cerita_prop","cerita_prop_show")
-	.addIndicators({name: "3 (duration: x)"})
+	/* .addIndicators({name: "1 (duration: 1000)"}) */
 	.addTo(controller);
 
 var scene = new ScrollMagic.Scene({
@@ -22,7 +22,7 @@ var scene = new ScrollMagic.Scene({
 		triggerHook: 'onEnter'
 	})
 	.setClassToggle(".cerita_prop","cerita_prop_stop")
-	.addIndicators({name: "4 (duration: x)"})
+	/* .addIndicators({name: "1 (duration: 1000)"}) */
 	.addTo(controller);
 
 function delay (URL) {

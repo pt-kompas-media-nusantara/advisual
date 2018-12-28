@@ -110,6 +110,10 @@ h1, h2 {font-family: Animated;}
 	left: 5%;
 	right: 5%;
 }
+.awan3 {
+	height:100px;
+	background-color:#fff;
+}
 .bg_awan {
 	width: 100vw;
 	height: 48px;
@@ -152,7 +156,7 @@ h1, h2 {font-family: Animated;}
 	width: 100%;
 }
 .cerita {
-	padding-top: 100px;
+	padding-top: 70px;
 	padding-bottom: 0;
 	margin-top: -100px;
 	background-image: url(../img/rel-stasiun.png);
@@ -160,6 +164,9 @@ h1, h2 {font-family: Animated;}
 	background-position: center;
 	background-size: 100px;
 	z-index: 9;
+}
+.cerita_intro {
+	padding: 100px 0;
 }
 .cerita .text-paragraph {
 	max-width: 1300px;
@@ -193,6 +200,7 @@ h1, h2 {font-family: Animated;}
 	-webkit-box-shadow: -5px 10px 5px 0px rgba(6,159,164,1);
 	-moz-box-shadow: -5px 10px 5px 0px rgba(6,159,164,1);
 	box-shadow: -5px 10px 5px 0px rgba(6,159,164,1);
+	border: 10px solid #fff;
 }
 .cerita .text-paragraph .row:nth-child(odd) div:first-of-type {
 	float: left;
@@ -224,7 +232,7 @@ h1, h2 {font-family: Animated;}
 	margin: auto;
 	top: auto;
 	left: 0;
-	bottom: 150px;
+	bottom: 125px;
 	right: 0;
 	z-index: 9;
 	background-size: 100%;
@@ -236,7 +244,7 @@ h1, h2 {font-family: Animated;}
 }
 .cerita_prop_stop {
 	position: absolute !important;
-	bottom: 150px;
+	bottom: 125px;
 	top: auto;
 }
 .back_pesawat {
@@ -274,12 +282,12 @@ h1, h2 {font-family: Animated;}
 }
 .field {position: relative;}
 @-webkit-keyframes flight {
-	0%  	{opacity:0;transform:translate(-50vw,30vw);}
+	0%  	{opacity:0;transform:translate(-100vw,60vw);}
 	25%  	{opacity:1;}
 	100%  	{opacity:1;transform:translate(0,0);}
 }
 @keyframes flight {
-	0%  	{opacity:0;transform:translate(-50vw,30vw);}
+	0%  	{opacity:0;transform:translate(-100vw,60vw);}
 	25%  	{opacity:1;}
 	100%  	{opacity:1;transform:translate(0,0);}
 }
@@ -336,6 +344,7 @@ h1, h2 {font-family: Animated;}
 		font-size: 4.5vw;
 	}
 	.landmark {
+		width: 100%;
 		bottom: 20%;
 	}
 	.cerita {

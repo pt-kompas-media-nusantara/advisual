@@ -16,7 +16,7 @@
 	<style>
 		#loading{background-color: #00599A;height:100%;width:100%;position:fixed;z-index:20;margin-top:0px;top:0px;}#loading-center{width:100%;height: 100%;position: relative;}#loading-center-absolute{position: absolute;left:50%;top:50%;height:200px;width:200px;margin-top:-100px;margin-left: -100px;-ms-transform: rotate(-135deg);-webkit-transform:rotate(-135deg);transform: rotate(-135deg);}.object{-moz-border-radius: 50% 50% 50% 50%;-webkit-border-radius:50% 50% 50% 50%;border-radius: 50% 50% 50% 50%;position:absolute;border-top: 5px solid #FFF;border-bottom: 5px solid transparent;border-left:5px solid #FFF;border-right:5px solid transparent;-webkit-animation:animate 2s infinite;animation:animate 2s infinite;}#object_one{left:75px;top:75px;width:50px;height:50px;}#object_two{left:65px;top:65px;width:70px;height:70px;-webkit-animation-delay:0.2s;animation-delay:0.2s;}#object_three{left:55px;top:55px;width:90px;height:90px;-webkit-animation-delay:0.4s;animation-delay:0.4s;}#object_four{left:45px;top: 45px;width:110px;height:110px;-webkit-animation-delay:0.6s;animation-delay:0.6s;}@-webkit-keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}@keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}
 		/* custom */
-		.cerita_prop {width:18px;height:350px; background-image: url(img/kereta.png);}
+		.cerita_prop {width:18px;height:270px; background-image: url(img/kereta.png);}
 		.section {z-index:inherit;}
 		#loading {z-index: 99;}
 		#btn_jepang {display: none;}
@@ -42,7 +42,7 @@
 		<div id="content" class="section">
 			<div class="bg_awan bg_awan_top"></div>
 			
-			<div class="section" style="background-color:#fff;z-index:20">
+			<div class="section cerita_intro" style="background-color:#fff;z-index:20">
 				<div class="text-paragraph">
 					<p>Jepang memang punya segudang destinasi wisata yang seakan tak pernah habis. Mau pilih gunung? Ada. Mau pilih pantai? Ada. Mau makanan yang lezat? Ada banget. Mau belanja? Banyak.</p>
 					<p>Negara kepulauan di Asia Timur ini memang telah lama menjadi destinasi wisata favorit orang Indonesia. Maklum, budaya Jepang sudah sangat familiar di Indonesia sendiri. Bisa jadi karena kedekatan historis dan perdagangan membuat orang Indonesia tertarik untuk berkunjung ke sana.</p>
@@ -56,7 +56,7 @@
 				<div class="text-paragraph clearfix">
 					<div class="cerita_prop"></div>
 					<div class="row clearfix">
-						<div><img src="img/fuji-ahakone-izu-park.jpg"></div>
+						<div><img src="img/jepang/fuji-ahakone-izu-park.jpg"></div>
 						<div>
 							<h2>Fuji-Hakone-Izu National Park</h2>
 							<p>Gunung Fuji pasti masuk dalam daftar kunjungan wisata, terutama bagi kamu yang baru pertama kali ke Jepang. Nah, kamu bisa melihat Gunung Fuji, salah satunya dari Fuji-Hakone-Izu National Park. Kamu bahkan bisa melihat Gunung Fuji dari Danau Ashinoko dengan menggunakan <span class="tI">sightseeing cruise</span> ala anime <span class="tI">One Piece</span>.</p>
@@ -65,7 +65,7 @@
 					</div>
 					
 					<div class="row clearfix">
-						<div><img src="img/ramen.jpg"></div>
+						<div><img src="img/jepang/ramen.jpg"></div>
 						<div>
 							<h2>Nakiryu Ramen</h2>
 							<p>Berwisata tanpa berkuliner? Sepertinya tidak mungkin. Di Tokyo, ada dua ramen yang mendapatkan penghargaan Michelin Star, yaitu Tsuta Ramen dan Nakiryu Ramen. Mahal? Tidak juga. Nakiryu merupakan yang terbaru, yaitu pada 2017.</p>
@@ -74,7 +74,7 @@
 					</div>
 					
 					<div class="row clearfix">
-						<div><img src="img/zoao-fox-village.jpg"></div>
+						<div><img src="img/jepang/zoao-fox-village.jpg"></div>
 						<div>
 							<h2>Zao Fox Village</h2>
 							<p>Setelah ada Cat Island, di Jepang juga ada kampung rubah atau Zao Fox Village. Letaknya di kota Sendai. Di sini ada ratusan rubah yang bisa kamu lihat dari dekat. Rubah-tubah itu tidak dimasukkan ke dalam kandang. Bebas berkeliaran. Kenapa rubah? Soalnya binatang ini banyak terdapat dalam cerita legenda Jepang.</p>
@@ -83,7 +83,7 @@
 					</div>
 					
 					<div class="row clearfix">
-						<div><img src="img/nyoto-onsen.jpg"></div>
+						<div><img src="img/jepang/nyoto-onsen.jpg"></div>
 						<div>
 							<h2>Nyuto Onsen</h2>
 							<p>Bepergian ke Jepang, tapi sama sekali tidak mencoba berendam di onsen (pemandian air panas)? Berarti liburan kamu di Jepang belum afdol. Onsen yang bisa kamu pilih ada di Nyuto Onsen.</p>
@@ -96,7 +96,7 @@
 			</div> <!-- /.cerita -->
 			
 			<div class="bg_awan bg_awan_top" style="margin-top:-60px;"></div>
-			<div style="height:10px;background-color:#fff;"></div>
+			<div class="awan3"></div>
 			<div class="bg_awan bg_awan_bottom"></div>
 			
 			<div class="text-paragraph" style="margin-top:40px;">
@@ -140,7 +140,7 @@
 	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <!-- <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
 	<script type="text/javascript" src="/_common/js/scrollmagic/animation.gsap.min.js"></script>
 	<script type="text/javascript" src="local/script.js"></script>
 	
