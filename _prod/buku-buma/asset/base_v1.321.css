@@ -55,8 +55,9 @@ div {box-sizing: border-box;}
 #headerArea img {width: 100%;}
 #landing_image p, #exit_text p {
 	font-family: "arial" !important;
-	font-size: 14px !important;
-	line-height: 30px !important;
+	font-size: 24px !important;
+	line-height: 48px !important;
+	max-width: none;
 }
 #text_intro h1, #text_intro p{color: #000;}
 .menu {
@@ -105,7 +106,7 @@ div {box-sizing: border-box;}
 	cursor: pointer;
 	font-size: 12px;
 }
-.text-paragraph h2, .text-paragraph p, .text-lead p, .text-image-parallax_caption p, .image-middle, .div-caption p {
+.text-paragraph h2, .text-paragraph p, .text-lead p, .text-quote p, .text-image-parallax_caption p, .image-middle, .div-caption p {
 	font-family: Georgia;
 }
 .section {padding: 20px 0;}
@@ -147,9 +148,14 @@ div {box-sizing: border-box;}
 .text-paragraph p {
 	padding: 10px 0;
 	max-width: 600px;
-	font-family: Georgia;
 	font-size: 16px;
 	line-height: 32px;
+}
+.text-quote p {
+	opacity: 1;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 36px;
 }
 .image-right p, .image-middle p, .image-left p {
 	padding-top: 0;
@@ -188,6 +194,10 @@ div {box-sizing: border-box;}
 }
 
 @media only screen and (max-width: 568px) {
+	#landing_image p, #exit_text p {
+		font-size: 13px !important;
+		line-height: 26px !important;
+	}
 	.div-caption {
 		height: 100vh;
 	}
@@ -212,7 +222,7 @@ div {box-sizing: border-box;}
 	}
 	#exit_text p {
 		font-family: "arial" !important;
-		font-size: 12px !important;
-		line-height: 24px !important;
+		font-size: 14px !important;
+		line-height: 28px !important;
 	}
 }
