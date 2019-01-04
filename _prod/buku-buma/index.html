@@ -45,21 +45,22 @@
 			100% {opacity: 100%;left:0}
 		}
 		h1 {
+			width: 300px;
             float: left;
-            padding-left: 20px;
 			opacity: 1;
 			text-align: center;
 			-webkit-animation: frame1 1s;
 			animation: frame1 1s;
             color: #fff;
 		}
+		h1 img {width: 100%;}
 		h2 {
             float: left;
-			padding: 35px 10px 10px 20px;
-			font-size: 16px;
+			padding: 3% 0;
+			font-size: 80px;
+			font-weight: bold;
 			opacity: 1;
-			color: #000;
-			text-align: center;
+			color: #fff;
 			-webkit-animation: frame2 1s;
 			animation: frame2 1s;
 			transition: 1s;
@@ -71,105 +72,46 @@
 			font-size: 24px;
             text-align: left;
 			color: #fff;
-            font-family: Georgia;
+            font-family: Arial;
+		}
+		h4 {
+			color: #fff;
+			font-size: 18px;
+            font-family: Arial;
+			margin-bottom: 5px;
 		}
 		p {
 			font-size: 12px;
 			text-align: left;
 			color: #fff;
             font-family: Arial;
+			margin-bottom: 5px;
 		}
-		/* ---------------------- base class ---------------------- */
-		.clearfix:before,
-		.clearfix:after{content:"";display:table;}
-		.clearfix:after{clear:both;}
-
-		.dispTable{
-			display:table-cell;
-			vertical-align: middle;
+		html {
+			width: 100vw;
+			height: 100vh;
+			background-image: url(img/buma-landing-2.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			background-attachment: fixed;
 		}
-		.dispInline li{display:inline-block;}
-		.dispList li{display:list-item;}
-
-		.tI {font-style: italic;}
 		/* ---------------------- components ---------------------- */
-		.topHeading {margin-bottom: 50px;}
-		.wrap01 {
-			max-width: 1920px;
-            min-height: 750px;
-			margin: 0 auto;
+		.div-booklist {
+			padding: 15px 20px;
+			max-width: 500px;
+			height: 48vh;
+			overflow-y: scroll;
+			background-color: rgba(0,0,0,.4);
 		}
-		.multiple {
-			width: 100%;
-			margin: 0px auto;
-			position: relative;
-			text-align:center;
+		.booktitle {
+			padding-bottom: 20px;
+			border-bottom: 1px solid #fff;
 		}
-		.block01 {
-			height: 500px;
-			width: 33%;
-			display:inline-block;
-			overflow: hidden;
-			transition: .3s;
-			position: relative;
-			cursor: pointer;
-			opacity: 0;
-			background-size: cover !important;
-			background-position: center !important;
-			z-index: 0;
-			-webkit-transform:scale(.5);
-			-moz-transform:scale(.5);
-			-ms-transform:scale(.5);
-			-o-transform:scale(.5);
-			transform:scale(.5);
-		}
-		.block01:hover {
-			transition: .3s;
-			z-index: 1;
-		}
-		.block01 div {
-			height: 150px;
-			padding: 0 30px 30px 30px;
-			position: absolute;
-			bottom: 0;
-			background-color: rgba(0,0,0,.30);
-            transition: .5s;
-		}
-		.show {
-			opacity: 1 !important;
-			margin-top: 0;
-			transition: 1s;
-			-webkit-transform:scale(1);
-			-moz-transform:scale(1);
-			-ms-transform:scale(1);
-			-o-transform:scale(1);
-			transform:scale(1);
-		}
-        .hover {
-            background-color: rgba(0,0,0,.80) !important;
-            -webkit-transform:scale(1.05);
-			-moz-transform:scale(1.05);
-			-ms-transform:scale(1.05);
-			-o-transform:scale(1.05);
-            transform:scale(1.05);
-        }
 		/* ---------------------- header ---------------------- */
-		#headerArea {
-			padding-left: 10px;
-			font-size: 14px;
-		}
-		#headerArea ul li a {
-			margin-right: 15px;
-			color: #000;
-			transition: .3s;
-		}
-		#headerArea ul li a:hover {
-			color: #00599A;
-			transition: .3s;
-		}
-		/* ---------------------- main ---------------------- */
-		#mainArea {
-			padding-top: 25px;
+		#wrap {
+			max-width: 1024px;
+			padding: 2.5%;
 		}
 		/* ---------------------- footer ---------------------- */
 		#footerArea {
@@ -180,6 +122,11 @@
             font-family: Arial;
 		}
 		/* ---------------------- responsive ---------------------- */
+		@media screen and (max-width:1366px){
+			h2 {
+				font-size: 46px;
+			}
+		}
 		@media screen and (max-width:1000px){
 			.block01 {
 				width: 49%;
@@ -194,66 +141,64 @@
 			}
 		}
 		@media screen and (max-width:768px){
-			#footerArea ul {
-				float: none;
-				text-align: center;
+			html {
+				background-position: 75% center;
 			}
-			.wrap01 {
-				padding-left: 0;
-				padding-right: 0;
+			#wrap {
+				padding: 20px;
 			}
-            .block01 div {
-                background-color: rgba(0,0,0,.80) !important;
-            }
-		}
-		@media screen and (max-width:768px){
+			h1 {
+				width: 120px;
+			}
+			h2 {
+				padding: 20px;
+			}
             h1,h2 {
                 float: none;
-                text-align: center;
+				font-size: 28px;
             }
-            h2 {margin-top:20px;}
-			.block01 {width: 99%;}
-			.block01 div {height: auto;}
+			.content {
+				background-color: rgba(0,0,0,.4);
+			}
+			.div-booklist {
+				background-color: initial;
+			}
 		}
 	</style>
 </head>
 
 <body>
     <div id="wrap">
-        <div id="mainArea" class="clearfix">
-            <div class="topHeading clearfix">
-                <h1 style="width:200px;height:67px;"><a href="#"><img src="img/logo-buma.png" alt="logo buma" width="200" height="67"></a></h1>
-                <h2>Menjadi Pilihan berkat Keunggulan</h2>
-            </div>
-            
-            <div class="wrap01">
-                <div class="multiple">
-					
-					<div class="block01" onclick="window.open('bab1.html');" style="background: url(bab1/buma-01.jpg) no-repeat;">
-                        <div>
-							<h3>Bab 1<br>Berkarya untuk Hidup Lebih Baik</h3>
-                            <p>Site Lati, Berau, Kalimantan Timur, tanggal 9 Desember 1998.  PT Bukit Makmur Mandiri Utama atau lebih dikenal sebagai BUMA baru saja dipercaya menjadi kontraktor tambang batubara di site tersebut. &#9654;</p>
-                        </div>
-                    </div>
-					
-                    <div class="block01" onclick="window.open('bab2.html');" style="background: url(bab1/buma-01.jpg) no-repeat;">
-                        <div>
-							<h3>Bab 2<br>Berubah untuk Mengejar Prestasi</h3>
-                            <p>Sejak 2009, harga batu bara mengalami peningkatan yang begitu pesat dan menjadi primadona. Puncaknya ketika menyentuh harga 130 dollar AS per ton pada 2011. Namun, sejak itu, harga batubara mengalami tren menurun. &#9654;</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+		<div class="topHeading clearfix">
+			<h1><a href="#"><img src="img/logo-buma-2.png" alt="logo buma"></a></h1>
 		</div>
+		
+		<div class="content">
+			<h2>MENJADI PILIHAN BERKAT KEUNGGULAN</h2>
+			<div class="div-booklist">
+				<div class="booktitle">
+					<h3>BAB 1</h3>
+					<h4>Berkarya untuk Hidup Lebih Baik</h4>
+					<p>Site Lati, Berau, Kalimantan Timur, tanggal 9 Desember 1998. PT Bukit Makmur Mandiri Utama atau lebih dikenal sebagai BUMA baru saja dipercaya menjadi kontraktor tambang batubara di site tersebut. Dengan jumlah karyawan sekitar 160 orang, BUMA mulai mengerjakan proyek tersebut.</p>
+					<p><a href="bab1.html">Baca Bab 1 ▶</a></p>
+				</div>
+				<div class="booktitle">
+					<h3>BAB 2</h3>
+					<h4>Berubah untuk Mengejar Prestasi</h4>
+					<p>Sejak 2009, harga batu bara mengalami peningkatan yang begitu pesat dan menjadi primadona. Puncaknya ketika menyentuh harga 130 dollar AS per ton pada 2011. Namun, sejak itu, harga batubara mengalami tren menurun. Memasuki 2012, penurunan terjadi cukup tajam hingga di bawah 100 dollar AS.</p>
+					<p><a href="bab2.html">Baca Bab 2 ▶</a></p>
+				</div>
+			</div>
+		</div>
+		
     </div> <!-- /#wrap -->
     
     <script src="asset/jquery_v2.1.0.js" type="text/javascript"></script>
-    <script src="asset/w3.js" type="text/javascript"></script>
     <script src="asset/jquery_viewportchecker.js" type="text/javascript"></script> 
   
     <script> /* animation when hovering a particular article*/
         $( document ).ready(function(){
-			w3.includeHTML();
 			$(".block01").viewportChecker({
 				classToAdd: 'show',
 				offset: 100,
