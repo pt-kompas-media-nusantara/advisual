@@ -4,11 +4,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-	<title>Klasiloka</title>
+	<title>title</title>
 	<link rel="icon" href="/_common/img/icon/advisual_favicon.png">
 	<meta name="author" content="Kompas Klasika" />
-	<meta name="description" content="Klasiloka" />
-	<meta name="keywords"  content="klasiloka" />
+	<meta name="description" content="<desc>" />
+	<meta name="keywords"  content="<keywords" />
 	<meta name="Resource-type" content="Document" />
 
 	<link rel="stylesheet" type="text/css" href="/_common/css/jquery.fullPage.css" />
@@ -30,6 +30,12 @@
 			background-position: bottom;
 			transition: 1s;
 		}
+		#headerArea {
+			padding: 20px;
+			width: 100%;
+			position: fixed;
+			z-index: 11;
+		}
 	</style>
 </head>
 	
@@ -40,10 +46,12 @@
 	<div id="bg_2" class="background"></div>
 	<div id="bg_3" class="background"></div>
 	
+	<div id="headerArea" class="clearfix"><h1 style="width:200px;height:40px;" class="fL"><a href="../"><img src="/_common/img/logo/advisual.svg" width="200" height="40" alt="logo advisual"></a></h1></div>
+	
 	<div id="fullpage">
 
 		<div class="section " id="section0">
-
+			tes
 		</div>
 		<div class="section" id="section1">
 
@@ -58,7 +66,22 @@
 	<script type="text/javascript" src="/_common/js/jquery_ui-v1.9.1.js"></script>
 	<script type="text/javascript" src="/_common/js/jquery.scrolloverflow.js"></script>
 	<script type="text/javascript" src="/_common/js/jquery.fullPage.js"></script>
+	<script>
+		function onReady(callback) {
+			var intervalID = window.setInterval(checkReady, 1000);
+			function checkReady() {
+				if (document.getElementsByTagName('body')[0] !== undefined) {
+					window.clearInterval(intervalID);
+					callback.call(this);
+				}
+			}
+		}
+		function show(id, value) {document.getElementById(id).style.display = value ? 'block' : 'none';}
+		onReady(function(){show('fullpage', true);show('loading', false);});
+	</script>
 	<script type="text/javascript">
+		w3.includeHTML();
+		$(window).on('beforeunload',function(){$(window).scrollTop(0);});
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],

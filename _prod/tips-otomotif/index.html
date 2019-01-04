@@ -5,65 +5,173 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta charset="utf-8">
-    <title>Kenali Komponen Mobil Anda</title>
+    <title>Tips Merawat Mobil Anda</title>
     <link rel="icon" href="/_common/img/icon/advisual_favicon.png">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="Kenali komponen mobil Anda, simak tips-tips merawat mobil berikut ini.">
     <meta name="keywords" content="tips merawat mobil">
     <meta name="author" content="Kompas klasika">
     <link href="/_common/modules_v1.css" rel="stylesheet">
-    <link href="local/styles_v1.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" type="text/css" href="local/default.css" /> -->
+	<link rel="stylesheet" type="text/css" href="local/component.css" />
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet">
 </head>
 
 <body>
   	<style>
 		#loading{background-color: #00599A;height:100%;width:100%;position:fixed;z-index:20;margin-top:0px;top:0px;}#loading-center{width:100%;height: 100%;position: relative;}#loading-center-absolute{position: absolute;left:50%;top:50%;height:200px;width:200px;margin-top:-100px;margin-left: -100px;-ms-transform: rotate(-135deg);-webkit-transform:rotate(-135deg);transform: rotate(-135deg);}.object{-moz-border-radius: 50% 50% 50% 50%;-webkit-border-radius:50% 50% 50% 50%;border-radius: 50% 50% 50% 50%;position:absolute;border-top: 5px solid #FFF;border-bottom: 5px solid transparent;border-left:5px solid #FFF;border-right:5px solid transparent;-webkit-animation:animate 2s infinite;animation:animate 2s infinite;}#object_one{left:75px;top:75px;width:50px;height:50px;}#object_two{left:65px;top:65px;width:70px;height:70px;-webkit-animation-delay:0.2s;animation-delay:0.2s;}#object_three{left:55px;top:55px;width:90px;height:90px;-webkit-animation-delay:0.4s;animation-delay:0.4s;}#object_four{left:45px;top: 45px;width:110px;height:110px;-webkit-animation-delay:0.6s;animation-delay:0.6s;}@-webkit-keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}@keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}
 		html {
-			background: url(img/bg.jpg) no-repeat;
+			background-color: #000;
     		background-position: center;
     		background-repeat: no-repeat;
     		background-attachment: fixed;
-			background-size: cover;
+			background-size: contain;
 		}
-		@keyframes blink {
-			0% {opacity: 0}
-			100% {}
+		h3 {
+			font-family: 'Ubuntu', sans-serif;
+			letter-spacing: -3px;
 		}
+		.overlay-bg1 {background-image: url(img/bg_ban.jpg);}
+		.overlay-bg2 {background-image: url(img/bg_kaca.jpg);}
+		.overlay-bg3 {background-image: url(img/bg_lampu.jpg);}
+		.overlay-bg4 {background-image: url(img/bg_velg.jpg);}
+		.article.current{display: block !important;}
 		.dot {
-			width: 20px;
-			height: 20px;
-			background-color: #FF0004;
+			padding: 4px 11px;
+			font-size: 22px;
 			position: absolute;
 			border-radius: 25px;
 			cursor: pointer;
-			transition: 1s;
+			transition: .5s;
+			border: 2px solid #FF0004;
+			color: #ff0004;
+		}
+		.dot:hover{
+			background-color: rgba(0,0,0,0);
+			background-color: #FF0004;
+			color: #fff;
 		}
 		.description {
-			padding: 10px;
+			width: 130px;
+			height: 130px;
+			display: block;
+			vertical-align: middle;
 			font-size: 20px;
 			font-family:'Alegreya Sans', sans-serif;
 			position: absolute;
 			color: #fff;
-			background-color: #FF0004;
-			font-weight: bold;
-			border-radius: 16px;
-			transition: 1s;
+			transition: .3s;
 			opacity: 0;
+			/* border: 1px solid #fff; */
+			border-radius: 80px;
+			background-size: 120%;
+			background-color: #000;
+			background-repeat: no-repeat;
+			background-position: center center;
+			overflow: hidden;
+			z-index: -1;
+		}
+		.description span {
+			top: 52px;
+			left: 0;
+			width: 100%;
+			vertical-align: middle;
+			z-index: 13;
+			position: relative;
+		}
+		.description img {
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			z-index: 10;
+			transition: .3s;
+			left:-35px;right:0;top:-35px;bottom:0;
+			margin-left:auto;
+			margin-right:auto;
+			opacity: .7;
+		}
+		.content {
+			max-width: 960px;
+			padding: 20px;
+			margin: 0 auto;
 		}
 		.div-map {
             width: 1450px;
             height: 500px;
             margin: 2% auto 4% auto;
             position: relative;
+			z-index: 10;
         }
-		.section {padding: 10px 0;}
-		#headerArea {
-			z-index: 30;
+		.section {
+			background: none;
+			padding: 10px 0;
+		}
+		.searchBar {
+			display: block;
+			width: 300px;
+			margin: 20px auto 0 auto;
+			padding: 10px;
+			font-family: ubuntu;
+		}
+		.tab-title {
+			cursor: pointer;
+		}
+		/* #descBan {background-image: url(img/ban.jpg)} */
+		/* effect */
+		@-webkit-keyframes slide {
+			from { background-position: 0 0; }
+			to { background-position: -400px 0; }
+		}
+		.show {
+			opacity: 1 !important;
+			transform: translate(0,0) !important;
+			transition: 1s;
+			z-index: 10;
+		}
+		.blur {
+			transition: 1s;
+			opacity: .6 !important;
+		}
+		.fillBg{
+			background-color: #FF0004;
+			color: #fff;
+		}
+		.zoomIn {
+			transition: .3s;
+			transform: scale(1.35) !important;
+		}
+		.zoomOut{
+			transition: .3s;
+			transform: scale(.65) !important;
+		}
+		@media only screen and (max-width: 1024px) {
+			.component {
+				top: auto;
+				bottom: -30%;
+				opacity: .5;
+			}
+			.tips .col {
+				width: 100% !important;
+				float: none !important;
+			}
+		}
+		#headerArea {z-index: 30;}
+		#section_title h2 {
+			padding-top: 80px;
+			text-align: center;
+			font-size: 36px;
+			font-family: 'Ubuntu', sans-serif;
+			color: #fff;
+			font-weight: 100;
+			letter-spacing: -1px;
 		}
 		#section_map {
             overflow-y: hidden;
             overflow-x: scroll;
+			padding-bottom: 40px;
         }
+		#section_content {background-color: #fff;}
+		#footerArea {color:#fff;}
 		#car {
 			transition: 1s;
 			width: 1000px;
@@ -72,69 +180,133 @@
 			background-position: center;
 			position: absolute;
 			margin: auto;
+			transition: 1s;
 			left: 0;
 			right: 0;
 			top: 0;
 			bottom: 0;
 		}
-		.hidden {
-			transition: 1s;
-			opacity: 0;
-		}
-		.show {
-			opacity: 1 !important;
-			transform: translate(0,0) !important;
-			transition: 1s;
-		}
-		.zoomAtas {
-			transform: scale(2.5) translate(10%,22%);
-			transition: 1s;
-		}
-		.zoomKiri {
-			transform: scale(2.5) translate(37%,0%);
-			transition: 1s;
-		}
-		.zoomBawah {
-			transform: scale(2.5) translate(8%,-36%);
-			transition: 1s;
-		}
 		#car img {width: 100%;}
+		@media only screen and (max-width: 769px) {
+			.description {
+				display: none;
+			}
+		}
 	</style>
    	<div id="loading"><div id="loading-center"><div id="loading-center-absolute"><div class="object" id="object_four"></div><div class="object" id="object_three"></div><div class="object" id="object_two"></div><div class="object" id="object_one"></div></div></div></div>
    
     <div w3-include-html="/_common/header.html"></div>
 	
+	<div class="image-gallery-modal div-tab" itemscope itemtype="">
+		<figure class="tab-title" data-tab="tab-1" itemprop="associatedMedia" itemscope itemtype="">
+			<div id="descBan" class="description" style="left:15%;bottom:16%;"><img src="img/ban.png"><span>BAN</span></div>
+		</figure>
+
+		<figure class="tab-title" data-tab="tab-2" itemprop="associatedMedia" itemscope itemtype="">
+			<div id="descVelg" class="description" style="bottom:16%;left:74%;"><img src="img/velg.png"><span>VELG</span></div>
+		</figure>
+
+		<figure class="tab-title" data-tab="tab-3" itemprop="associatedMedia" itemscope itemtype="">
+			<div id="descLampu" class="description" style="top:44%;left:15%;"><img src="img/lampu.png"><span>LAMPU</span></div>
+		</figure>
+
+		<figure class="tab-title" data-tab="tab-4" itemprop="associatedMedia" itemscope itemtype="">
+			<div id="descKaca" class="description" style="top:24%;left:30%;"><img src="img/kaca.png"><span>KACA</span></div>
+		</figure>
+	</div>
+	
+	<div class="md-modal md-effect-12" id="modal-1">
+		<div class="md-content">
+			<h3>Ban</h3>
+			<input type="text" id="inputBan" class="searchBar" onkeyup="searchBan()" placeholder="cari tips" title="cari tips">
+			<div>
+				<ul id="infoBan">
+					<li><a href="https://klasika.kompas.id/mengenal-kode-jenis-dan-tanda-di-ban/">Kode jenis dan tanda di ban</a></li>
+					<li><a href="https://klasika.kompas.id/tingkatkan-kenyamanan-dengan-ban-nitrogen/">Ban nitrogen</a></li>
+					<li><a href="https://klasika.kompas.id/ban-serep-dan-perawatannya/">Perawatan ban serep</a></li>
+					<li><a href="https://klasika.kompas.id/tak-ingin-ban-mobil-botak-sebelah-segera-lakukan-balancing/">Balancing</a></li>
+				</ul>
+				<button class="md-close">Kembali ke menu</button>
+			</div>
+		</div>
+	</div>
+	<div class="md-modal md-effect-12" id="modal-2">
+		<div class="md-content">
+			<h3>Velg</h3>
+			<input type="text" id="inputVelg" class="searchBar" onkeyup="searchVelg()" placeholder="cari tips" title="cari tips">
+			<div>
+				<ul id="infoVelg">
+					<li><a href="https://klasika.kompas.id/tips-mudah-merawat-velg-mobil-agar-tampil-memikat/">Tips mengganti velg</a></li>
+					<li><a href="https://klasika.kompas.id/agar-velg-berkilau/">Agar velg berkilau</a></li>
+					<li><a href="https://klasika.kompas.id/jeli-rawat-velg-sesuai-jenisnya/">Merawat velg sesuai jenisnya</a></li>
+					<li><a href="https://klasika.kompas.id/pentingnya-menyelaraskan-kaki-kaki-mobil/">Menyelaraskan kaki mobil</a></li>
+				</ul>
+				<button class="md-close">Kembali ke menu</button>
+			</div>
+		</div>
+	</div>
+	<div class="md-modal md-effect-12" id="modal-3">
+		<div class="md-content">
+			<h3>Lampu</h3>
+			<input type="text" id="inputLampu" class="searchBar" onkeyup="searchLampu()" placeholder="cari tips" title="cari tips">
+			<div>
+				<ul id="infoLampu">
+					<li><a href="https://klasika.kompas.id/penyebab-lampu-mobil-redup/">Penyebab lampu redup</a></li>
+					<li><a href="https://klasika.kompas.id/merawat-lampu-utama-mobil/">Perawatan lampu utama </a></li>
+					<li><a href="https://klasika.kompas.id/waspadai-sekring-saat-lampu-tidak-menyala/">Waspadai sekring bila lampu tidak menyala</a></li>
+					<li><a href="https://klasika.kompas.id/aman-berkendara-dengan-mobil-pada-malam-hari/">Berkendara pada malam hari</a></li>
+				</ul>
+				<button class="md-close">Kembali ke menu</button>
+			</div>
+		</div>
+	</div>
+	<div class="md-modal md-effect-12" id="modal-4">
+		<div class="md-content">
+			<h3>Kaca</h3>
+			<input type="text" id="inputKaca" class="searchBar" onkeyup="searchKaca()" placeholder="cari tips" title="cari tips">
+			<div>
+				<ul id="infoKaca">
+					<li><a href="https://klasika.kompas.id/usir-jamur-di-kaca-mobil/">Mengusir jamur kaca</a></li>
+					<li><a href="https://klasika.kompas.id/agar-kaca-kembali-bening/">Agar kaca kembali bening</a></li>
+					<li><a href="https://klasika.kompas.id/bersihkan-embun-dari-kaca-mobil-dengan-trik-berikut-ini/">Membersihkan embun</a></li>
+					<li><a href="https://klasika.kompas.id/atasi-baret-pada-kaca-mobil/">Mengatasi baret</a></li>
+				</ul>
+				<button class="md-close">Kembali ke menu</button>
+			</div>
+		</div>
+	</div>
+	
     <div id="wrap">
     
 		<div id="section_title" class="section clearfix">
-			<h2>Mengenal Komponen Mobil dan Cara Merawatnya</h2>
-			<p class="tC" style="margin-top:50px;">Pilih bagian mobil</p>
+			<h2>KUMPULAN <br><span class="tB">TIPS OTOMOTIF</span></h2>
    		</div>
 
 		<div id="section_map" class="section clearfix">
             <div class="div-map" id="landing_map">
-				<div id="car"><img src="img/toyota-rush-exterior.png"></div>
+				<div id="car"><img style="opacity:1;" src="img/toyota-rush-exterior.png"></div>
 				
-                <div onclick="location.href='ban.html'" target="_self" id="ban" class="dot" style="top:95%;left:40%;"></div>
-                <div id="velg" class="dot" style="top:79%;left:46%;"></div>
-                <div id="lampu" class="dot" style="top:49%;left:35%;"></div>
-                <div id="kaca" class="dot" style="top:15%;left:42%;"></div>
-				
-				<div id="descBan" class="description" style="left:34%;bottom:-1%;transform:translate(-60%,0);">Ban</div>
-				<div id="descVelg" class="description" style="bottom:14%;left:49%;transform:translate(60%,0);">Velg</div>
-				<div id="descLampu" class="description" style="top:47%;left:27%;transform:translate(-60%,0%)">Lampu</div>
-				<div id="descKaca" class="description" style="top:0;left:41%;transform:translate(0,-60%)">Kaca</div>
-            </div>
-        </div>
+                <a data-modal="modal-1" id="ban" class="dot md-trigger" style="top:93%;left:20%;">+</a>
+                <a data-modal="modal-2" id="velg" class="dot md-trigger" style="top:85%;left:76%;">+</a>
+                <a data-modal="modal-3" id="lampu" class="dot md-trigger" style="top:49%;left:18%;">+</a>
+                <a data-modal="modal-4" id="kaca" class="dot md-trigger" style="top:20%;left:36%;">+</a>
 
+            </div>
+        </div> <!-- /#section_map -->
+		
     </div> <!-- /#wrap -->
     
+	<div class="md-overlay"></div>
+	
     <div w3-include-html="/_common/footer.html"></div>
     
     <script src="/_common/js/jquery_v2.1.0.js" type="text/javascript"></script>
 	<script src="/_common/js/jquery_viewportchecker.js" type="text/javascript"></script>
 	<script src="/_common/js/lazy.js" type="text/javascript"></script>
 	<script src="/_common/js/w3.js" type="text/javascript"></script>
+	<script src="local/search.js" type="text/javascript"></script>
+	<script src="local/classie.js"></script>
+	<script src="local/modalEffects.js"></script>
 	<script>
 		w3.includeHTML();
 		function onReady(callback) {
@@ -153,29 +325,7 @@
 		$(window).on('beforeunload',function(){$(window).scrollTop(0);});
 		$(document).ready(function(){
 			
-			/* interactivity */
-			$("#ban").hover(function(){
-				$("#car").toggleClass('zoomBawah');
-				$(".dot").not(this).toggleClass('hidden');
-				$("#descBan").toggleClass('show');
-			});
-			$("#velg").hover(function(){
-				$("#car").toggleClass('zoomBawah');
-				$(".dot").not(this).toggleClass('hidden');
-				$("#descVelg").toggleClass('show');
-			});
-			$("#lampu").hover(function(){
-				$("#car").toggleClass('zoomKiri');
-				$(".dot").not(this).toggleClass('hidden');
-				$("#descLampu").toggleClass('show');
-			});
-			$("#kaca").hover(function(){
-				$("#car").toggleClass('zoomAtas');
-				$(".dot").not(this).toggleClass('hidden');
-				$("#descKaca").toggleClass('show');
-			});
-			
-			$(".text-paragraph p,.text-quote p").viewportChecker({
+			$(".text-paragraph p,.text-quote p,.tips.left, .tips.right").viewportChecker({
 				classToAdd: 'show',
 				offset: 100,
 			});
@@ -187,28 +337,42 @@
 					$('#headerArea').css('opacity', '0');
 				} */
 			});
-			$(".image-gallery").hover(function(){
-				$(this).find('p').toggleClass("show");
-				$(this).find('img').toggleClass("zoom");
-				$(this).find('.image-info').toggleClass("hidden");
+			/* interactivity */
+			$(".dot").hover(function(){
+				$("#car").toggleClass('blur');
+			});
+			$("#ban").hover(function(){
+				$("#descBan").toggleClass('show zoomIn');
+				$("#descBan").find("img").toggleClass('zoomOut');
+			});
+			$("#ban").click(function(){
+				$(".md-overlay").addClass('overlay-bg1');
+			});
+			$("#kaca").hover(function(){
+				$("#descKaca").toggleClass('show zoomIn');
+				$("#descKaca").find("img").toggleClass('zoomOut');
+			});
+			$("#kaca").click(function(){
+				$(".md-overlay").addClass('overlay-bg2');
+			});
+			$("#velg").hover(function(){
+				$("#descVelg").toggleClass('show zoomIn');
+				$("#descVelg").find("img").toggleClass('zoomOut');
+			});
+			$("#velg").click(function(){
+				$(".md-overlay").addClass('overlay-bg4');
+			});
+			$("#lampu").hover(function(){
+				$("#descLampu").toggleClass('show zoomIn');
+				$("#descLampu").find("img").toggleClass('zoomOut');
+			});
+			$("#lampu").click(function(){
+				$(".md-overlay").addClass('overlay-bg3');
+			});
+			$(".md-close,.md-overlay").click(function(){
+				$(".md-overlay").removeClass('overlay-bg1 overlay-bg2 overlay-bg3 overlay-bg4');
 			});
 			new LazyLoad();
-            $('.tile')
-				.on('mouseover', function(){
-				  $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
-				})
-				.on('mouseout', function(){
-				  $(this).children('.photo').css({'transform': 'scale(1)'});
-				})
-				.on('mousemove', function(e){
-				  $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
-				})
-				.each(function(){
-				  $(this)
-					.append('<div class="photo"></div>')
-					.append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
-					.children('.photo').css({'background-image': 'url('+ $(this).attr('data-original') +')'});
-            })
 		});
 	</script>
 </body>

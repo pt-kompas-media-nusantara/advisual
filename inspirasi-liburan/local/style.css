@@ -131,6 +131,7 @@ h1, h2 {font-family: Animated;}
 .bg_awan_bottom {
 	height:120px;
 	background-image: url(../img/bg_awan2.png);
+	background-color: #00c3cc;
 	background-repeat: repeat-x;
 	background-position: center;
 }
@@ -162,7 +163,7 @@ h1, h2 {font-family: Animated;}
 	background-image: url(../img/rel-stasiun.png);
 	background-repeat: repeat-y;
 	background-position: center;
-	background-size: 100px;
+	background-size: 125px;
 	z-index: 9;
 }
 .cerita_intro {
@@ -227,6 +228,8 @@ h1, h2 {font-family: Animated;}
 	height: 1px;
 }
 .cerita_prop {
+	width:18px;
+	height:270px; 
 	position: fixed;
 	opacity: 0;
 	margin: auto;
@@ -238,6 +241,12 @@ h1, h2 {font-family: Animated;}
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+.cerita_prop.kereta {
+	background-image: url(../img/kereta.png);
+}
+.cerita_prop.mobil {
+	background-image: url(img/mobil.png);
 }
 .cerita_prop_show {
 	opacity: 1;
@@ -265,6 +274,12 @@ h1, h2 {font-family: Animated;}
 	width:8vw;
 }
 .map_prop img {width: 100%;}
+.next_country {
+	padding-top: 40px;
+	background-color: #00c3cc;
+	z-index: 20;
+	position: relative;
+}
 .text-paragraph h2 {
 	color: #fff;
 	font-weight: 100;
