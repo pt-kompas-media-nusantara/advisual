@@ -131,7 +131,7 @@ h1, h2 {font-family: Animated;}
 .bg_awan_bottom {
 	height:120px;
 	background-image: url(../img/bg_awan2.png);
-	background-color: #00c3cc;
+	/* background-color: #00c3cc; */
 	background-repeat: repeat-x;
 	background-position: center;
 }
@@ -276,7 +276,7 @@ h1, h2 {font-family: Animated;}
 .map_prop img {width: 100%;}
 .next_country {
 	padding-top: 40px;
-	background-color: #00c3cc;
+	background-color: #3fc5cf;
 	z-index: 20;
 	position: relative;
 }
