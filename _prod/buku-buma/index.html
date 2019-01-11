@@ -57,31 +57,34 @@
 		h2 {
             float: left;
 			padding: 3% 0;
-			font-size: 80px;
+			font-size: 100px;
 			font-weight: bold;
 			opacity: 1;
-			color: #fff;
+			color: #1d1d1d;
+			transition: 1s;
+            font-family: Arial;
 			-webkit-animation: frame2 1s;
 			animation: frame2 1s;
 			transition: 1s;
-            font-family: Arial;
 		}
 		h3 {
 			margin: 10px 0;
 			font-weight: bold;
-			font-size: 24px;
+			font-size: 16px;
             text-align: left;
 			color: #fff;
             font-family: Arial;
 		}
 		h4 {
 			color: #fff;
-			font-size: 18px;
+			font-size: 19px;
             font-family: Arial;
 			margin-bottom: 5px;
+			text-transform: uppercase;
 		}
 		p {
 			font-size: 12px;
+			line-height: 20px;
 			text-align: left;
 			color: #fff;
             font-family: Arial;
@@ -90,11 +93,12 @@
 		html {
 			width: 100vw;
 			height: 100vh;
-			background-image: url(img/buma-landing-2.jpg);
+			background-image: url(bab1/buma-14-wb.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
-			background-position: center center;
+			background-position: 67% 35%;
 			background-attachment: fixed;
+			background-color: #000;
 		}
 		/* ---------------------- components ---------------------- */
 		.div-booklist {
@@ -108,9 +112,13 @@
 			padding-bottom: 20px;
 			border-bottom: 1px solid #fff;
 		}
+		.booktitle p:last-of-type {
+			text-align: right;
+			text-transform: uppercase;
+		}
 		/* ---------------------- header ---------------------- */
 		#wrap {
-			max-width: 1024px;
+			max-width: 1400px;
 			padding: 2.5%;
 		}
 		/* ---------------------- footer ---------------------- */
@@ -127,37 +135,41 @@
 				font-size: 46px;
 			}
 		}
-		@media screen and (max-width:1000px){
-			.block01 {
-				width: 49%;
-				margin: 0;
-			}
-			.block01:hover {
-				-webkit-transform:scale(1);
-				-moz-transform:scale(1);
-				-ms-transform:scale(1);
-				-o-transform:scale(1);
-				 transform:scale(1);
-			}
-		}
-		@media screen and (max-width:768px){
+		@media screen and (max-width:1024px){
 			html {
-				background-position: 75% center;
+				background-position: 33%;
 			}
 			#wrap {
-				padding: 20px;
+				padding: 0;
+				height: 100vh;
+				position: relative;
 			}
 			h1 {
 				width: 120px;
+				padding: 20px;
 			}
 			h2 {
 				padding: 20px;
 			}
             h1,h2 {
                 float: none;
-				font-size: 28px;
+				font-size: 40px;
             }
 			.content {
+				padding: 20px;
+				height: 45vh;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				position: absolute;
+				margin: auto;
+				overflow-y: hidden;
+			}
+			.div-booklist {
+				max-width: 100%;
+			}
+			.content h2, .content .div-booklist {
+				padding: 20px;
 				background-color: rgba(0,0,0,.4);
 			}
 			.div-booklist {
@@ -171,22 +183,23 @@
     <div id="wrap">
         
 		<div class="topHeading clearfix">
-			<h1><a href="#"><img src="img/logo-buma-2.png" alt="logo buma"></a></h1>
+			<h1><a href="#"><img src="img/logo-buma.jpg" alt="logo buma"></a></h1>
+			<h2>MENJADI PILIHAN BERKAT KEUNGGULAN</h2>
 		</div>
 		
 		<div class="content">
-			<h2>MENJADI PILIHAN BERKAT KEUNGGULAN</h2>
+			
 			<div class="div-booklist">
 				<div class="booktitle">
 					<h3>BAB 1</h3>
 					<h4>Berkarya untuk Hidup Lebih Baik</h4>
-					<p>Site Lati, Berau, Kalimantan Timur, tanggal 9 Desember 1998. PT Bukit Makmur Mandiri Utama atau lebih dikenal sebagai BUMA baru saja dipercaya menjadi kontraktor tambang batubara di site tersebut. Dengan jumlah karyawan sekitar 160 orang, BUMA mulai mengerjakan proyek tersebut.</p>
+					<p>PT Bukit Makmur Mandiri baru saja dipercaya menjadi kontraktor tambang batubara.</p>
 					<p><a href="bab1.html">Baca Bab 1 ▶</a></p>
 				</div>
 				<div class="booktitle">
 					<h3>BAB 2</h3>
 					<h4>Berubah untuk Mengejar Prestasi</h4>
-					<p>Sejak 2009, harga batu bara mengalami peningkatan yang begitu pesat dan menjadi primadona. Puncaknya ketika menyentuh harga 130 dollar AS per ton pada 2011. Namun, sejak itu, harga batubara mengalami tren menurun. Memasuki 2012, penurunan terjadi cukup tajam hingga di bawah 100 dollar AS.</p>
+					<p>Sejak 2009, harga batu bara mengalami peningkatan yang begitu pesat.</p>
 					<p><a href="bab2.html">Baca Bab 2 ▶</a></p>
 				</div>
 			</div>
