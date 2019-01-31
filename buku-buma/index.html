@@ -17,7 +17,7 @@
 	<meta name="keywords"  		content="buma" />
 	<meta name="Resource-type" 	content="Document" />
    	
-   	<link href="asset/base_v1.32.css" rel="stylesheet">
+   	<link href="asset/base_v1.4.css" rel="stylesheet">
     
     <style>
 		/* ---------------------- base tag ---------------------- */
@@ -116,10 +116,12 @@
 			text-align: right;
 			text-transform: uppercase;
 		}
+		#headerArea {position: relative;}
+		.topHeading {margin-top: 25px;}
 		/* ---------------------- header ---------------------- */
 		#wrap {
 			max-width: 1400px;
-			padding: 2.5%;
+			padding: 0 2.5%;
 		}
 		/* ---------------------- footer ---------------------- */
 		#footerArea {
@@ -132,7 +134,7 @@
 		/* ---------------------- responsive ---------------------- */
 		@media screen and (max-width:1366px){
 			h2 {
-				font-size: 46px;
+				font-size: 40px;
 			}
 		}
 		@media screen and (max-width:1024px){
@@ -143,10 +145,6 @@
 				padding: 0;
 				height: 100vh;
 				position: relative;
-			}
-			h1 {
-				width: 120px;
-				padding: 20px;
 			}
 			h2 {
 				padding: 20px;
@@ -180,11 +178,13 @@
 </head>
 
 <body>
+	
+	<div id="headerArea" class="clearfix"></div>
+	
     <div id="wrap">
         
 		<div class="topHeading clearfix">
-			<h1><a href="#"><img src="img/logo-buma.jpg" alt="logo buma"></a></h1>
-			<h2>MENJADI PILIHAN BERKAT KEUNGGULAN</h2>
+			<h2>Memupuk Generasi Kini demi Masa Depan yang Lebih Baik</h2>
 		</div>
 		
 		<div class="content">
@@ -202,24 +202,18 @@
 					<p>Sejak 2009, harga batu bara mengalami peningkatan yang begitu pesat.</p>
 					<p><a href="bab2.html">Baca Bab 2 ▶</a></p>
 				</div>
+				<div class="booktitle">
+					<h3>BAB 3</h3>
+					<h4>Pahit-Manis Kerja di Tambang</h4>
+					<p>BUMA berusaha menumbuhkan iklim keterbukaan dalam dinamika kerja karyawannya.</p>
+					<p><a href="bab3.html">Baca Bab 3 ▶</a></p>
+				</div>
 			</div>
 		</div>
 		
     </div> <!-- /#wrap -->
     
     <script src="asset/jquery_v2.1.0.js" type="text/javascript"></script>
-    <script src="asset/jquery_viewportchecker.js" type="text/javascript"></script> 
-  
-    <script> /* animation when hovering a particular article*/
-        $( document ).ready(function(){
-			$(".block01").viewportChecker({
-				classToAdd: 'show',
-				offset: 100,
-			});
-            $(".block01").hover(function () {
-                $(this).find("div").toggleClass("hover");
-             });
-        });
-    </script>
+	<script src="asset/script.js" type="text/javascript"></script>
 </body>
 </html>
