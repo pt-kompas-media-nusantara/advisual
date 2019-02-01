@@ -1,13 +1,23 @@
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("header_progress_bar").style.width = scrolled + "%";
+}
+
 $(document).ready(function(){
 	$(window).scrollTop(0);
 	$('#headerArea').load('asset/header.html');
 	$('#footerArea').load('asset/footer.html');
+	$('.subbab3 .div-caption').load('bab3/subbab3.html');
 	
 	$(".text-paragraph p,.text-quote p").viewportChecker({
 		classToAdd: 'show',
 		offset: 100,
 	});
-	
+    
 	var swiper = new Swiper('.swiper-container', {
 		pagination: '.swiper-pagination',
 		paginationClickable: true,
@@ -24,12 +34,12 @@ $(document).ready(function(){
 	$(".section,#headerArea,.parallax").click(function(){
 		$(".menu").removeClass("moveLeft");
 	});
-	$(window).scroll(function() {    
+	/* $(window).scroll(function() {    
 		var scroll = $(window).scrollTop();    
 		if (scroll >= 1 * $(window).height()) {
 			$('#headerArea').css('opacity', '1');
 		} else {
 			$('#headerArea').css('opacity', '0');
 		}
-	});
+	}); */
 });
