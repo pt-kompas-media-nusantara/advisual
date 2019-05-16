@@ -1,0 +1,665 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="utf-8">
+    <title>Mudik Seru dengan Petualangan Baru</title>
+    <link rel="icon" href="/_common/img/icon/advisual_favicon.png">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Pulang ke kampung halaman merupakan momen yang dinanti banyak orang saat merayakan libur Lebaran. Kegiatan mudik tersebut tentu akan semakin seru apabila dirangkai dengan petualangan-petualangan baru">
+    <meta name="keywords" content="kompas eksplor">
+    <meta name="author" content="Kompas klasika">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60689217-5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-60689217-5');
+	</script>
+    
+    <link href="/_common/modules_v1.css" rel="stylesheet">
+    <link href="/_common/css/swiper.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Ubuntu:300" rel="stylesheet">
+</head>
+
+<body>
+  	<style>
+		#loading{background-color: #00599A;height:100%;width:100%;position:fixed;z-index:20;margin-top:0px;top:0px;}#loading-center{width:100%;height: 100%;position: relative;}#loading-center-absolute{position: absolute;left:50%;top:50%;height:200px;width:200px;margin-top:-100px;margin-left: -100px;-ms-transform: rotate(-135deg);-webkit-transform:rotate(-135deg);transform: rotate(-135deg);}.object{-moz-border-radius: 50% 50% 50% 50%;-webkit-border-radius:50% 50% 50% 50%;border-radius: 50% 50% 50% 50%;position:absolute;border-top: 5px solid #FFF;border-bottom: 5px solid transparent;border-left:5px solid #FFF;border-right:5px solid transparent;-webkit-animation:animate 2s infinite;animation:animate 2s infinite;}#object_one{left:75px;top:75px;width:50px;height:50px;}#object_two{left:65px;top:65px;width:70px;height:70px;-webkit-animation-delay:0.2s;animation-delay:0.2s;}#object_three{left:55px;top:55px;width:90px;height:90px;-webkit-animation-delay:0.4s;animation-delay:0.4s;}#object_four{left:45px;top: 45px;width:110px;height:110px;-webkit-animation-delay:0.6s;animation-delay:0.6s;}@-webkit-keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}@keyframes animate{50%{-ms-transform: rotate(360deg) scale(0.8);-webkit-transform: rotate(360deg) scale(0.8);transform: rotate(360deg) scale(0.8);}}
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            background-color: #fbefbd;
+            width: 100%;
+            height: 100%;
+        }
+        #wrap {overflow: scroll;}
+        h3 {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        h1,h2,h3,h4,p {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        #landing_image {
+            background-image: url(img/prop-1.png);
+            background-color: #fbeebb;
+            background-position: right;
+            background-size: cover;
+        }
+        #section_p1 {
+            background-image: url(img/prop-masjid-semarang.png);
+        }
+        #section_p2 {
+            background-image: url(img/prop-brown-canyon.png);
+        }
+        #section_p3 {
+            background-image: url(img/prop-sam-poo-kong2.png);
+        }
+        #section_3 {
+            background-image: url(img/prop-suramadu2.png);
+        }
+        section {
+            padding: 50px 0;
+            background-color: #fbefbd;
+            z-index: 0;
+            position: relative;
+        }
+        section.black {
+            background-color: #000;
+        }
+        section.black h2,
+        section.black h3,
+        section.black p{
+            color: #fff;
+        }
+        .btn-thumbnail {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            opacity: 1;
+        }
+        .image-wide {
+            width:100vw;
+            height:100vh;
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+        .image-highlight {
+            background-color: #f0b11d;
+            margin: 20px auto;
+        }
+        .image-highlight dt{
+            padding: 0;
+        }
+        .image-highlight dt img{
+            width: 100%;
+        }
+        .image-highlight dt {
+            float: left;
+            width: 42%;
+        }
+        .image-highlight dd{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            float: left;
+            width: 58%;
+        }
+        .image-highlight dd h3{
+            color: #000 !important;
+        }
+        .image-highlight dd p{
+            padding: 5px 20px;
+            font-size: 14px;
+            line-height: 22px;
+            color: #000 !important;
+        }
+        div.section.module.parallax {
+            background-color: #fbeebb;
+            background-position: top;
+        }
+        div.section.module.parallax h2{
+            font-size: 42px;
+        }
+        .div-caption {
+            width: 50vw;
+            bottom: 70%;
+        }
+        .div-caption h1 {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+            color: #000;
+            /* font-size: 80px; */
+        }
+        .div-caption p {
+            color: #fff;
+            font-size: 17px;
+            line-height: 26px;
+        }
+        .indent {
+            padding-top: 340px;
+        }
+        .image-middle {
+            margin: 20px auto 10px;
+        }
+        .image-middle img {
+            margin-bottom: 0;
+        }
+        .image-indent {
+            max-width: 900px;
+            margin: 0 auto 10px auto;
+            position: absolute;
+            top: -245px;
+            left: 0;
+            right: 0;
+        }
+        .image-indent img {
+            width: 100%;
+        }
+        .text-lead p{
+            text-align: center;
+        }
+        .section.module.parallax h2 {
+            font-size: 22px;
+            text-align: center;
+            background-attachment: scroll;
+        }
+        .text-paragraph p {
+            font-size: 17px;
+        }
+        .text-credits {
+            max-width: 940px;
+        }
+        .text-credits ul {
+            display: block;
+            text-align: center;
+            max-width: 940px;
+        }
+        .text-credits ul li{
+            width: 210px;
+            padding: 10px 0 10px 60px;
+            display: inline-block;
+            text-align: right;
+            position: relative;
+            vertical-align: top;
+        }
+        .text-credits ul li:nth-child(1) div {
+            background-position: 0;
+        }
+        .text-credits ul li:nth-child(2) div {
+            background-position: -325px;
+        }
+        .text-credits ul li:nth-child(3) div {
+            background-position: -450px;
+        }
+        .text-credits ul li:nth-child(4) div {
+            background-position: -133px;
+        }
+        .text-credits ul li div {
+            width: 50px;
+            height: 50px;
+            background-image: url(img/icon-credits2.png);
+            position: absolute;
+            left: 0;
+            background-size: 250px;
+        }
+        .text-credits ul li h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            color: #000;
+            text-align: left;
+        }
+        .text-credits ul li p {
+            padding: 5px 0;
+            font-size: 14px;
+            text-align: left;
+        }
+        .text-lead_line {
+            background-color: #000;
+        }
+        .image-middle .text-prop {
+            padding: 0 20px;
+        }
+        .text-paragraph {
+            margin: 50px auto;
+        }
+        .text-paragraph h3 {
+            padding: 10px 20px;
+        }
+        /* .text-paragraph h2,
+        .text-paragraph p {
+            opacity: 1;
+        } */
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .swiper-slide {
+            background-size: cover;
+            background-position: bottom;
+        }
+        .gallery-top {
+            height: 80%;
+            width: 100%;
+        }
+        .gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+        .gallery-thumbs .swiper-slide {
+            width: 25%;
+            height: 100%;
+            opacity: 0.4;
+        }
+        .gallery-thumbs .swiper-slide-active {
+            opacity: 1;
+        }
+        @media screen and (max-width: 568px) {
+            .section.module.parallax {
+                background-position: bottom !important;
+                background-size: 160%;
+            }
+            div.module.parallax {
+                background-attachment: scroll;
+            }
+            #section_p3 {
+                background-position: left bottom !important;
+            }
+            .div-caption {
+                width: 100vw;
+                bottom: initial;
+            }
+            .div-caption h1 {
+                font-size: 42px;
+            }
+            .image-highlight dt,
+            .image-highlight dd{
+                float: none;
+                width: 100% !important;
+            }
+            .indent {
+                padding-top: 160px;
+            }
+            .image-indent {
+                top: -114px;
+            }
+            .image-gallery-modal figure {
+                width: 150px;
+            }
+        }
+	</style>
+   	<div id="loading"><div id="loading-center"><div id="loading-center-absolute"><div class="object" id="object_four"></div><div class="object" id="object_three"></div><div class="object" id="object_two"></div><div class="object" id="object_one"></div></div></div></div>
+   
+    <header></header>
+	
+    <div id="wrap">
+    
+    	<div class="module parallax" id="landing_image">
+            <div class="div-caption">
+                <h1>MUDIK SERU DENGAN PETUALANGAN BARU</h1>
+            </div>
+            <p class="tC" style="bottom:0;position:absolute;width:100%;z-index:10;"><a class="animated bounce" style="display:inline-block;"><img src="/_common/img/icon/arrow_down.png" alt="scroll kebawah" width="30" height="30"></a></p>
+		</div>
+        
+        <section class="clearfix" style="background-color:#f0b11d;">
+            <div class="text-paragraph">
+                <div class="image-middle">
+                    <img class="text-prop" src="img/prop-teks-chevrolet.png" alt="Chevrolet">
+                </div>
+            </div>
+            <div class="text-lead">
+            	<p class="tI">Pulang ke kampung halaman merupakan momen yang dinanti banyak orang saat merayakan libur Lebaran. Kegiatan mudik tersebut tentu akan semakin seru apabila dirangkai dengan petualangan baru.</p>
+            	<div class="text-lead_line"></div>
+            </div>
+
+            <div class="text-paragraph">
+                <p>Itulah yang melatarbelakangi tim Kompas Eksplor bekerja sama dengan Chevrolet melakukan perjalanan merapah pulau Jawa bagian tengah hingga Madura untuk mengeksplorasi destinasi wisata sekaligus menjajal ketangguhan The New Chevrolet Trailblazer.</p>
+                <p>Sebuah pagi yang cerah mengawali perjalanan tim Eksplor merapah pulau Jawa bagian tengah hingga Madura. Ruas Tol Cikopo-Palimanan pun menjadi jalur ideal menuju ibu kota Jawa Tengah, Semarang.</p>
+            </div>
+   		</section>
+
+        <section class="clearfix black indent">
+            <div class="image-indent">
+                <img src="img/prop-2-black.png" alt="">
+            </div>
+            <div class="text-paragraph">
+                <p>Namun, belum sampai di ruas tol tersebut, tim harus merasakan kemacetan panjang di Tol Jakarta-Cikampek. Untungnya, mobil yang digunakan memiliki sederet fitur yang mampu menjaga kenyamanan berkendara. Salah satunya layar sentuh 8 inci yang dapat dihubungkan dengan ponsel pintar untuk memutar musik dan mendengarkan lagu-lagu favorit.</p>
+                <p>Tersematnya 7 <i>speaker</i> premium yang dilengkapi dengan <i>subwoofer</i> membuat tim merasa amat terhibur berada di tengah kemacetan panjang. Terlebih <i>electronic power steering</i> yang mampu menyesuaikan beban setir sesuai kecepatan kendaraan. Alhasil, saat berada di kemacetan, kemudi menjadi lebih ringan sehingga anggota tim Eksplor yang mengemudikan kendaraan tidak mudah lelah.</p>
+            </div>
+        </section>
+        
+        <div class="section module parallax" id="section_p1">
+            <div class="text-paragraph">
+                <h2>MASJID AGUNG JAWA TENGAH</h2>
+            </div>
+        </div>
+        
+        <section class="clearfix">
+            <div class="text-paragraph">
+                <div class="image-middle">
+                    <img class="text-prop" src="img/prop-teks-masjid-agung.png" alt="dummy">
+                </div>
+            </div>
+            <div class="text-paragraph">
+                <p>Setelah melakukan perjalanan panjang, tibalah di Semarang. Di ibu kota Jawa Tengah tersebut, tim akan mencicipi berbagai keunikan, mulai dari tempat wisata hingga kuliner. Masjid Agung Jawa Tengah yang berada tidak jauh dari pusat kota menjadi obyek pertama yang disambangi tim.</p>
+                <p>Masjid ini memiliki gaya arsitektur perpaduan antara Jawa dan Arab. Selain tempat ibadah, masjid ini juga menjadi obyek wisata religi bagi wisatawan domestik maupun mancanegara. Menara Al Husna dengan ketinggian 99 meter dan pilar-pilar pada serambi masjid menjadi magnet tersendiri bagi orang yang bertandang ke tempat ini.</p>
+                <p>Wisata kuliner mencicipi makanan khas Semarang pun dilakoni sebelum tim beristirahat. Sebuah restoran lumpia di Jalan Pemuda disambangi untuk mencicipi makanan berbahan dasar rebung yang dicampur dengan irisan ayam dan udang.</p>
+                <p>Keesokan harinya, pagi-pagi benar, tim melanjutkan perjalanan menuju Brown Canyon dengan waktu tempuh sekitar 30 menit dari penginapan di pusat kota. Kawasan perbukitan tersebut merupakan salah satu tempat proyek penggalian material yang kini berbentuk tebing terjal seperti obyek wisata di AS, Grand Canyon.</p>
+            </div>
+            <div class="image-middle">
+                <img src="img/mesjid-agung.jpg" alt="masjid agung semarang">
+            </div>
+            <div class="text-paragraph">
+                <dl class="image-highlight clearfix">
+                    <dt><img src="img/lumpia-sq.jpg"></dt>
+                    <dd>
+                        <h3>LUMPIA</h3>
+                        <p>Lumpia yang merupakan makanan khas Semarang juga tak luput dijadikan menu wajib saat bertandang ke kota ini. Tim pun menyambangi Lumpia Mbak Lien yang berada di Jalan Pemuda.</p>
+                        <p>Penganan hangat berbahan dasar rebung dicampur dengan irisan ayam dan udang tersebut memberikan kenikmatan tersendiri saat mendarat di lidah.</p>
+                    </dd>
+                </dl>
+            </div>
+        </section>
+        
+        <div class="section module parallax" id="section_p2">
+            <div class="text-paragraph">
+                <h2>BROWN CANYON</h2>
+            </div>
+        </div>
+        
+        <section class="clearfix">
+            <div class="image-middle">
+                <img class="text-prop" src="img/prop-teks-brown-canyon.png" alt="dummy">
+            </div>
+            <div class="text-paragraph clearfix">
+                <p>Brown Canyon menjadi pembuka di hari kedua pada eksplorasi kali ini. Tempat ini bukanlah merupakan tempat wisata, melainkan sebuah kawasan berbukit tempat proyek penggalian material yang kini berbentuk tebing terjal layaknya obyek wisata di AS, Grand Canyon.</p>
+                <p>Selain melihat alam sekitarnya, tim juga menjajal ketangguhan The New Chevrolet Trailblazer yang tampil gagah dengan sederet fitur. Alhasil, medan menantang dapat dilibas tanpa hambatan.</p>
+            </div>
+        </section>
+        
+        <section class="clearfix black indent">
+            <div class="image-indent">
+                <img src="img/prop-5-black.png" alt="">
+            </div>
+            <div class="text-paragraph">
+                <p>Di kawasan terbuka tersebut, tim menjajal ketangguhan The New Chevrolet Trailblazer dengan melintasi berbagai medan jalan. Kendaraan berbekal mesin 2.5 L Duramax diesel direct injection 4 silinder ini mampu menunjukkan keandalannya dengan tetap mengedepankan kenyamanan.</p>
+                <p><i>Ground clearance</i> setinggi 219 milimeter berpadu apik dengan suspensi depan (independen) dan belakang (<i>5-link with coil spring</i> dan <i>gas shock absorbers</i>) membuat penumpang tetap nyaman meski jalan yang dilibas bergelombang dan penuh genangan.</p>
+            </div>
+            <div class="text-paragraph" style="height: 50vh;">
+                <div class="swiper-container gallery-top gallery-top-1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(img/brown-canyon-1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/brown-canyon-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/brown-canyon-3.jpg)"></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs gallery-thumbs-1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(img/brown-canyon-1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/brown-canyon-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/brown-canyon-3.jpg)"></div>
+                    </div>
+                </div>
+            </div> <!-- .text-paragraph -->
+        </section>
+        
+        <div class="section module parallax" id="section_p3" style="background-position:left top;">
+            <div class="text-paragraph">
+                <h2>SAM POO KONG</h2>
+            </div>
+        </div>
+        
+        <section class="clearfix">
+            <div class="text-paragraph">
+                <h2>Sam Poo Kong</h2>
+                <p>Obyek wisata berikutnya adalah Sam Poo Kong. Kelenteng yang menjadi salah satu obyek wisata utama Semarang ini selalu ramai pengunjung, baik pada hari-hari kerja maupun akhir pekan.</p>
+                <p>Berada di sisi barat daya Kota Semarang, bangunan yang dulu menjadi persinggahan pertama seorang pelaut China, Cheng Ho, kini menjadi tempat bersembahyang dan berziarah. Wisatawan yang ingin berkunjung diwajibkan membeli tiket masuk ataupun tiket terusan.</p>
+            </div>
+            <div class="image-middle">
+                <img src="img/sam-po-kong.jpg" alt="chevrolet trailblazer di brown canyon">
+            </div>
+            <div class="text-paragraph">
+                <p>Setelah mengunjungi Kelenteng Sam Poo Kong, tim Eksplor kembali merajut perjalanan menuju Surabaya, Jawa Timur. Di Kota Pahlawan, wisata kuliner menjadi agenda pembuka sebelum melanjutkan ke obyek wisata berikutnya.</p>
+            </div>
+            <div class="text-paragraph">
+                <dl class="image-highlight clearfix">
+                    <dt><img src="img/rawon-shutterstock-sq.jpg" alt="ilustrasi rawon shutterstock"></dt>
+                    <dd>
+                        <h3>Rawon</h3>
+                        <p>Rawon Kalkulator yang berada di Taman Bungkul pun disambangi untuk mencicipi menu khas kota ini, rawon. Meski rumah makan ini memiliki nama Sedap Malam, orang lebih mengenalnya dengan Rawon Kalkulator lantaran sang kasir dapat menghitung dengan cepat bak sebuah kalkulator.</p><p>Potongan daging sapi yang dilengkapi kuah berwarna hitam terasa nikmat saat mendarat di lidah.<br>&#40;Foto: Shutterstock&#41;</p>
+                    </dd>
+                </dl>
+            </div>
+        </section>
+        
+        <section class="clearfix black indent">
+            <div class="image-indent">
+                <img src="img/prop-4-black.png" alt="">
+            </div>
+            <div class="text-paragraph">
+                <h2>Bukit Jaddih</h2>
+                <p>Keesokan harinya perjalanan dilanjutkan menuju Bukit Jaddih, Madura dengan melewati Jembatan Suramadu. Bukit ini merupakan kawasan penambangan kapur yang begitu luas dan menawan sehingga dewasa ini namanya semakin dikenal para wisatawan.</p>
+                <p>Karena medan jalan yang amat menantang, penuh kelokan, tanjakan, dan turunan curam, akan lebih nyaman bila menggunakan kendaraan dengan ground clearance tinggi.</p>
+                <p>Lagi-lagi, keseruan kembali tercipta karena kendaraan yang digunakan mampu menaklukkan medan terjal dan berliku–penuh tanjakan curam dan tikungan tajam. Di tengah indahnya bukit kapur, tim juga merasakan kenyamanan berada di dalam kabin SUV berpenggerak roda belakang tersebut.</p>
+                <p>Saat di tanjakan curam, tim merasa nyaman karena mobil ini dilengkapi dengan fitur <i>hill start assist</i> (HSA) sehingga tak perlu khawatir kendaraan merosot ketika rem dilepas beberapa detik. Usai menjelajah beberapa area di bukit tersebut, turunan curam pun tak dapat dihindari. Namun, dengan hadirnya <i>hill descent control</i>, kendaraan dapat mengerem secara otomatis meski pedal rem tidak diinjak. Kedua fitur tersebut amat penting dalam meningkatkan keselamatan berkendara, terlebih melintas beragam medan jalan.</p>
+            </div>
+            <div class="text-paragraph" style="height: 50vh;">
+                <div class="swiper-container gallery-top gallery-top-2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(img/bukit-jaddih-1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/bukit-jaddih-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/bukit-jaddih-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/bukit-jaddih-4.jpg)"></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs gallery-thumbs-2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(img/bukit-jaddih-1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/bukit-jaddih-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/bukit-jaddih-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/bukit-jaddih-4.jpg)"></div>
+                    </div>
+                </div>
+            </div> <!-- .text-paragraph -->
+        </section>
+    
+        <section class="clearfix">
+            <div class="text-paragraph">
+                <h2>Parangkusumo</h2>
+                <p>Setelah menikmati bukit kapur di Madura, sekaligus menjajal fitur yang ada di The New Chevrolet Trailblazer, perjalanan dilanjutkan menuju Pantai Parangkusumo di Yogyakarta, Jawa Tengah.</p>
+                <p>Menjelang senja, tibalah tim Eksplor di Pantai Parangkusumo untuk menikmati desiran ombak dan embusan angin pantai yang menyapa sekujur tubuh. Meski bukan hari libur, pantai di pesisir selatan Pulau Jawa ini tetap ramai.</p>
+            </div>
+            <div class="text-paragraph" style="height: 50vh;">
+                <div class="swiper-container gallery-top gallery-top-3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(img/parangkusumo-1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/parangkusumo-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/parangkusumo-3.jpg)"></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs gallery-thumbs-3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(img/parangkusumo-1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/parangkusumo-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/parangkusumo-3.jpg)"></div>
+                    </div>
+                </div>
+            </div> <!-- .text-paragraph -->
+            <div class="text-paragraph">
+                <p>Setelah menikmati suasana pantai sekaligus melakukan pengambilan gambar dari sosok The New Chevrolet Trailblazer, tim segera bergegas melanjutkan wisata kuliner menuju rumah makan sate klathak Pak Pong yang berada di kawasan Bantul.</p>
+            </div>
+            <div class="text-paragraph">
+                <dl class="image-highlight clearfix">
+                    <dt><img src="img/sate-klatak-sq.jpg" alt="sate klatak pak pong"></dt>
+                    <dd>
+                        <h3>Sate Klathak Pak Pong</h3>
+                        <p>Sate daging kambing muda ini disajikan dengan unik karena ditusuk menggunakan jeruji besi, berbeda dengan sate pada umumnya yang menggunakan tusuk bambu. Satu porsi terdiri atas 2 tusuk dan disajian dengan kuah gulai.</p>
+                        <p>Kombinasi keduanya menciptakan sensasi luar biasa bagi indera pengecap. Sate lezat ini menjadi menu penutup bagi tim sebelum keesokan harinya kembali ke Ibu Kota.</p>
+                    </dd>
+                </dl>
+                <p>Keesokan paginya, tim kembali ke Jakarta melalui daerah Kaliurang yang dikenal dengan pemandangan alamnya yang hijau dan sejuk. Tanjakan dan kelokan ikut mewarnai perjalanan ketika melintasi kawasan tersebut.</p>
+                <p>Sama seperti ketika berangkat, Tol Cipali kembali dilalui saat tim menuju Ibu Kota. Tengah malam tim pun tiba di kawasan Jakarta Pusat. Rasa letih dan kantuk terbayar dengan petualangan seru bersama The New Chevrolet Trailblazer.</p>
+            </div>
+        </section>
+        
+        <section id="section_3" class="image-wide" style="background-image:url(img/prop-suramadu.png);background-color:#fbeebb;background-position:top;"></section>
+
+		<section class="section" style="margin-top:40px;background-color:#fbefbd;">
+			<div class="text-credits">
+                <ul>
+                    <li>
+                        <div></div>
+                        <h3>Copywriter</h3>
+				        <p>B Adi Yuwono</p>
+                    </li>
+                    <li>
+                        <div></div>
+                        <h3>Desain grafis</h3>
+				        <p>Yovieta Budidarman</p>
+				        <p>Arief Krestiono</p>
+                    </li>
+                    <li>
+                        <div></div>
+                        <h3>Fotografer</h3>
+				        <p>Egbert Siagian</p>
+				        <p>Antonius SP</p>
+                    </li>
+                    <li>
+                        <div></div>
+                        <h3>Developer</h3>
+				        <p>Dimitri H</p>
+                    </li>
+                </ul>
+			</div>
+		</section>
+        
+    </div> <!-- /#wrap -->
+    
+    <footer></footer>
+    
+    <script type="text/javascript" src="/_common/js/jquery_v2.1.0.js"></script>
+	<script type="text/javascript" src="/_common/js/jquery_viewportchecker.js"></script>
+	<script type="text/javascript" src="/_common/js/lazy.js"></script>
+	<script type="text/javascript" src="/_common/js/swiper.min.js"></script>
+	<script>
+		function onReady(callback) {
+			var intervalID = window.setInterval(checkReady, 1000);
+			function checkReady() {
+				if (document.getElementsByTagName('body')[0] !== undefined) {
+					window.clearInterval(intervalID);
+					callback.call(this);
+				}
+			}
+		}
+		function show(id, value) {document.getElementById(id).style.display = value ? 'block' : 'none';}
+		onReady(function(){show('wrap', true);show('loading', false);});
+	</script>
+	<script>
+        var galleryTop1 = new Swiper('.gallery-top-1', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 10,
+        });
+        var galleryTop2 = new Swiper('.gallery-top-2', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 10,
+        });
+        var galleryTop3 = new Swiper('.gallery-top-3', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 10,
+        });
+        var galleryThumbs1 = new Swiper('.gallery-thumbs-1', {
+            spaceBetween: 10,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            touchRatio: 0.2,
+            slideToClickedSlide: true
+        });
+        var galleryThumbs2 = new Swiper('.gallery-thumbs-2', {
+            spaceBetween: 10,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            touchRatio: 0.2,
+            slideToClickedSlide: true
+        });
+        var galleryThumbs3 = new Swiper('.gallery-thumbs-3', {
+            spaceBetween: 10,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            touchRatio: 0.2,
+            slideToClickedSlide: true
+        });
+        
+        galleryTop1.params.control = galleryThumbs1;
+        galleryThumbs1.params.control = galleryTop1;
+        
+        galleryTop2.params.control = galleryThumbs2;
+        galleryThumbs2.params.control = galleryTop2;
+        
+        galleryTop3.params.control = galleryThumbs3;
+        galleryThumbs3.params.control = galleryTop3;
+
+		$(window).on('beforeunload',function(){$(window).scrollTop(0);});
+		$(document).ready(function(){
+            var scroll = $(window).scrollTop(); 
+            $('header').load('/_common/header.html');
+            $('footer').load('/_common/footer.html');
+			$(".text-paragraph p,.text-quote p,.text-paragraph h2").viewportChecker({
+				classToAdd: 'show',
+                repeat: true,
+				offset: 50
+			});
+			$(window).scroll(function() {    
+				var scroll = $(window).scrollTop();    
+				if (scroll >= 1 * $(window).height()) {
+					$('#headerArea').css('opacity', '1');
+				} else {
+					$('#headerArea').css('opacity', '0');
+				}
+			});
+			$(".image-gallery").hover(function(){
+				$(this).find('p').toggleClass("show");
+				$(this).find('img').toggleClass("zoom");
+				$(this).find('.image-info').toggleClass("hidden");
+			});
+			new LazyLoad();
+            $('.tile')
+				.on('mouseover', function(){
+				  $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+				})
+				.on('mouseout', function(){
+				  $(this).children('.photo').css({'transform': 'scale(1)'});
+				})
+				.on('mousemove', function(e){
+				  $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+				})
+				.each(function(){
+				  $(this)
+					.append('<div class="photo"></div>')
+					.append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
+					.children('.photo').css({'background-image': 'url('+ $(this).attr('data-original') +')'});
+            })
+		});
+	</script>
+</body>
+</html>
