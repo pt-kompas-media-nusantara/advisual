@@ -1,0 +1,9 @@
+# ignore files
+test.txt
+info.php
+
+# Ignore folders
+logs/
+baca/
+amp/
+_prod/
